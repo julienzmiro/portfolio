@@ -1,0 +1,443 @@
+@import "normalize";
+@import "html5boilerplate";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:900);
+
+$bgColor: #F4F7F8;
+$textColor: #25292C;
+
+@mixin transitions ($prop, $duration: 1s) {
+  transition: $prop $duration;
+  -moz-transition: $prop $duration;
+  -webkit-transition: $prop $duration;
+  -o-transition: $prop $duration;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  background-color: $bgColor;
+  color: $textColor;
+}
+
+h1 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 60%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  color: $textColor;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px dotted $textColor;
+}
+a:hover {
+  border-bottom: 1px dotted transparent;
+}
+strong {
+  font-weight: 400;
+}
+
+#introScreen {
+  padding: 180px 0;
+}
+
+#resumeScreen {
+  height: 210px;
+  line-height: 210px;
+  text-align: center;
+}
+
+#contactScreen {
+  width: 100%;
+  max-width: 100%;
+}
+#contactScreen a {
+  display: block;
+  width: 33.3%;
+  height: 300px;
+  text-align: center;
+  float: left;
+  color: $bgColor;
+  background: #25292C;
+  position: relative;
+  -webkit-transition: background 0.15s ease;
+  -moz-transition: background 0.15s ease;
+  -ms-transition: background 0.15s ease;
+  -o-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+#contactScreen a:nth-child(2) {
+  width: 33.4%;
+}
+#contactScreen a:hover {
+  /*background: #C84963;*/
+  background: #C5413C;
+}
+#contactScreen a:nth-child(2) {
+  background: #42474B;
+}
+#contactScreen a:nth-child(2):hover {
+  /*background: #D85A74;*/
+  background: #D8504A;
+}
+#contactScreen a:nth-child(3) {
+  background: #616669;
+}
+#contactScreen a:nth-child(3):hover {
+  /*background: #E86782;*/
+  background: #E65D56;
+}
+#contactScreen a div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+#contactScreen p,
+#contactScreen svg {
+  margin: 0;
+  padding: 0;
+}
+
+.csScreen {
+  height: 420px;
+  background: #333;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.csScreen p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.csScreen a {
+  color: $bgColor;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-bottom: none;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.csScreen .csScreenInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.csScreen .hoverLabel {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  border-bottom: 1px solid $bgColor;
+  -webkit-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  -o-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  transform: translateX(-50%) translateY(-35px) translateZ(0);
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.csScreen:hover .hoverLabel {
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-45px) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-45px) translateZ(0);
+  -o-transform: translateX(-50%) translateY(-45px) translateZ(0);
+  transform: translateX(-50%) translateY(-45px) translateZ(0);
+  opacity: 1;
+}
+
+#csPPDocumentation {
+  background: #009cde;
+}
+#docuVisu {
+  width: 110px;
+  height: 135px;
+  position: relative;
+  margin: 0 auto;
+}
+#docuVisu img {
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#ppFile1 {
+  bottom: 10px;
+  right: 10px;
+}
+#ppFile2 {
+  bottom: 20px;
+  right: 20px;
+}
+#ppFile3 {
+  bottom: 30px;
+  right: 30px;
+}
+#csPPDocumentation:hover #ppFile1 {
+  -webkit-transform: translateX(10px) translateY(10px);
+  -moz-transform: translateX(10px) translateY(10px);
+  -o-transform: translateX(10px) translateY(10px);
+  transform: translateX(10px) translateY(10px);
+}
+#csPPDocumentation:hover #ppFile3 {
+  -webkit-transform: translateX(-10px) translateY(-10px);
+  -moz-transform: translateX(-10px) translateY(-10px);
+  -o-transform: translateX(-10px) translateY(-10px);
+  transform: translateX(-10px) translateY(-10px);
+}
+
+#csDesignPractice {
+  background: #E73E3E;
+}
+#csDesignPractice img:nth-child(2) {
+  margin-top: 20px;
+}
+#csDesignPractice:hover img:nth-child(1) {
+  -webkit-animation: rotate 6s linear infinite;
+  -moz-animation: rotate 6s linear infinite;
+  -o-animation: rotate 6s linear infinite;
+  animation: rotate 6s linear infinite;
+}
+#csDesignPractice:hover img:nth-child(2) {
+  -webkit-animation: rotateInv 6s linear infinite;
+  -moz-animation: rotateInv 6s linear infinite;
+  -o-animation: rotateInv 6s linear infinite;
+  animation: rotateInv 6s linear infinite;
+}
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes rotate { 100% { -moz-transform: rotate(360deg); } }
+@-o-keyframes rotate { 100% { -o-transform: rotate(360deg); } }
+@keyframes rotate { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-webkit-keyframes rotateInv { 100% { -webkit-transform: rotate(-360deg); } }
+@-moz-keyframes rotateInv { 100% { -moz-transform: rotate(-360deg); } }
+@-o-keyframes rotateInv { 100% { -o-transform: rotate(-360deg); } }
+@keyframes rotateInv { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+#csCharts {
+  background: #FC9A66;
+}
+#csCharts img {
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+#csCharts:hover img {
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -o-transform: scale(.9);
+  transform: scale(.9);
+}
+
+#csPbxUpload {
+  background: #62A6D9;
+}
+#loaderVisu {
+  background: $bgColor;
+  width: 250px;
+  height: 20px;
+  border-radius: 15px;
+  padding: 3px;
+  overflow: hidden;
+  text-align: left;
+  line-height: 20px;
+  margin: 0 auto 45px;
+}
+#loaderVisuProgress {
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  height:20px;
+  width:75px;
+  border-radius:15px;
+  background: #224B6B;
+}
+#csPbxUpload:hover #loaderVisuProgress {
+  width: 250px;
+}
+
+#csPbxUpsell {
+  background: #E3AA4C;
+}
+#visuCircle {
+  background: #765621;
+  border-radius: 999px;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 30px;
+  padding: 0;
+}
+#visuCircle p {
+  color: $bgColor;
+  font-weight: 900;
+  font-size: 39px;
+  line-height: 41px;
+  margin: 3px 0 0 0;
+  padding: 0;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+#csPbxUpsell:hover #visuCircle {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/*CS*/
+nav {
+  width: 69px;
+  text-align: center;
+  position: fixed;
+}
+nav a {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #25292C;
+  -webkit-transition: background 0.15s ease;
+  -moz-transition: background 0.15s ease;
+  -ms-transition: background 0.15s ease;
+  -o-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+nav a:hover {
+  background: #E65D56;
+}
+nav svg {
+  width: 60px;
+  height: 60px;
+  fill: $bgColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+.csContent {
+  padding: 120px 30px;
+}
+.csContent header {
+  margin: 0 0 90px 0;
+}
+.csContent header p {
+  margin: 0;
+}
+.csContent h3 {
+  margin: 90px 0 30px;
+}
+.csContent figure {
+  text-align: center;
+  margin: 60px 0;
+}
+.csContent figure figcaption {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 5px 0 0 0;
+}
+.csContent figure img {
+  max-width: 100%;
+}
+.csContent p {
+  line-height: 1.6;
+}
+
+@media all and (max-width: 499px) {
+  section {
+    width: 90%;
+  }
+  h1 {
+    font-size: 39px;
+    line-height: 1.2;
+  }
+  #contactScreen a,
+  #contactScreen a:nth-child(2) {
+    width: 100%;
+    float: none;
+  }
+
+  nav {
+    width: 100%;
+    text-align: left;
+    position: static;
+  }
+  nav a {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+  nav svg {
+    width: 45px;
+    height: 45px;
+    left: 15px;
+    -webkit-transform: translateY(-50%) translateX(0);
+    -moz-transform: translateY(-50%) translateX(0);
+    -o-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+  }
+  .csContent {
+    padding: 60px 0;
+  }
+}

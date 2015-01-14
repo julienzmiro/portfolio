@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Crafting charts - Julien Zmiro - UX / UI designer and developer</title>
+        <meta name="description" content="Julien Zmiro, UX / UI / product designer and developer.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../css/screen.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="../index.html" title="Back">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="90px" height="90px" viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
+                    <g>
+                        <polygon points="48.152,61.659 50.539,59.841 39.231,45 50.539,30.159 48.152,28.341 35.46,45  "/>
+                    </g>
+                    <path d="M45,5.949c-21.532,0-39.051,17.518-39.051,39.05c0,21.533,17.519,39.052,39.051,39.052c21.533,0,39.05-17.519,39.05-39.052  C84.05,23.467,66.533,5.949,45,5.949z M45,81.268c-19.799,0-35.848-16.237-35.848-36.267S25.201,8.733,45,8.733  c19.798,0,35.849,16.238,35.849,36.268S64.798,81.268,45,81.268z"/>
+                </svg>
+            </a>
+        </nav>
+
+        <section class="csContent">
+            <header>
+                <h1>Crafting charts</h1>
+                <h2>qunb</h2>
+                <p>2014</p>
+            </header>
+
+            <p>At qunb, our mission is to make data easy to understand. To do so, we created a document called a "datastory" : series of slides that deliver simple messages illustrated by charts. We really tried to keep things simple : one slide, one message.</p>
+
+            <figure>
+                <img src="../img/crafting-charts/slide.png" alt="A slide from a datastory">
+                <figcaption>Each slide only displays one clear message</figcaption>
+            </figure>
+
+            <p>When we decided to redesign our charts, one of the first decisions was to always display interesting data on the slide. Before that, users had to explore the chart to discover the numbers related to the message. Exploration is not the first use case of our charts. The message is clearly the first use case, so it was important to put everything in that direction.</p>
+
+            <h3>Colors</h3>
+            <p>Managing colors has been challenging since we use one color for each "scenario" of datastory.<br>
+            For each color, we had to create a palette of 7 shades. These 7 shades will be used in 2 cases :
+            <ul>
+                <li>Sometimes we need to convey information through the color (different shades = different ranges of values as for a heatmap for instance).</li>
+                <li>And sometimes we just need to use different shades in order to improve the readability of the chart.</li>
+            </ul>
+            </p>
+
+            <figure>
+                <img src="../img/crafting-charts/colors.png" alt="Our color palettes">
+                <figcaption>Our color palettes</figcaption>
+            </figure>
+
+            <h3>Charts types</h3>
+            <p>A large part of the work consisted in identifying charts types from charts options. I think that this is sometimes a completely subjective question. For instance, is a donut chart an option of a classical pie chart ? Or are they completely different charts ?</p>
+            <p>Once we finished to list all the charts and their options, we designed them one by one.<br>
+            Here are some examples.</p>
+
+            <figure>
+                <img src="../img/crafting-charts/line.png" alt="Line chart">
+                <figcaption>Line chart</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/crafting-charts/area.png" alt="Area chart">
+                <figcaption>Area chart</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/crafting-charts/vert-bars.png" alt="Bar chart">
+                <figcaption>Bar chart with an option to display the evolution between 2 points</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/crafting-charts/butterfly.png" alt="Butterfly chart">
+                <figcaption>Butterfly chart</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/crafting-charts/venn.png" alt="Venn chart">
+                <figcaption>Venn chart</figcaption>
+            </figure>
+            <figure>
+                <img src="../img/crafting-charts/infographics.png" alt="Infographics">
+                <figcaption>We even created templates for infographics</figcaption>
+            </figure>
+
+            <!-- <h3>interactions</h3>
+            <p>One of the main issue on the former version of our charts concerned interactions. Depending on the chart type, and sometimes even on the value, the results of the same interaction were very different. We did that because we wanted to be (too) smart, and to really adapt interactions to each context (available space, chart layout,...).<br>
+            This decision was well intentioned, but I think it did not worked properly. At the end, users never knew what to expect from a chart in terms of interaction. We needed more consistency.</p>
+            <p>Beyond consistency, the other rule that we tried to follow was to display values as close as possible to their points. When I move my mouse hover a point on a line chart, having the value displayed next to this point helps a lot to explain the relationship.</p>
+            <p>However, we wanted to avoid huge annoying tooltips that hide the chart. We tried to design a tooltip as light as possible, showing clearly the values.</p>
+
+            X Tooltip -->
+
+            <h3>Animations</h3>
+            <p>With the datastory, we created a new kind of document. I guess that trying to mimic existing solutions when innovating is a common behavior, and we often display charts on a screen in the same way that they were printed on paper.</p>
+            <p>One major improvements that our new medium can bring, comes from animations.<br>
+            We are now able to convey information in the way we animate our charts.</p>
+            <p>For instance, the marimekko chart has always been one of the most difficult to understand. Beyond the difficulty to compare areas, the problem is that there is a lot of dimensions (a measure, some categories, some sub categories for each category,...), and the relationship between each of them is not clear.</p>
+            
+            <figure>
+                <img src="../img/crafting-charts/mekko.png" alt="Marimekko chart">
+                <figcaption>It's very difficult to understand the relationship between elements of this chart.</figcaption>
+            </figure>
+
+            <p>By animating the way we build the chart, we can help to explain how it should be read.</p>
+
+            <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
+        </section>
+
+        <script>
+            var _gaq=[['_setAccount','UA-6108297-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
