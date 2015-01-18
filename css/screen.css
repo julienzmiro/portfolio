@@ -1,12 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:900);
-/* normalize.css v1.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:900);
 article,
 aside,
 details,
@@ -181,7 +181,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /**
@@ -300,7 +300,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -489,7 +489,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -618,7 +618,7 @@ textarea {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -643,7 +643,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
@@ -659,7 +659,6 @@ textarea {
 
   @page {
     margin: 0.5cm; }
-
   p,
   h2,
   h3 {
@@ -673,15 +672,15 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
-  background-color: #f4f7f8;
-  color: #25292c; }
+  background-color: #fff;
+  color: #25292C; }
 
 h1 {
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 50px;
   font-weight: 900;
   line-height: 1.4;
@@ -701,10 +700,10 @@ section {
   padding: 0; }
 
 a {
-  color: #25292c;
+  color: #25292C;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: 1px dotted #25292c; }
+  border-bottom: 1px dotted #25292C; }
 
 a:hover {
   border-bottom: 1px dotted transparent; }
@@ -730,7 +729,7 @@ strong {
   height: 300px;
   text-align: center;
   float: left;
-  color: #f4f7f8;
+  color: #fff;
   background: #25292C;
   position: relative;
   -webkit-transition: background 0.15s ease;
@@ -791,7 +790,7 @@ strong {
   line-height: 1.2; }
 
 .csScreen a {
-  color: #f4f7f8;
+  color: #fff;
   display: block;
   width: 100%;
   height: 100%;
@@ -818,7 +817,7 @@ strong {
   bottom: 0;
   left: 50%;
   opacity: 0;
-  border-bottom: 1px solid #f4f7f8;
+  border-bottom: 1px solid #fff;
   -webkit-transform: translateX(-50%) translateY(-35px) translateZ(0);
   -moz-transform: translateX(-50%) translateY(-35px) translateZ(0);
   -o-transform: translateX(-50%) translateY(-35px) translateZ(0);
@@ -899,37 +898,29 @@ strong {
 @-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg); } }
-
 @-moz-keyframes rotate {
   100% {
     -moz-transform: rotate(360deg); } }
-
 @-o-keyframes rotate {
   100% {
     -o-transform: rotate(360deg); } }
-
 @keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-
 @-webkit-keyframes rotateInv {
   100% {
     -webkit-transform: rotate(-360deg); } }
-
 @-moz-keyframes rotateInv {
   100% {
     -moz-transform: rotate(-360deg); } }
-
 @-o-keyframes rotateInv {
   100% {
     -o-transform: rotate(-360deg); } }
-
 @keyframes rotateInv {
   100% {
     -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
-
 #csCharts {
   background: #FC9A66; }
 
@@ -954,7 +945,7 @@ strong {
   background: #62A6D9; }
 
 #loaderVisu {
-  background: #f4f7f8;
+  background: #fff;
   width: 250px;
   height: 20px;
   border-radius: 15px;
@@ -990,13 +981,13 @@ strong {
   padding: 0; }
 
 #visuCircle p {
-  color: #f4f7f8;
+  color: #fff;
   font-weight: 900;
   font-size: 39px;
   line-height: 41px;
   margin: 3px 0 0 0;
   padding: 0;
-  font-family: "Alegreya Sans", sans-serif; }
+  font-family: 'Alegreya Sans', sans-serif; }
 
 #csPbxUpsell:hover #visuCircle {
   -webkit-transform: scale(1.2);
@@ -1015,12 +1006,12 @@ nav a {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #25292C;
-  -webkit-transition: background 0.15s ease;
-  -moz-transition: background 0.15s ease;
-  -ms-transition: background 0.15s ease;
-  -o-transition: background 0.15s ease;
-  transition: background 0.15s ease; }
+  background: #ddd;
+  -webkit-transition: background 0.1s ease;
+  -moz-transition: background 0.1s ease;
+  -ms-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
+  transition: background 0.1s ease; }
 
 nav a:hover {
   background: #E65D56; }
@@ -1028,7 +1019,7 @@ nav a:hover {
 nav svg {
   width: 60px;
   height: 60px;
-  fill: #f4f7f8;
+  fill: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1061,8 +1052,36 @@ nav svg {
 .csContent figure img {
   max-width: 100%; }
 
-.csContent p {
-  line-height: 1.6; }
+.csContent video {
+  max-width: 100%; }
+
+.csContent p,
+.csContent li {
+  line-height: 1.8; }
+
+.foreword {
+  width: 100%;
+  border: 1px solid RGBA(230, 93, 86, 0.3);
+  border-radius: 3px;
+  background: RGBA(230, 93, 86, 0.1);
+  padding: 30px 45px;
+  box-sizing: border-box;
+  color: #E65D56;
+  font-size: 1rem; }
+
+.foreword h2 {
+  font-size: 1.2rem; }
+
+.foreword a {
+  color: #E65D56;
+  border-bottom: 1px dotted #E65D56; }
+
+.foreword a:hover {
+  border-bottom: 1px dotted transparent; }
+
+.foreword p {
+  margin-top: 5px;
+  margin-bottom: 0; }
 
 @media all and (max-width: 499px) {
   section {
@@ -1098,3 +1117,5 @@ nav svg {
 
   .csContent {
     padding: 60px 0; } }
+
+/*# sourceMappingURL=screen.css.map */

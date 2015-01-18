@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:900);
 
-$bgColor: #F4F7F8;
+$bgColor: #fff;
 $textColor: #25292C;
 
 @mixin transitions ($prop, $duration: 1s) {
@@ -354,12 +354,12 @@ nav a {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #25292C;
-  -webkit-transition: background 0.15s ease;
-  -moz-transition: background 0.15s ease;
-  -ms-transition: background 0.15s ease;
-  -o-transition: background 0.15s ease;
-  transition: background 0.15s ease;
+  background: #ddd;
+  -webkit-transition: background 0.1s ease;
+  -moz-transition: background 0.1s ease;
+  -ms-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
+  transition: background 0.1s ease;
 }
 nav a:hover {
   background: #E65D56;
@@ -399,9 +399,39 @@ nav svg {
 }
 .csContent figure img {
   max-width: 100%;
+  // border: 1px solid #eee;
 }
-.csContent p {
-  line-height: 1.6;
+.csContent video {
+  max-width: 100%;
+}
+.csContent p,
+.csContent li {
+  line-height: 1.8;
+}
+
+.foreword {
+  width: 100%;
+  border: 1px solid RGBA(230, 93, 86, .3);
+  border-radius: 3px;
+  background: RGBA(230, 93, 86, .1);
+  padding: 30px 45px;
+  box-sizing: border-box;
+  color: #E65D56;
+  font-size: 1rem;
+}
+.foreword h2 {
+  font-size: 1.2rem;
+}
+.foreword a {
+  color: #E65D56;
+  border-bottom: 1px dotted #E65D56;
+}
+.foreword a:hover {
+  border-bottom: 1px dotted transparent;
+}
+.foreword p {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 @media all and (max-width: 499px) {
