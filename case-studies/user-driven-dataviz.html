@@ -35,9 +35,10 @@
               <h2>Foreword</h2>
               <p>This article is based on my limited experience of datavisualization, and I would really love to <strong>receive some feedback</strong> on it... Please don't hesitate to <a href="mailto:julien.zmiro@gmail.com" title="Contact me by email">reach me</a> if you have anything to say about it!</p>
             </section>
-            <p>I never had a lot of opportunities to learn about datavisualization (let's say dataviz for conveniance) before joining qunb (where we're trying to tell meaningful stories from abstract numbers). Of course, I read Edward Tufte, and I was amazed be the examples of representations in his books. But after more than one year of familiarization, I have to say that I'm really surprised by the way most of the dataviz are created. I often hear or read occult rules that seem to come from an ancient code of dataviz and that state things like "continues values should be displayed as line chart and discrete values as bar charts". That's fine, all these rules seem very reasonable... but they're going beyond their role of simple common sense constraints, and they're overwhelming what's really at stake in a dataviz: the communication of an idea.</p>
-            <p>The problem is that a large part of these dataviz are really poorly designed and end up to be almost impossible to read. I know that a lot of people spend a lot of time to work on how these charts look, and that's really important, but I'm not only talking about visual design here.<br>
-              A lot of dataviz are wrong because they don't address a clear use case. They just follow existing patterns, because it's easy to simply update data from an old excel template, or because most of these dataviz are now automated, meaning that there is not a real person that is trying to communicate a message (and we're still pretty bad at making programs that know what story tell from a specific dataset).<br>
+            <p>With the exception of the books from Edward Tufte, I never had a lot of opportunities to learn about datavisualization (let's say dataviz for conveniance) before joining qunb (where we're trying to tell meaningful stories from abstract numbers). But after more than one year of familiarization, I have to say that I'm really surprised by the way most of the dataviz are created today. I often hear or read occult rules that seem to come from an ancient code of dataviz and that state things like "continues values should be displayed as line chart and discrete values as bar charts"...<br>
+            That's fine, all these rules seem very reasonable... but they're going beyond their role of simple common sense constraints, and they're overwhelming what's really at stake in a dataviz: the communication of an idea.</p>
+            <p>The problem is that a large part of the dataviz that we consume everyday are really poorly designed and end up to be completely indigestible. I know that a lot of people spend a lot of time to work on how these charts look, and that's really important, but I'm not only talking about visual design here.<br>
+              A lot of dataviz are wrong because they don't address a clear use case. They just follow existing patterns, because it's so easy to simply update data from an old excel template, or because most of these dataviz are now automated, meaning that there is not a real person that is trying to communicate a message (and we're still pretty bad at making programs that know what story tell from a specific dataset).<br>
               So if we used a line chart to display our sales of last year, why should we change this year ? Even if the message that we want the user to receive is completely different today...<br>
               These dataviz are <strong>data driven.</strong>
               I'll try to explain why I think that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
@@ -64,7 +65,7 @@
                   <figcaption>User's attention is the bottleneck of data consumption</figcaption>
                 </figure> -->
                 Selecting which information deserves attention can be tricky, and very often, the user is abandonned at this step.<br>
-                In our table example, we can of course discover some patterns just by reading the numbers in the cells, but it's hard because it requires a lot of mental work to visualize these abstractions.<br>
+                In our table example, we can of course discover some patterns just by reading the numbers in the cells, but it's hard because it requires a lot of mental work to visualize these abstractions: "this number is greater than this one and this one and... and this one seems to be linked to this one, but that's not true for this dimension and...".<br>
                 In the same way that numbers are symbols that wrap the complex abstractions that are quantities, we need something to help us to "preprocess" relevant information in this other kind of complex abstraction that is relationship. We need to be able <strong>to gain some knowledge from the data</strong>.<br>
                 That's exactly the goal of a dataviz.</p>
 
@@ -79,14 +80,15 @@
                     <strong>Data explanation</strong> is a process where the representation pushes the knowledge to the user.<br>
                     Delivering a message is the first use case.</p>
                   <p>There is no better way between these 2 options, it's just a matter of identifying which of them you're trying to address as a first use case. Moreover, things are not just black or white, and we can find parts about both data exploration and data explanation in most of the representations. These two approaches are more like extremities of a scale... but it's important to identify where a dataviz should stand on this scale, because it allows to be bold and thus more clear and efficient.</p>
-                  <p>Most of the dataviz are about data exploration, not because this has been identified as the use case to follow, but simply because they are data driven, meaning that they have been designed according to the type of data that they need to show, and not on the message that they want to communicate to the user. It's easier to fall on the data exploration side when you don't know the use case : just throw a bunch of data in the most common template, and let the user handle it.<br>
-                    Data explanation is almost always completely unrecognised.</p>
+                  <p>Most of the dataviz that we use everydays are about data exploration, not because this has been identified as the use case to follow, but simply because they are data driven, meaning that they have been designed according to the type of data that they need to show, and not to the message that they want to communicate to the user. It's easier to fall on the data exploration side when you don't know the use case : just throw a bunch of data in the most common template, and let the user handle it.<br>
+                    Data explanation is almost always completely ignored.</p>
                   <p>Let's come back to our table example.</p>
                   <figure>
                     <img src="../img/user-driven-dataviz/table.jpg" alt="Let's come back to our dataset" />
                   </figure>
-                  <p>That's actually an interesting (and quiet extreme) way to let the user explore a dataset. But as we just explained it, data exploration is over used.<br>
-                    So what representation would allow us to push a clear message to the user ?</p>
+                  <p>That's actually an interesting (and quiet extreme) way to let the user explore a dataset. But as we just explained it, data exploration is over used and we'll probably need to look in the direction of data explanation if we really had to design a representation to exploit this dataset.<br>
+                    Let's pretend that we'll have to send a report about its visits per countries to our client.<br>
+                    What representation would allow us to push a clear message to the user ?</p>
                   <p>The common approach is to choose the representation depending on the data. Here, we're dealing with locations, so we'll end up with a map.</p>
                   <figure>
                     <img src="../img/user-driven-dataviz/map.jpg" alt="A map" />
