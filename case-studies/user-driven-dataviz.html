@@ -35,13 +35,14 @@
               <h2>Foreword</h2>
               <p>This article is based on my limited experience of datavisualization, and I would really love to <strong>receive some feedback</strong> on it... Please don't hesitate to <a href="mailto:julien.zmiro@gmail.com" title="Contact me by email">reach me</a> if you have anything to say about it!</p>
             </section>
-            <p>With the exception of the books from Edward Tufte, I didn't had a lot of opportunities to learn about datavisualization before joining qunb (where we're trying to tell meaningful stories from abstract numbers). But after more than one year of familiarization, I have to say that I'm not really comfortable with the way most of the datavisualizations (let's say dataviz for conveniance) are created today. I often hear or read rules statings things like "continues values should be displayed as line chart and discrete values as a bar chart"...<br>
-            That's fine, all these rules seem very reasonable... but they're going beyond their role of simple common sense constraints, and they're overwhelming what's really at stake in a dataviz: the communication of an idea.</p>
-            <p>The problem is that a large part of the dataviz that we consume everyday are really poorly designed and end up to be completely indigestible because they're only based on the data and on these rules about the data.<br>
-              They are wrong because they don't address a clear use case. They just follow existing patterns, because it's so easy to simply update data from an old excel template, or because most of these dataviz are now automated, meaning that there is not a real person that is trying to communicate a message (and we're still pretty bad at making programs that know what story tell from a specific dataset).<br>
-              So if we used a line chart to display our sales of last year, why should we change this year ? Even if the message that we want the user to receive is completely different today...<br>
-              These dataviz are <strong>data driven.</strong>
-              I'll try to explain why I think that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
+            <p>At qunb, we spent one year to build a tool that tells meaningful stories from Google Analytics. These stories are actually a series of clear messages supported by relevant charts and visual representations.<br>
+            With the exception of the books from Edward Tufte, I didn't had a lot of opportunities to learn about datavisualization before joining qunb. Now that I'm a bit more familiar with this fields, I have to say that I'm not really comfortable with the way most of the datavisualizations (let's say dataviz for conveniance) are created today. I often hear or read rules statings things like "continues values should be displayed as line chart and discrete values as a bar chart"...<br>
+            That's fine, all these rules are very reasonable... but they're going beyond their role of simple common sense constraints, and they're overwhelming what's really at stake in a dataviz: the communication of an idea.</p>
+            <p>We build dataviz according to the nature of the data instead of the message that we want to communicate.<br>
+            Consequently, a large part of the dataviz that we consume everyday are really poorly designed and end up to be completely indigestible. They don't address a clear use case. They just follow existing patterns, because it's so easy to simply update data from an old excel template, or because most of these dataviz are now automated, meaning that there is not a real person that is trying to communicate a message (and we're still pretty bad at making programs that know what story tell from a specific dataset).<br>
+            So if we used a line chart to display our sales of last year, why should we change this year ? Even if the message that we want the user to receive is completely different today...<br>
+            These dataviz are <strong>data driven.</strong>
+            I'll try to explain why I think that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
 
               <h3>But first, what is a dataviz ?</h3>
               <p>Here is some data.</p>
@@ -128,16 +129,17 @@
                     If you think about it, all these questions are always about comparison. Comparison is a kind of "primitive user need" when we design dataviz.</p>
                   <p>The goal is always to allow the user to <strong>compare</strong> values or series of values in order to:
                     <ul>
-                      <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that" ?</li>
-                      <li>Determine a <strong>causality</strong>: What impact has "this" over "that" ?</li>
-                      <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason ?</li>
-                      <li>Explain a <strong>composition</strong>: How is "this" made up of "these" ?</li>
-                      <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that" ?</li>
-                      <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense) ?</li>
-                      <li>Observe a <strong>deviation</strong>: Does "this" deviate from this reference ?</li>
+                      <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that" ? Bars are usually an interesting representation to easily and visually rank elements.</li>
+                      <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense) ? Line chart is usually the most interesting representation to show the shape of the change.</li>
+                      <li>Determine a <strong>causality</strong>: What impact has "this" over "that" ? As time is a condition of causality, a line or a multi line chart is a good tool for this one too.</li>
+                      <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason ? Correlation is very similar to causality, except that there is no obvious reason to explain a link between two or more entities.That means that here again, line chart is interesting.</li>
+                      <li>Observe a <strong>deviation</strong>: Does "this" diverge from this reference ? This one is also very close to the evolution one. It's really difficult to imagine a deviation without time, so a line chart seems to be fine.</li>
+                      <li>Explain a <strong>composition</strong>: How is "this" made up of "these" ? Here it's important to make it clear that some elements are actually parts of a whole. A good tool for that is to picture a shape made of sub-shapes. A pie chart is the most common representation.</li>
+                      <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that" ? A distribution usually makes sense on two dimensions. The most simple and flexible representation is probably a simple point. When points are spread on two axis, we call that a scatter plot.</li>
                     </ul>
                   </p>
-                  <p>Again, things are not just black or white, and we'll often try to communicate several type of messages (and even several messages of the same type). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
+                  <p>All these ideas of representations are just the most common examples. They work for this kind of messages, but that doesn't mean that we should not try to find something else, something more relevant for a very specific use case. The goal is just to start by defining a type of message, and then by creating an interesting representation based on this message.<br>
+                  Here again, things are not just black or white, and we'll often try to communicate several type of messages (and even several messages of the same type). We'll probably have to create more complex representations to do that (like composing several charts in one for instance). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
                   <p>Some rules of thumb can help to pick the right chart.<br>
                     For instance, some charts use areas to convey more than one variable through a shape (using height to illustrate one variable, and width for another one for instance).</p>
                   <figure>
@@ -183,7 +185,8 @@
                     You don't always have to tell everything in one representation. Complicated problems can easily be split into small parts that become often easier to understand. You can spread representations either in space (show multiple representation in one page for instance), or in time (show a series of representations one after the other). You can also leverage the succession of these representation to create a journey that will also convey a meaning (diving step by step into the details of a value for instance).<br>
                     The most important thing is that whatever you decide, it has to be intentional and meaningful.</p>
                   <p>Tools are many, the most important thing is to be conscious of them, and to leverage them as much as possible to achieve the first use case that you defined: data exploration, or data explanation.<br>
-                    Because that should always be your first concern when designing something : understanding what you're trying to achieve. Just like the way we switched from data driven to user driven approach in web design 15 years ago (remember old email clients that were just mapping of databases ? What a journey to come to something like Google Inbox!), we need to move away from meaningless and unintentional dataviz to help user driven design of dataviz to become more widespread.</p>
+                    Because that should always be your first concern when designing something : understanding what you're trying to achieve. Just like the way we switched from data driven to user driven approach in web design 15 years ago (remember old email clients that were just mapping of databases ? What a journey to come to something like Google Inbox!), we need to move away from meaningless and unintentional dataviz to help user driven design of dataviz to become more widespread.<br>
+                    The type of data that we want to show should only be a constraint, the use case that we want to address, and thus the user, should always be the driver of a dataviz.</p>
 
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
 
