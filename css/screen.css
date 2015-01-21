@@ -712,6 +712,9 @@ a {
 a:hover {
   border-bottom: 1px dotted transparent; }
 
+a, a:focus, a img, a:focus img {
+  outline: none; }
+
 strong {
   font-weight: 400; }
 
