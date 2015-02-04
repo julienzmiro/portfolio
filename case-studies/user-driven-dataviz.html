@@ -129,17 +129,16 @@
                     If you think about it, all these questions are always about comparison. Comparison is a kind of "primitive user need" when we design dataviz.</p>
                   <p>The goal is always to allow the user to <strong>compare</strong> values or series of values in order to:
                     <ul>
-                      <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that" ? Bars are usually an interesting representation to easily and visually rank elements.</li>
-                      <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense) ? Line chart is usually the most interesting representation to show the shape of the change.</li>
-                      <li>Determine a <strong>causality</strong>: What impact has "this" over "that" ? As time is a condition of causality, a line or a multi line chart is a good tool for this one too.</li>
-                      <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason ? Correlation is very similar to causality, except that there is no obvious reason to explain a link between two or more entities.That means that here again, line chart is interesting.</li>
-                      <li>Observe a <strong>deviation</strong>: Does "this" diverge from this reference ? This one is also very close to the evolution one. It's really difficult to imagine a deviation without time, so a line chart seems to be fine.</li>
-                      <li>Explain a <strong>composition</strong>: How is "this" made up of "these" ? Here it's important to make it clear that some elements are actually parts of a whole. A good tool for that is to picture a shape made of sub-shapes. A pie chart is the most common representation.</li>
-                      <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that" ? A distribution usually makes sense on two dimensions. The most simple and flexible representation is probably a simple point. When points are spread on two axis, we call that a scatter plot.</li>
+                      <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that" ?</li>
+                      <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense) ?</li>
+                      <li>Determine a <strong>causality</strong>: What impact has "this" over "that" ?</li>
+                      <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason ?</li>
+                      <li>Observe a <strong>deviation</strong>: Does "this" diverge from this reference ?</li>
+                      <li>Explain a <strong>composition</strong>: How is "this" made up of "these" ?</li>
+                      <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that" ?</li>
                     </ul>
                   </p>
-                  <p>All these ideas of representations are just the most common examples. They work for this kind of messages, but that doesn't mean that we should not try to find something else, something more relevant for a very specific use case. The goal is just to start by defining a type of message, and then by creating an interesting representation based on this message.<br>
-                  Here again, things are not just black or white, and we'll often try to communicate several type of messages (and even several messages of the same type). We'll probably have to create more complex representations to do that (like composing several charts in one for instance). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
+                  <p>Here again, things are not just black or white, and we'll often try to communicate several type of messages (and even several messages of the same type). We'll probably have to create more complex representations to do that (like composing several charts in one for instance). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
                   <p>Some rules of thumb can help to pick the right chart.<br>
                     For instance, some charts use areas to convey more than one variable through a shape (using height to illustrate one variable, and width for another one for instance).</p>
                   <figure>
@@ -160,6 +159,31 @@
                       <!-- <li>It's honest in the way it shows data.</li> -->
                     </ul>
                   </p>
+                  <h3>And how does a visual representation actually convey information ?</h3>
+                  <p>Stephen Few wrote a very interesting paper about <a href="http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf" title="rules for encoding values in graphs">rules for encoding values in graphs</a>. He talks about some kinds of basic visual entities that are used to encode information : points, lines, and bars.<br>
+                  <p>These 3 visual elements are the most common ones, but if we step down one level of abstraction, we can try to define some properties that would help to understand how to convey information in any kind of visual representations.<br>
+                  Four visual properties seem interesting here:
+                    <ul>
+                      <li>The shape</li>
+                      <li>The color</li>
+                      <li>The dimension</li>
+                      <li>The position</li>
+                    </ul>
+                  </p>
+                  <p>Let's study all these properties through an example.</p>
+                  <figure>
+                    <a href="../img/user-driven-dataviz/visual-properties-example.jpg" title="An interesting chart to study visual properties"><img src="../img/user-driven-dataviz/visual-properties-example.jpg" alt="An interesting chart to study visual properties" /></a>
+                    <figcaption>Chart by <a href="http://www.valentinadefilippo.co.uk/">Valentina D'Efilipo</a></figcaption>
+                  </figure>
+                  <p>This chart is really interesting because it leverages all these visual properties to convey meaning.</p>
+                  <p>The shape of a visual element is an amazing tool to create abstractions in many different ways.<br>
+                  Here, we can notice two intersting usages of shapes. First, this graph uses flowers to represent the number of deaths in wars. That's a pure iconic purpose, and that's the most important role of the shape: acting like a placeholder for a concept. That's exactly what happens when we draw countries on a map. The shape of each country helps the reader to create a match between the visual representation and the concept of "France" or "Spain".<br>
+                  We can find another interesting usage of shapes in the way how lines are used to show the duration of the war. A line is a natural way to illustrate a link between entities, and that's why we often use lines to illustrate evolutions (a link between two states in time). Here, lines are used to create a link between a starting date and an ending date.</p>
+                  <p>Colors can be very hard to master. It's tempting to think that colors bring meaning by themselves, because we often associate a color to a feeling, or an object... but it's very easy to confuse a reader who is not able to understand this association. In those cases, colors can be harmful for the readability.<br>
+                  In this graph, colors are used to create categories of elements. That's very efficient, because it's easy to notice color patterns, even when the elements are not close from each other. <br>
+                  But the most basic usage of color is probably to highlight elements. Again, color matching (and thus contrast) is amazingly powerful.</p>
+                  <p>In this graph, the dimensions of the flowers is simply used to illustrate the number of deaths. That's the most basic usage of dimensions, exactly like we do when we encode a value in the height of bars in a bar chart.</p>
+                  <p>Finally, the position of the flowers and their lines tells us where we are in time. Again, that's a very common practice that we can see in most of the line charts.</p>
                   <h3>We know how to map a message to a representation, but how to identify interesting messages in a first place ?</h3>
                   <p>When designing dataviz, Identifying interesting messages in a dataset can be challenging.<br>
                   One of the most famous example of this issue is known as <a href="http://en.wikipedia.org/wiki/Anscombe%27s_quartet" title="Anscomb's Quartet">Anscomb's Quartet</a>.<br>
