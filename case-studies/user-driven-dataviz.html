@@ -45,7 +45,7 @@
             I'll try to explain why I think that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
 
               <h3>But first, what is a dataviz ?</h3>
-              <p>Here is some data.</p>
+              <p>Here are some data.</p>
               <figure>
                 <img src="../img/user-driven-dataviz/table.jpg" alt="Here is a simple dataset" />
                 <!-- <figcaption>Here is a simple dataset</figcaption> -->
@@ -187,11 +187,12 @@
                   <h3>We know how to map a message to a representation, but how to identify interesting messages in a first place ?</h3>
                   <p>When designing dataviz, Identifying interesting messages in a dataset can be challenging.<br>
                   One of the most famous example of this issue is known as <a href="http://en.wikipedia.org/wiki/Anscombe%27s_quartet" title="Anscomb's Quartet">Anscomb's Quartet</a>.<br>
-                  This extrem example shows very well that extracting relevant facts from a dataset can be hard. Actually, the designer is in the shoes of a user alone in front of a raw dataset. This is a clear data exploration use case... but without a lot of tools to explore.</p>
+                  This extrem example shows very well that extracting relevant facts from a dataset can be hard. Actually, the designer is in the shoes of a user alone in front of a raw dataset. This is a clear data exploration use case...</p>
                   <p>There is an interesting approach to adopt in order to frame a dataset and to reveal interesting patterns.<br>
                   As described by Bret Victor in the article <a href="http://worrydream.com/LadderOfAbstraction/" title="Up and Down the Ladder of Abstraction">Up and Down the Ladder of Abstraction</a>: "to understand a system, we must explore it".<br>
                   In this article, Bret Victor explains that we can explore complex systems (like complex datasets) by constantly moving in the level of abstraction that we adopt to represent this system, in order to see and to manipulate different layers of concepts.<br>
-                  There is a lot of ways to visually represent a dataset, and each of these representations stands on a specific level of abstraction: numbers are abstractions of quantities, mean and variance are abstractions of a series of numbers, a table is an abstraction of the structure of these numbers, a line chart is an abstraction of their evolution, a bar chart is an abstraction of their ranking,... when we're trying to know what messages to get from a dataset, it's usually a good idea to explore the dataset through different representations, and thus different level of abstraction, in order to reveal interesting patterns to address.</p>
+                  There is a lot of ways to visually represent a dataset, and each of these representations stands on a specific level of abstraction: numbers are abstractions of quantities, mean and variance are abstractions of a series of numbers, a table is an abstraction of the structure of these numbers, a line chart is an abstraction of their evolution, a bar chart is an abstraction of their ranking,... when we're trying to know what messages to get from a dataset, it's usually a good idea to explore the data through different representations, and thus different level of abstraction, in order to reveal interesting patterns to address.<br>
+                  That's how you realise that a dataset like the one described in Anscomb's Quartet is actually more complex than how it looked at first sight.</p>
                   <h3>So, if I know my use case, and if I know the type of message that I'm trying to address, the rest of the work is just about visual design right ?</h3>
                   <p>Visual design is not the only way to convey information and you should use all the tools available on your medium to achieve this mission.</p>
                   <p>Animations for instance can be an amazing tool.<br>
@@ -215,7 +216,7 @@
                   <p>Interactions are important too, particularly for data exploration. You can engage the user to discover interesting facts by allowing him to actually manipulate the dataset.</p>
                   <p>And what about your "user's flow" ?<br>
                     You don't always have to tell everything in one representation. Complicated problems can easily be split into small parts that become often easier to understand. You can spread representations either in space (show multiple representation in one page for instance), or in time (show a series of representations one after the other). You can also leverage the succession of these representation to create a journey that will also convey a meaning (diving step by step into the details of a value for instance).<br>
-                    The most important thing is that whatever you decide, it has to be intentional and meaningful.</p>
+                    Whatever you decide, it has to be intentional and meaningful.</p>
                   <p>Tools are many, the most important thing is to be conscious of them, and to leverage them as much as possible to achieve the first use case that you defined: data exploration, or data explanation.<br>
                     Because that should always be your first concern when designing something : understanding what you're trying to achieve. Just like the way we switched from data driven to user driven approach in web design 15 years ago (remember old email clients that were just mapping of databases ? What a journey to come to something like Google Inbox!), we need to move away from meaningless and unintentional dataviz to help user driven design of dataviz to become more widespread.<br>
                     The type of data that we want to show should only be a constraint, the use case that we want to address, and thus the user, should always be the driver of a dataviz.</p>
