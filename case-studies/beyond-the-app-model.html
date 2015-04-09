@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Beyond the app model - Julien Zmiro - UX / UI designer and developer</title>
+        <meta name="description" content="Julien Zmiro, UX / UI / product designer and developer.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../css/screen.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="../index.html" title="Back">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="90px" height="90px" viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
+                    <g>
+                        <polygon points="48.152,61.659 50.539,59.841 39.231,45 50.539,30.159 48.152,28.341 35.46,45  "/>
+                    </g>
+                    <path d="M45,5.949c-21.532,0-39.051,17.518-39.051,39.05c0,21.533,17.519,39.052,39.051,39.052c21.533,0,39.05-17.519,39.05-39.052  C84.05,23.467,66.533,5.949,45,5.949z M45,81.268c-19.799,0-35.848-16.237-35.848-36.267S25.201,8.733,45,8.733  c19.798,0,35.849,16.238,35.849,36.268S64.798,81.268,45,81.268z"/>
+                </svg>
+            </a>
+        </nav>
+
+        <section class="csContent">
+            <header>
+                <h1>Beyond the app model</h1>
+                <h2>personal project<span> - 2015</span></h2>
+            </header>
+
+            <p>The model that we use everyday to interact with our "digital asset" is outdated.<br>
+            We've replaced softwares by apps, libraries of softwares (OS) by libraries of apps (mobile OS), physical stores by app stores, clicks by taps,... but the paradigm is always the same.<br>
+            And solutions that worked 15 years ago when we were using Words 3 times per day and Outlook once every 2 hours are not suited for our current usage.<br>
+            How many different products do we use when we're trying to achieve a single goal, like planning a meeting (calendar, emails, maps, contacts, linkedin,...) ?<br>
+            How many time do we miss some opportunities to leverage interesting services because we just don't know about them (a map of transportation in a new city, online payment methods at the restaurant, app of a physical store to find more products,...) ?<br>
+            How many time will we need to browse dozens of apps, or websites to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and time slots to watch a movie,...) ?<br>
+            There is a common flaw in product design: features bloat. Companies often spend a lot of time to add features over features without rethinking the deeper structure of their product, and before they are able to realize it, their products simply became unusable. That's probably a proper metaphor of our relationship with our digital assets. We've added many different services to our lives, and we're starting to realize that the situation is not sustainable because it just requires too much attention.<br>
+            Even if we're probably quite clement with them, the struggle is already real, and we won't be able to handle all these services in the same way when we'll have always more and more devices, more and more different interfaces, and more and more apps and products,...</p>
+
+            <h3>There is a model to reinvent.</h3>
+            <aside>
+              First, let's be clear about two words that we'll be using a lot in this document:
+              <ul>
+                <li>By "products", I'am referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).</li>
+                <li>By "services", I'm referring to end values offered by a product ("Storing emails", "composing and sending emails", "searching in emails" are some examples of services from the products listed above).</li>
+              </ul>
+              For instance, Gmail and Google Inbox are two different products based on (almost) the same services, but offering different ways to leverage them.
+            </aside>
+            <p>Products don't have a lot of reasons to exist beyond the services that they offer to their users. And if we try to imagine another way to interact with our services, products could even be seen as obstacles lying between users and their goals : people need to know about a product before being able to use it; people need to acquire a product; people need to learn how to use this new product; people need to remember the product, to find it and to open it anytime they want to use it; people often need to juggle between different products to achieve a single goal;...</p>
+            <h3>Services as an API</h3>
+            <p>If we push this idea to its limits, we could imagine a world with almost no product as we know them today, and where a kind of unified system would allow people to seamlessly access interesting services, no matter what products offer them, or even on what devices they are available. Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service that is interesting for my current situation exists, and I would just consume this service on the fly. Of course, this model would raise a lot of questions (economic models, onboarding on new services,...), but that's always interesting to have a glance at this kind of long-term perspective.</p>
+            <h3>Let's come back to the reality</h3>
+            <p>Disrupting the model that we use everyday to interact with so many different services is a huge challenge, and the gap is probably too big to make it in one step. If we try to imagine the first steps to go in this direction, we obviously look at OS as they currently are the platforms that shape our relationship with digital services: they define that we should *install* an *app*, and then *open* it when we want to use it; they define that services would be split and *compartmentalized* into apps for instance... these rules come from the good old computer era legacy, but they shape how we behave today, in a very different world.<br>
+            For this reason, OS seem to be a natural starting point when we try to think about a new way to interact with our digital services. They are just in the best position right now to engage any change and to tackle all the problems that we'll meet in this quest.<br>
+            But we have to keep in mind that there could be a lot of different ways... for instance, another really interesting approach is the new direction of Facebook Messenger as a platform, where the paradigm of discussions could be seen as an interesting interface to access services (it could become a kind of personal assistant that handles all my digital life).</p>
+            <h3>Design proposal</h3>
+            <p>Again, the main principles behind this design proposal are not related to any specific product, but as an example, I decided to imagine what a mobile OS could do to remove frictions in the way people access their services.<br>
+            We won't go as far as what we described previously (services as an API), and we'll keep the concept of "app" in our system. Completely removing a concept like this one requires a lot of work on many design challenges, and the point of this study is just to draw the main directions. However, we'll try to remove as much as possible the frictions from the current app based model.<br>
+            This design proposal doesn't really take any kind of constraint, and particularly technical constraints, into account. In that way, it's still a bit science fiction. But we are really close to success in most of the technical challenges that we'll describe there... plus, the principles, more than the practical applications, are the things important here.<br>
+            We also have to keep in mind that we're not trying to redesign every part of the OS (settings, notifications,...). We'll focus our work on the way people access services (discover, acquire, launch, and use services).<br>
+            We won't go too much into details in this document, the goal is mostly to establish the main elements and principles of our design proposal (let's call it "the system" for conveniance): the actions, the cards, the feed, the pull and push mechanisms,...<br>
+            At the end, we'll describe a typical user journey to have a better idea on how our system could help people in daily situations.</p>
+            <h3>The core values</h3>
+            <p>Let's start by defining the most important guidelines that we'll try to follow when we'll design this new system.<br>
+            This system will try to get rid of obstacles lying between people and their services:
+              <ul>
+                <li>By being a single entry point: "No matter what product, or even what device, I can always use the system as an entry point to reach relevant services in a consistent way." Please notice that we talked about accessing services and not products. The difference is important here because the point is to deep link to relevant services within the relevant products... otherwise current mobile OS do a perfect job as app launchers.</li>
+                <li>By helping services discovery: "No matter if I know the product, if there is an interesting service for my current situation, the system will provide it to me."</li>
+                <li>By grouping services: "No matter on how many different products or devices the relevant services are available, I can quickly access and compare those related to a specific "meta-context" (a smart context created by the system)."</li>
+              </ul>
+              In order to do that, we'll have to focus our system on 3 core values:
+              <ul>
+                <li>Relevancy: Suggest the solutions that are interesting for a specific context.</li>
+                <li>Reliability: Build a system that will be able to answer any problem.</li>
+                <li>Consistency: Offer similar ways to interact with the system as much as possible.</li>
+              </ul>
+            </p>
+            <h3>What designing for "the context" really means</h3>
+            <p>When we try to think about what it is to be contextual, we always think about specific situations (that's the definition of "being contextual").<br>
+            But when designing for the context, we tend to think that we have to design with all these situations in mind: "what should we display in that specific case ?", "And how should we handle this specific situation ?",... that's obviously not possible.<br>
+            There are roughly, two ways to handle this situation:
+<!--/TOP
+Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content des formes de couleurs differentes... 1) on fait rentrer les formes dans les cases de la grid en gardant la couleur mais en perdant la richesse de l'info contenue dans la forme 2) on adapte la grid aux differentes formes)
+/-->
+              <ul>
+                <li>By designing a rigid system and making the all different contexts fit to this system. That means that we'll handle informations about a person in the same way than informations about a place or an action. The problem with this solution is that we are rarely able to provide useful answers because we don't adapt the system according to what really matters in a specific context (should we show a map instead of a text based address ? Should we show the whole journey of transportation instead of just the estimated time of arrival ?).</li>
+                <li>By designing a flexible system that fits to all the different contexts. That means to accept the idea that we won't be able to anticipate all the use cases, but provide the tools to answer anything. In that case, the ability of the system to be smart is the key: the more we'll be able to understand a context, the more we'll be able to provide a relevant and a specific answer; when we don't know enough, we'll provide generic fallbacks. We just need to spend more time to design a system that will support this flexibility.</li>
+              </ul>
+            Of course, this is an exaggeration, and most of the time, we'll aim for solutions within the range of this scale. But drawing this line helps to define what's really at stake : consistency vs relevancy.<br>
+            In this proposal, we'll go for the relevancy as a priority, as it's the most interesting value that we want to leverage when talking about contextual awareness.</p>
+<!--/Left
+Une liste d'actions
+/-->
+            <h3>Two types of actions</h3>
+            <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access these services, but we want also to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.<br>
+            We can define two kind of actions:
+            <ul>
+              <li>External actions: Most of the actions that we'll offer to the user will lead to external apps. In that way, the system that we design could be seen as an app launcher, but what really matters here, is that we'll add a smart layer on top of that, so we'll only provide the most relevant actions within the most relevant apps.</li>
+              <li>Internal actions: Again, our goal is to remove anything that is not required to access services. That means that we should not hesitate to offer end services directly within the system (without having to open an app) as much as we can (mostly when the end service is about consuming information and not really taking any action).</li>
+            </ul>
+            In a long-term perspective, we could easily imagine having more and more (almost all) actions handled as internal actions by completely changing the architecture of the relationship between the apps and the OS (services as an API).</p>
+            <h3>A flexible wrapper...</h3>
+            <p>One of the core values of our system will be to gather informations and actions related to specific contexts (for instance: all the different ways to reach a person, all the different transportation options to go somewhere, all the actions and informations related to an email,...). That means that we'll need to create a lot of very different ephemeral groups of content that should help the user to 1) understand what this group is meaning (what concept it is illustrating), 2) understand what actions are available, and 3) choose wisely the best option between those actions. In this document we'll call these groups of content "meta-contexts", because they are illustrating contexts that exist only within our system (most of the time).<br>
+            Meta-contexts can be all very different: they can illustrate a very clear and simple concept (a person, a place,...) or some ideas that are more abstract (a journey, an action like "call", a phone number, or even a text string like the first characters of a phone number,...). Meta-contexts are even used for search results. In this case, we create a meta-context that gathers everything related to the search query (in other words: the search results).<br>
+            Because of this diversity, and because we want to handle each meta-context in the most efficient way, we need to be able to design a flexible wrapper that would fit any kind of content.<br>
+            However, we still want to preserve as much as possible the consistency of our system. The idea is not to be flexible for the sole purpose of being flexible, and we want to diverge only when we have a good reason to do so.<br>
+            There is a balance to find, and we'll try to find it by providing a common structure to all our meta-contexts, and by making of each part of this structure a completely optional module. This way, we'll be able to establish patterns at a macro level (consistency), to adapt our system at micro levels (relevancy), and we'll always have a fallback to handle any kind of content (reliability).</p>
+<!--/TOP
+Images de différents types de cartes
+/-->
+            <h3>...meet the card</h3>
+            <p>Cards are becoming a very common design pattern, and I guess that's because cards act very well when we need to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys very well the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
+            Our meta-contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about a card pattern.</p>
+<!--/Left
+Image d'une card qui sera déconstruite
+/-->
+            <h3>The structure of a card</h3>
+            <p>Let's have a look at the structure of our cards (every part is optional):
+              <ul>
+                <li>Title: The name of the meta-context (person name, place name, search query,...). In case of a search query, we display the title in the search field.</li>
+                <li>Header: Additional information about a meta-context (a map, a photo, an icon, the first lines of an email,...).</li>
+                <li>Subtitle: Small text that gives more informations about the meta-context (why is this person interesting, address of a place,...).</li>
+                <li>Actions: List of actions related to this meta-context. On the feed (we'll explain the feed later), we only display the most relevant actions, and we'll provide secondary actions in the zoom-in view.</li>
+                <li>Zoom-in view: A detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</li>
+              </ul>
+            </p>
+<!--/Top
+Image de deux cards et de leurs zoom-in
+/-->
+            <h3>Zoom on the zoom-in view</h3>
+            <p>The rule is simple: every "more" request (more informations about a meta-context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.<br>
+            The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display.<br>
+            This view is the end point of our "internal actions", and is mostly suited for information consuming and exploring (reading an email, viewing an image, interacting with a map,...).<br>
+            Users can access this view either by taping the header of a card, or by long touching actions. In the later case, they will land on a zoom-in view dedicated to this action with more details about it (the app that will be launched for instance), and with other options when it makes sense (other phone numbers for a call for instance). Keep in mind that we want to help users to access relevant services, thus if we think that some options are important, we should put them as other primary actions of a card (for instance show primary actions for the next 3 metro).</p>
+<!--/Left
+Image animée sur toute la hauteur d'un feed de cards avec de nouvelles cards qui popent
+/-->
+            <h3>A new homescreen: the contextual feed</h3>
+            <p>Bringing directly the most relevant information to the user is always better than asking.<br>
+            The context is the key of our system.<br>
+            Once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to do that is the homescreen of our system. In our system, we'll call it the contextual feed.<br>
+            The contextual feed is just a feed of cards. Cards related to my current context pop at the top of my feed because our system has decided that they are relevant for this specific situation (and this decision is based on many factors like the time, the weather, the place, people or places around me, events that we currently handle as notifications,...). This way, cards never disappear from the contextual feed, they will just gradually be buried inside the feed as they will become less relevant. This mechanism fits really well the idea of "context" because cards that are the most relevant (and probably the most useful) are always within reach, but I still can dig to access previous cards.</p>
+
+<!--/Top
+Image de la search journey
+/-->
+            <h3>Search as main pull paradigm</h3>
+            <p>The contextual feed is clearly a push mechanism (the system pushes information to the user). That's the most important part of a contextual system where most of the content is more valuable when pushed to the user.<br>
+            However, despite all our efforts, we won't be able to answer perfectly all the different use cases that people will come across everyday. We need to provide a way for the user to pull information by himself.<br>
+            Our whole pull mechanism (the user pulls information from the system) is based on a search pattern (actually, that's more a command based pattern). That's risky, because that's really different from the current model of static libraries of icons, but it really makes sense if we want to remove the frictions of the concept of "product". Plus we counterbalance this effect with smart search suggestions that are not based on low value products (we could imagine search suggestions like "Facebook", or "Messenger", or even "All my apps" but it really doesn't make any sense in our proposal), but that are based on high value services ("Go to X", "Meeting with Y", "Z nearby",...).<br>
+            Search suggestions are made of a lot of different things: last search queries, contextual queries (queries interesting for this specific situation like "Set an alarm" depending on the time, or "Pay at Café Saint-Martin",...), and common actions ("Call...", "Go to...", "Nearby...",...). The goal is to avoid to ask the user to actually type something as much as possible (we should also use voice based input of course, but that's a bit out of the scope of this study for now).<br>
+            There are many ways to offer this search mechanism in our system. I have to say that I spent a lot of time on this decision, and I've been through many different approaches, but at the end, I decided to put the search in another screen next to the feed's screen.<br>
+<!--/Top
+Image de la structure des screens en wireframe
+/-->
+            From the screen of the contextual feed, I can just swipe from the right to the left to access the search screen. We could also imagine a third screen, on the other side of the feed, that will let users access all their apps (almost like our current OS homescreens) if we think that it makes sense. Again this part is not really in the scope of this proposal.</p>
+<!--/Top
+Images de différents results
+/-->
+            <h3>Search results</h3>
+            <p>As we described earlier, results of a search query appear wrapped in a card.<br>
+            The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
+            <h3>A typical user journey</h3>
+            <p>Now that we defined the main elements of our design proposal, let's have a look at what that really mean for real life usages.</p>
+
+            <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
+        </section>
+
+        <script>
+            var _gaq=[['_setAccount','UA-6108297-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
