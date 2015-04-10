@@ -90,12 +90,12 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             <p>Of course, this is an exaggeration, and most of the time, we'll aim for solutions within the range of this scale. But drawing this line helps to define what's really at stake : consistency vs relevancy.<br>
             In this proposal, we'll go for the relevancy as a priority, as it's the most interesting value that we want to leverage when talking about contextual awareness.</p>
             <h3>Two types of actions</h3>
-            <figure class="floatL">
-                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions">
-            </figure>
             <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access these services, but we want also to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.</p>
+            <!-- <figure>
+                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions">
+            </figure> -->
             <p>We can define two kind of actions:
-            <ul class="clear">
+            <ul>
               <li>External actions: Most of the actions that we'll offer to the user will lead to external apps. In that way, the system that we design could be seen as an app launcher, but what really matters here, is that we'll add a smart layer on top of that, so we'll only provide the most relevant actions within the most relevant apps.</li>
               <li>Internal actions: Again, our goal is to remove anything that is not required to access services. That means that we should not hesitate to offer end services directly within the system (without having to open an app) as much as we can (mostly when the end service is about consuming information and not really taking any action).</li>
             </ul>
@@ -108,14 +108,14 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             However, we still want to preserve as much as possible the consistency of our system. The idea is not to be flexible for the sole purpose of being flexible, and we want to diverge only when we have a good reason to do so.<br>
             There is a balance to find, and we'll try to find it by providing a common structure to all our meta-contexts, and by making of each part of this structure a completely optional module. This way, we'll be able to establish patterns at a macro level (consistency), to adapt our system at micro levels (relevancy), and we'll always have a fallback to handle any kind of content (reliability).</p>
             <h3>...meet the card</h3>
-            <figure class="floatL">
+            <figure>
                 <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards">
             </figure>
             <p>Cards are a very common design pattern. That's probably because cards act very well when we need to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys very well the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
             Our meta-contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about a card pattern.</p>
             <h3>The structure of a card</h3>
             <p>Let's have a look at the structure of our cards (every part is optional):</p>
-            <figure class="floatL">
+            <figure>
                 <img src="../img/beyond-the-app-model/03-card-structure.png" alt="Examples of actions">
             </figure>
             <ol>
@@ -123,9 +123,9 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
               <li>Header: Additional information about a meta-context (a map, a photo, the first lines of an email, address of a place,...).</li>
               <li>Actions: List of actions related to this meta-context. On the feed (we'll explain the feed later), we only display the most relevant actions, and we'll provide secondary actions in the zoom-in view.</li>
             </ol>
-            <p class="clear">By taping the card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
+            <p>By taping the card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
             <h3>Zoom on the zoom-in view</h3>
-            <figure class="floatL">
+            <figure>
                 <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views">
             </figure>
             <p>The rule is simple: every "more" request (more informations about a meta-context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.<br>
@@ -158,14 +158,41 @@ Image de la structure des screens en wireframe
             The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
             <h3>A typical user journey</h3>
             <p>Now that we defined the main elements of our design proposal, let's have a look at what that really means in real life situations.</p>
-<!--/Left
-Les commentaires ci-dessous en caption des images plutot
-/-->
-            <p>Every morning, when I check my phone for the first time, I can access interesting information to start the day : the weather, my calendar of the day, the latest news,...</p>
-            <p>Later on the morning, when I'm about to leave, a new card pop on my feed to suggest the best way to go to work.</p>
-            <p>Whenever I receive an important email, a card pop on my screen. Depending on the importance of the content, the OS notifies me of this new card. From the card, I can directly access interesting next steps: reply, add an event to my calendar, get the direction to a place mentionned in the email,...</p>
-            <p>I want to lunch in a restaurant that a friend told me about. I can easily gather all the relevant informations with the search mechanism.</p>
-            <p>When I'm doing some shopping at Zara, I can't find the products that I noticed on the website. On my feed, the system provides me a card with services from the Zara's app, and I can find the products that I was looking for without having to install the app (I don't even know that an app exists).</p>
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/05-uj-morning.png" alt="My contextual feed on the morning">
+              </figure>
+              <p>Every morning, when I check my phone for the first time, I can access interesting information to start the day : the weather, my calendar of the day, the latest news,...</p>
+              <br class="clear">
+            </div>
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/06-uj-transportation.png" alt="Transportation card">
+              </figure>
+              <p>Later on the morning, when I'm about to leave, a new card pop on my feed to suggest the best way to go to work.</p>
+              <br class="clear">
+            </div>
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/07-uj-email.png" alt="Email card">
+              </figure>
+              <p>Whenever I receive an important email, a card pop on my screen. Depending on the importance of the content, the OS notifies me of this new card. From the card, I can directly access interesting next steps: reply, add an event to my calendar, get the direction to a place mentionned in the email,...</p>
+              <br class="clear">
+            </div>
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/08-uj-search.png" alt="Search">
+              </figure>
+              <p>I want to lunch in a restaurant that a friend told me about. I can easily gather all the relevant informations with the search mechanism.</p>
+              <br class="clear">
+            </div>
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card">
+              </figure>
+              <p>I'm looking for a gift at Zara, and I can't find the products that I noticed on the website. On my feed, the system provides me a card with services from the Zara's app, and I can find the products that I was looking for without having to install the app (I don't even know that an app exists).</p>
+              <br class="clear">
+            </div>
 
             <p>Of course, this design proposal still raises a lot questions, and this kind of approach would require way more work in order to answer all of them properly. The idea here is just to start to look in new directions (and there are a lot of other directions...).</p>
             <p>There is a famous quote from Marshall McLuhan stating that "all media are extensions of some human faculty". Wilson Miner has very well seized the essence of this quote in his talk <a href="https://vimeo.com/34017777#t=8m0s" title="When we build">"When we build"</a>.<br>

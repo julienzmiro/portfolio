@@ -534,6 +534,29 @@ nav svg {
   margin: 90px 0;
 }
 
+.ujContainer {
+  height: 857px;
+}
+.ujContainer p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+@media all and (max-width: 999px) {
+  .ujContainer {
+    height: auto;
+    text-align: center;
+  }
+  .ujContainer figure.floatL{
+    float: none;
+    margin: 60px auto 15px;
+  }
+  .ujContainer p {
+    position: static;
+    -webkit-transform: translateY(0);
+  }
+}
+
 @media all and (max-width: 499px) {
   section {
     width: 90%;
