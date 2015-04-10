@@ -719,6 +719,14 @@ a, a:focus, a img, a:focus img {
 strong {
   font-weight: 400; }
 
+.csContent figure.floatL {
+  float: left;
+  margin-right: 6%;
+  margin-top: 0; }
+
+.clear {
+  clear: both; }
+
 #introScreen {
   padding: 180px 0; }
 

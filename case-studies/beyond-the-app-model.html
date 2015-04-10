@@ -38,19 +38,9 @@
             How many time do we miss some opportunities to leverage interesting services because we just don't know about them (a map of transportation in a new city, online payment methods at the restaurant, app of a physical store to find more products,...) ?<br>
             How many time will we need to browse dozens of apps, or websites to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and time slots to watch a movie,...) ?</p>
             <p>
-            <!--There is a common flaw in product design: features bloat.<br>
-            Companies often spend a lot of time to add features over features without rethinking the deeper structure of their product, and before they are able to realize it, their products simply became unusable. That's probably a proper metaphor of our relationship with our digital assets. We've added many different services to our lives, and we're starting to realize that the situation is not sustainable because it just requires too much attention.<br>-->
             Even if we're probably quite clement with them, the struggle is already real, and we won't be able to handle all these services in the same way when we'll have always more and more devices, more and more different interfaces, and more and more apps and products,...</p>
 
             <h3>There is a model to reinvent.</h3>
-            <!-- <aside>
-              First, let's be clear about two words that we'll be using a lot in this document:
-              <ul>
-                <li>By "products", I'am referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).</li>
-                <li>By "services", I'm referring to end values offered by a product ("Storing emails", "composing and sending emails", "searching in emails" are some examples of services from the products listed above).</li>
-              </ul>
-              For instance, Gmail and Google Inbox are two different products based on (almost) the same services, but offering different ways to leverage them.
-            </aside> -->
             <p>First, let's be clear about two words that we'll be using a lot in this document:<br>
             By "products", I'am referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).<br>
             By "services", I'm referring to end values offered by a product ("Storing emails", "composing and sending emails", "searching in emails" are some examples of services from the products listed above).<br>
@@ -99,13 +89,13 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             </p>
             <p>Of course, this is an exaggeration, and most of the time, we'll aim for solutions within the range of this scale. But drawing this line helps to define what's really at stake : consistency vs relevancy.<br>
             In this proposal, we'll go for the relevancy as a priority, as it's the most interesting value that we want to leverage when talking about contextual awareness.</p>
-<!--/Left
-Une liste d'actions
-/-->
             <h3>Two types of actions</h3>
+            <figure class="floatL">
+                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions">
+            </figure>
             <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access these services, but we want also to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.</p>
             <p>We can define two kind of actions:
-            <ul>
+            <ul class="clear">
               <li>External actions: Most of the actions that we'll offer to the user will lead to external apps. In that way, the system that we design could be seen as an app launcher, but what really matters here, is that we'll add a smart layer on top of that, so we'll only provide the most relevant actions within the most relevant apps.</li>
               <li>Internal actions: Again, our goal is to remove anything that is not required to access services. That means that we should not hesitate to offer end services directly within the system (without having to open an app) as much as we can (mostly when the end service is about consuming information and not really taking any action).</li>
             </ul>
@@ -117,29 +107,27 @@ Une liste d'actions
             Because of this diversity, and because we want to handle each meta-context in the most efficient way, we need to be able to design a flexible wrapper that would fit any kind of content.<br>
             However, we still want to preserve as much as possible the consistency of our system. The idea is not to be flexible for the sole purpose of being flexible, and we want to diverge only when we have a good reason to do so.<br>
             There is a balance to find, and we'll try to find it by providing a common structure to all our meta-contexts, and by making of each part of this structure a completely optional module. This way, we'll be able to establish patterns at a macro level (consistency), to adapt our system at micro levels (relevancy), and we'll always have a fallback to handle any kind of content (reliability).</p>
-<!--/TOP
-Images de différents types de cartes
-/-->
             <h3>...meet the card</h3>
+            <figure class="floatL">
+                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards">
+            </figure>
             <p>Cards are a very common design pattern. That's probably because cards act very well when we need to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys very well the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
             Our meta-contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about a card pattern.</p>
-<!--/Left
-Image d'une card qui sera déconstruite
-/-->
             <h3>The structure of a card</h3>
-            <p>Let's have a look at the structure of our cards (every part is optional):
-              <ul>
-                <li>Title: The name of the meta-context (person name, place name, search query,...). In case of a search query, we display the title in the search field.</li>
-                <li>Header: Additional information about a meta-context (a map, a photo, an icon, the first lines of an email,...).</li>
-                <li>Subtitle: Small text that gives more informations about the meta-context (why is this person interesting, address of a place,...).</li>
-                <li>Actions: List of actions related to this meta-context. On the feed (we'll explain the feed later), we only display the most relevant actions, and we'll provide secondary actions in the zoom-in view.</li>
-                <li>Zoom-in view: A detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</li>
-              </ul>
-            </p>
-<!--/Top
-Image de deux cards et de leurs zoom-in
-/-->
+            <p>Let's have a look at the structure of our cards (every part is optional):</p>
+            <figure class="floatL">
+                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="Examples of actions">
+            </figure>
+            <ol>
+              <li>Title: The name of the meta-context (person name, place name, search query,...).</li>
+              <li>Header: Additional information about a meta-context (a map, a photo, the first lines of an email, address of a place,...).</li>
+              <li>Actions: List of actions related to this meta-context. On the feed (we'll explain the feed later), we only display the most relevant actions, and we'll provide secondary actions in the zoom-in view.</li>
+            </ol>
+            <p class="clear">By taping the card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
             <h3>Zoom on the zoom-in view</h3>
+            <figure class="floatL">
+                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views">
+            </figure>
             <p>The rule is simple: every "more" request (more informations about a meta-context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.<br>
             The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display.<br>
             This view is the end point of our "internal actions", and is mostly suited for information consuming and exploring (reading an email, viewing an image, interacting with a map,...).<br>
@@ -153,7 +141,7 @@ Image animée sur toute la hauteur d'un feed de cards avec de nouvelles cards qu
             The contextual feed is just a feed of cards. Cards related to my current context pop at the top of my feed because our system has decided that they are relevant for this specific situation (and this decision is based on many factors like the time, the weather, the place, people or places around me, events that we currently handle as notifications,...). This way, cards never disappear from the contextual feed, they will just gradually be buried inside the feed as they will become less relevant. This mechanism fits really well the idea of "context" because cards that are the most relevant (and probably the most useful) are always within reach, but I still can dig to access previous cards.</p>
             <p>The contextual feed is also helpful to discover interesting services. Even if the app is not installed on the phone, the system will suggest interesting services to the user by pushing cards in the feed when they make sense (even if that means that some of these cards will ask to install the app in a first time because of technical constraints).</p>
 <!--/Top
-Image de la search journey
+Image animée de la search journey
 /-->
             <h3>Search as main pull paradigm</h3>
             <p>The contextual feed is clearly a push mechanism (the system pushes information to the user). That's the most important part of a contextual system where most of the content is more valuable when pushed to the user.<br>
@@ -165,9 +153,6 @@ Image de la search journey
 Image de la structure des screens en wireframe
 /-->
             From the contextual feed, I can just swipe from the right to the left to access the search screen. We could also imagine a third screen, on the other side of the feed, that will let users access all their apps (almost like our current OS homescreens) if we think that it makes sense.</p>
-<!--/Top
-Images de différents results
-/-->
             <h3>Search results</h3>
             <p>As we described earlier, results of a search query appear wrapped in a card.<br>
             The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
@@ -184,7 +169,7 @@ Les commentaires ci-dessous en caption des images plutot
 
             <p>Of course, this design proposal still raises a lot questions, and this kind of approach would require way more work in order to answer all of them properly. The idea here is just to start to look in new directions (and there are a lot of other directions...).</p>
             <p>There is a famous quote from Marshall McLuhan stating that "all media are extensions of some human faculty". Wilson Miner has very well seized the essence of this quote in his talk <a href="https://vimeo.com/34017777#t=8m0s" title="When we build">"When we build"</a>.<br>
-            With so many new services and devices available, our faculties have obviously been extended, but we are not able to leverage all these new opportunities properly. We have superpowers within our hands, but we are still trying to behave according to the same old patterns.<br>
+            With so many new services and devices available, our faculties have obviously been extended, but we are no longer able to leverage all these new opportunities properly. We have superpowers within our hands, but we are still trying to behave according to the same old patterns.<br>
             We need to rethink the way we interact with our digital services, and we need to build a whole eco-system, with its own agents, rules and patterns, that will help us to live more efficiently with our new modern superpowers.</p>
 
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
