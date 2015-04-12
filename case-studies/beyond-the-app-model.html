@@ -36,22 +36,23 @@
             <p>
             How many different products do we use when we're trying to achieve a single goal, like planning a meeting (calendar, emails, maps, contacts, linkedin,...) ?<br>
             How many time do we miss some opportunities to leverage interesting services because we just don't know about them (a map of transportation in a new city, online payment methods at the restaurant, app of a physical store to find more products,...) ?<br>
-            How many screens will we need to browse to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and their respective time slots to watch a movie,...) ?</p>
+            How many screens do we need to browse to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and their respective time slots to watch a movie,...) ?</p>
             <p>
             Even if we're probably quite clement with them, the struggle is already real, and we won't be able to handle all these services in the same way when we'll have always more and more devices, more and more different interfaces, and more and more apps and products,...</p>
 
             <h3>There is a model to reinvent.</h3>
             <p>First, let's be clear about two words that we'll be using a lot in this document:<br>
-            By "products", I'am referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).<br>
+            By "products", I'm referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).<br>
             By "services", I'm referring to end values offered by a product ("Storing emails", "composing and sending emails", "searching in emails" are some examples of services from the products listed above).<br>
             For instance, Gmail and Google Inbox are two different products based on (almost) the same services, but offering different ways to interact with them.</p>
             <p>Products don't have a lot of reasons to exist beyond the services that they offer to their users. And if we try to imagine another way to interact with our services, products could even be seen as obstacles lying between users and their goals : people need to know about a product before being able to use it; people need to acquire a product; people need to learn how to use this new product; people need to remember the product, to find it and to open it anytime they want to use it; people often need to juggle between different products to achieve a single goal;...</p>
             <h3>Services as an API</h3>
             <p>If we push this idea to its limits, we could imagine a world with almost no products as we know them today, and where a kind of unified system would allow people to seamlessly access interesting services, no matter what products offer them, or even on what devices they are available.<br>
-            Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service that is interesting for my current situation exists, and I would just consume this service on the fly. We would shift from a paradigm based on the compartmentalization of services in apps to a paradigm based on the distribution of services in contextual streams.</p>
+            Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service that is interesting for my current situation exists, and I would just consume this service on the fly. We would shift from a paradigm based on the compartmentalization of services into apps, to a paradigm based on the distribution of services into contextual streams.</p>
             <p>Of course, this model would raise a lot of questions (economic models, onboarding on new services,...), but that's always interesting to have a glance at this kind of long-term perspective.</p>
             <h3>Let's come back to the reality</h3>
-            <p>Disrupting the model that we use everyday to interact with so many different services is a huge challenge, and the gap is probably too big to tackle it in one time. If we try to imagine the first steps to go in this direction, we obviously look at mobile OS as they currently are the platforms that rule our relationship with digital services: they define that we should <strong>install</strong> an <strong>app</strong>, and then <strong>open</strong> it when we want to use it; they define that services would be split and <strong>compartmentalized</strong> into apps for instance... these rules come from the good old computer era legacy, but they shape how we behave today, in a very different world.<br>
+            <p>Disrupting the model that we use everyday to interact with so many different services is a huge challenge, and the gap is probably too big to tackle it in one time.<br>
+            If we try to imagine the first steps to go in this direction, we obviously look at mobile OS as they currently are the platforms that rule our relationship with digital services: they define that we should <strong>install</strong> an <strong>app</strong>, and then <strong>open</strong> it when we want to use it for instance... these rules come from the good old computer era legacy, but they shape how we behave today, in a very different world.<br>
             For this reason, mobile OS seem to be a natural starting point when we try to think about a new way to interact with our digital services. They are just in the best position right now to engage any change and to tackle all the problems that we'll meet in this quest.</p>
             <p>But we have to keep in mind that there could be a lot of different ways... for instance, another really interesting approach is the new direction of Facebook Messenger as a platform, where the paradigm of discussions could be seen as an interesting interface to access services.</p>
             <h3>Design proposal</h3>
@@ -101,7 +102,7 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
               <li>Internal actions: Again, our goal is to remove anything that is not required to access services. That means that we should not hesitate to offer end services directly within the system (without having to open an app) as much as we can (mostly when the end service is about consuming information and not really taking any action).</li>
             </ul>
             </p>
-            <p>In a long-term perspective, we could easily imagine having more and more (almost all) actions handled as internal actions by completely changing the architecture of the relationship between the apps and the OS (services as an API).</p>
+            <p>In a long-term perspective, we could easily imagine having more and more (almost all) actions handled as internal actions by completely changing the architecture of the relationship between the services and the OS (services as an API).</p>
             <h3>A flexible wrapper...</h3>
             <p>One of the core values of our system will be to gather informations and actions related to specific contexts (for instance: all the different ways to reach a person, all the different transportation options to go somewhere, all the actions and informations related to an email,...). That means that we'll need to create a lot of very different ephemeral groups of content that should help the user to 1) understand what this group is meaning (what concept it is illustrating), 2) understand what actions are available, and 3) choose wisely the best option between those actions. In this document we'll call these groups of content "meta-contexts", because they are illustrating contexts that exist only within our system (most of the time).</p>
             <p>Meta-contexts can be all very different: they can illustrate a very clear and simple concept (a person, a place,...) or some ideas that are more abstract (a journey, an action like "call", a phone number, or even a text string like the first characters of a phone number,...). Meta-contexts are even used for search results. In this case, we create a meta-context that gathers everything related to the search query (in other words: the search results).</p>
@@ -173,6 +174,15 @@ Image de la structure des screens en wireframe
               <p>Later on the morning, when I'm about to leave, a new card pop on my feed to suggest the best way to go to work.</p>
               <br class="clear">
             </div>
+
+            <div class="ujContainer">
+              <figure class="floatL">
+                  <img src="../img/beyond-the-app-model/06-uj-transportation.png" alt="Transportation card">
+              </figure>
+              <p>I can zoom-in the card to access more transportation options.</p>
+              <br class="clear">
+            </div>
+
             <div class="ujContainer">
               <figure class="floatL">
                   <img src="../img/beyond-the-app-model/07-uj-email.png" alt="Email card">
@@ -191,12 +201,12 @@ Image de la structure des screens en wireframe
               <figure class="floatL">
                   <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card">
               </figure>
-              <p>I'm looking for a gift at Zara, and I can't find the products that I noticed on the website. On my feed, the system provides me a card with services from the Zara's app, and I can find the products that I was looking for without having to install the app (I don't even know that an app exists).</p>
+              <p>I'm looking for a gift at Zara, but I can't find the products that I noticed on the website. On my feed, the system provides me a card with services from the Zara's app, and I can find the products that I was looking for without having to install the app (I don't even know that an app exists).</p>
               <br class="clear">
             </div>
 
             <p>Of course, this design proposal still raises a lot questions, and this kind of approach would require way more work in order to answer all of them properly. The idea here is just to start to look in new directions (and there are a lot of other directions...).</p>
-            <p>There is a famous quote from Marshall McLuhan stating that "all media are extensions of some human faculty". Wilson Miner has very well seized the essence of this quote in his talk <a href="https://vimeo.com/34017777#t=8m0s" title="When we build">"When we build"</a>.<br>
+            <p>There is a famous quote from Marshall McLuhan stating that "all media are extensions of some human faculty". Wilson Miner has perfectly seized the essence of this quote in his talk <a href="https://vimeo.com/34017777#t=8m0s" title="When we build">"When we build"</a>.<br>
             With so many new services and devices available, our faculties have obviously been extended, but we are no longer able to leverage all these new opportunities properly. We have superpowers within our hands, but we are still trying to behave according to the same old patterns.<br>
             We need to rethink the way we interact with our digital services, and we need to build a whole eco-system, with its own agents, rules and patterns, that will help us to live more efficiently with our new modern superpowers.</p>
 
