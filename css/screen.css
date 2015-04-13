@@ -1184,7 +1184,8 @@ nav svg {
   margin: 90px 0; }
 
 .ujContainer {
-  height: 857px; }
+  height: 857px;
+  margin-top: 60px; }
 
 .ujContainer p {
   position: relative;
