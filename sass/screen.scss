@@ -192,10 +192,10 @@ strong {
   left: 50%;
   opacity: 0;
   border-bottom: 1px solid $bgColor;
-  -webkit-transform: translateX(-50%) translateY(-35px) translateZ(0);
-  -moz-transform: translateX(-50%) translateY(-35px) translateZ(0);
-  -o-transform: translateX(-50%) translateY(-35px) translateZ(0);
-  transform: translateX(-50%) translateY(-35px) translateZ(0);
+  -webkit-transform: translateX(-50%) translateY(-25px) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-25px) translateZ(0);
+  -o-transform: translateX(-50%) translateY(-25px) translateZ(0);
+  transform: translateX(-50%) translateY(-25px) translateZ(0);
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -205,11 +205,138 @@ strong {
 }
 .csScreen:hover .hoverLabel {
   position: absolute;
-  -webkit-transform: translateX(-50%) translateY(-45px) translateZ(0);
-  -moz-transform: translateX(-50%) translateY(-45px) translateZ(0);
-  -o-transform: translateX(-50%) translateY(-45px) translateZ(0);
-  transform: translateX(-50%) translateY(-45px) translateZ(0);
+  -webkit-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  -moz-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  -o-transform: translateX(-50%) translateY(-35px) translateZ(0);
+  transform: translateX(-50%) translateY(-35px) translateZ(0);
   opacity: 1;
+}
+
+#csBeyondApp {
+  background: #485FA0;
+}
+#beyondAppPhone {
+  width: 84px;
+  height: 140px;
+  background: transparent;
+  border: 4px solid white;
+  border-radius: 9px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+#beyondAppPhone div {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  margin: 0;
+  position: absolute;
+  // -webkit-transition: top .3s, left .3s;
+  // -moz-transition: top .3s, left .3s;
+  // -o-transition: top .3s, left .3s;
+  // transition: top .3s, left .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+#beyondAppPhone div:nth-child(1) {
+  top: 25px;
+  left: 8px;
+}
+#beyondAppPhone div:nth-child(2) {
+  top: 25px;
+  left: 32px;
+}
+#beyondAppPhone div:nth-child(3) {
+  top: 25px;
+  left: 56px;
+}
+#beyondAppPhone div:nth-child(4) {
+  top: 49px;
+  left: 8px;
+}
+#beyondAppPhone div:nth-child(5) {
+  top: 49px;
+  left: 32px;
+}
+#beyondAppPhone div:nth-child(6) {
+  top: 49px;
+  left: 56px;
+}
+#beyondAppPhone div:nth-child(7) {
+  top: 73px;
+  left: 8px;
+}
+#beyondAppPhone div:nth-child(8) {
+  top: 73px;
+  left: 32px;
+}
+#beyondAppPhone div:nth-child(9) {
+  top: 73px;
+  left: 56px;
+}
+#beyondAppPhone div:nth-child(10) {
+  top: 97px;
+  left: 8px;
+}
+#beyondAppPhone div:nth-child(11) {
+  top: 97px;
+  left: 32px;
+}
+#beyondAppPhone div:nth-child(12) {
+  top: 97px;
+  left: 56px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(1) {
+  left: -30px;
+  top: -20px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(2) {
+  width: 64px;
+  left: 8px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(3) {
+  left: 100px;
+  top: -20px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(4) {
+  left: -40px;
+  top: 35px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(5) {
+  width: 64px;
+  left: 8px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(6) {
+  left: 120px;
+  top: 45px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(7) {
+  left: -60px;
+  top: 75px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(8) {
+  width: 64px;
+  left: 8px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(9) {
+  left: 95px;
+  top: 88px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(10) {
+  left: -75px;
+  top: 135px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(11) {
+  width: 64px;
+  left: 8px;
+}
+#csBeyondApp:hover #beyondAppPhone div:nth-child(12) {
+  left: 98px;
+  top: 145px;
 }
 
 #csPPDocumentation {
@@ -231,15 +358,15 @@ strong {
 }
 #ppFile1 {
   bottom: 10px;
-  right: 10px;
+  right: 0px;
 }
 #ppFile2 {
   bottom: 20px;
-  right: 20px;
+  right: 10px;
 }
 #ppFile3 {
   bottom: 30px;
-  right: 30px;
+  right: 20px;
 }
 #csPPDocumentation:hover #ppFile1 {
   -webkit-transform: translateX(10px) translateY(10px);
