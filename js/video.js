@@ -5,7 +5,7 @@
     var v = document.getElementsByClassName("videoFigure");
 
     // Flush the event cache
-    // addEvent(window, 'unload', EventCache.flush);
+    addEvent(window, 'unload', EventCache.flush);
 
     // Listen the resize event on the window
     for (i = 0; i < v.length; ++i) {
