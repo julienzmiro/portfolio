@@ -10,6 +10,7 @@
         <meta name="description" content="Julien Zmiro, UX / UI / product designer and developer.">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/screen.css">
+        <script src="../js/video.js"></script>
     </head>
     <body>
 
@@ -96,16 +97,19 @@
             <p>One major improvements that our new medium can bring, comes from animations.<br>
             We are now able to convey information in the way we animate our charts.</p>
             <p>For instance, the marimekko chart has always been one of the most difficult to understand. Beyond the difficulty to compare areas, the problem is that there is a lot of dimensions (a measure, some categories, some sub categories for each category,...), and the relationship between each of them is not clear.</p>
-            
+
             <figure>
                 <img src="../img/crafting-charts/mekko.png" alt="Marimekko chart">
                 <figcaption>It's very difficult to understand the relationship between elements of this chart.</figcaption>
             </figure>
 
             <p>By animating the way we build the chart, we can help to explain how it should be read.</p>
-            <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg" controls>
-              <source src="../img/user-driven-dataviz/marimekko-anim.mp4" type="video/mp4">
-            </video>
+            <figure class="videoFigure">
+              <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg">
+                <source src="../img/user-driven-dataviz/marimekko-anim.mp4" type="video/mp4">
+              </video>
+              <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
+            </figure>
             <p>We start by showing main categories from the left to the right, and then we draw sub categories inside each category from the bottom to the top.</p>
 
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
