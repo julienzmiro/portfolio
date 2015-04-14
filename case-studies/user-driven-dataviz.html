@@ -10,6 +10,7 @@
         <meta name="description" content="Julien Zmiro, UX / UI / product designer and developer.">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/screen.css">
+        <script src="../js/video.js"></script>
     </head>
     <body>
 
@@ -202,12 +203,13 @@
                   </figure>
                   <p>Beyond the difficulty to compare areas, the problem is that there is a lot of dimensions (a measure, some categories, some sub categories for each category,...), and the relationship between each of them is not clear.</p>
                   <p>Let's see how animation could help us here with this very simple example:</p>
-                  <figure>
+                  <figure class="videoFigure">
                     <!-- <img src="../img/user-driven-dataviz/marimekko-anim.gif" alt="Animations convey a lot of information when they're used properly" /> -->
-                    <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg" controls>
+                    <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg">
                       <source src="../img/user-driven-dataviz/marimekko-anim.mp4" type="video/mp4">
                     </video>
                     <figcaption>Animations convey a lot of information when they're used properly</figcaption>
+                    <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
                   </figure>
                   <p>By animating the way we show all the elements of this chart, we can help the user to understand relationships between them : we start by showing main categories from the left to the right, and then we draw sub categories inside each category from the bottom to the top.</p>
                   <p>Copywriting is also very important.<br>
