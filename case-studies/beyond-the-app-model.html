@@ -39,21 +39,20 @@
             How many time do we miss some opportunities to leverage interesting services because we just don't know about them (a map of transportation in a new city, online payment methods at the restaurant, app of a physical store to find more products,...) ?<br>
             How many screens do we need to browse to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and their respective time slots to watch a movie,...) ?</p>
             <p>
-            Even if we're probably quite clement with them, the struggle is already real, and we won't be able to handle all these services in the same way when we'll have always more and more devices, more and more different interfaces, and more and more apps and products,...</p>
+            The struggle is already real, and we won't be able to handle all these services in the same way when we'll have always more and more devices, more and more different interfaces, and more and more apps and products,...</p>
 
             <h3>There is a model to reinvent.</h3>
             <p>First, let's be clear about two words that we'll be using a lot in this document:<br>
             By "products", I'm referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).<br>
             By "services", I'm referring to end values offered by a product ("Storing emails", "composing and sending emails", "searching in emails" are some examples of services from the products listed above).<br>
             For instance, Gmail and Google Inbox are two different products based on (almost) the same services, but offering different ways to interact with them.</p>
-            <p>Products don't have a lot of reasons to exist beyond the services that they offer to their users. And if we try to imagine another way to interact with our services, products could even be seen as obstacles: people need to know about a product before being able to use it; people need to acquire the product; people need to learn how to use this new product; people need to remember the product, to find it and to open it anytime they want to use it; people often need to juggle between different products to achieve a single goal;...</p>
+            <p>Products don't have a lot of reasons to exist beyond the services that they offer to their users. And if we try to imagine another way to interact with our services, products could even be seen as obstacles: people need to know about a product before being able to take advantage of its services; people need to acquire the product; people need to learn how to use this new product; people need to remember the product, to find it and to open it anytime they want to use it; people often need to juggle between different products to achieve a single goal;...</p>
             <h3>Services as an API</h3>
             <p>If we push this idea to its limits, we could imagine a world with almost no products as we know them today, and where a kind of unified system would allow people to seamlessly access interesting services, no matter what products offer them, or even on what devices they are available.<br>
             Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service that is interesting for my current situation exists, and I would just consume this service on the fly. We would shift from a paradigm based on the compartmentalization of services into apps, to a paradigm based on the distribution of services into contextual streams.</p>
             <p>Of course, this model would raise a lot of questions (economic models, onboarding on new services,...), but that's always interesting to have a glance at this kind of long-term perspective.</p>
             <h3>The Orchestra conductor</h3>
-            <p>There is something amazing about smart objects: they bring back the most suited physical interfaces to daily use cases, while keeping the value of the connection with other systems that initially forced us to put them under flat screens.<br>
-              <!-- where we've been using flat screens for many years -->
+            <p>There is something amazing about smart objects: they bring back the most suited physical interfaces to daily use cases, while keeping the value of the connection with other systems that initially forced us to put their services under flat screens.<br>
             Because we'll put a computer everywhere (see <a href="http://www.conceptkitchen2025.com/" title="the kitchen of 2025">the kitchen of 2025</a> for instance), we'll need an "orchestra conductor" to handle all the synchronisation work for us.</p>
             <p>All these small pieces of smart technologies will probably already bring a lot of value as self-sufficient systems, but they could become incredibly helpful for people by acting all together as a single brain (just because we won't be able to handle this synchronisation work by ourselves).<br>
             We'll need to design a protocol, to build a system that would allow us to live peacefuly with so many technologies and to focus on what really matters: the end services.</p>
@@ -80,7 +79,7 @@
               In order to do that, we'll have to focus our system on 3 core values:
               <ul>
                 <li>Relevancy: Suggest the solutions that are interesting for a specific context.</li>
-                <li>Reliability: Build a system that will be able to answer any problem.</li>
+                <li>Reliability: Build a system that will be able to answer any situation.</li>
                 <li>Consistency: Offer similar ways to interact with the system as much as possible.</li>
               </ul>
             </p>
@@ -111,7 +110,7 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             </p>
             <p>In a long-term perspective, we could easily imagine having more and more (almost all) actions handled as internal actions by completely changing the architecture of the relationship between the services and the OS (services as an API).</p>
             <h3>A flexible wrapper...</h3>
-            <p>One of the core values of our system will be to gather informations and actions related to specific contexts (for instance: all the different ways to reach a person, all the different transportation options to go somewhere, all the actions and informations related to an email,...). That means that we'll need to create a lot of very different ephemeral groups of content that should help the user to 1) understand what this group is meaning (what concept it is illustrating), 2) understand what actions are available, and 3) choose wisely the best option between those actions. In this document we'll call these groups of content "meta-contexts", because they are illustrating contexts that exist only within our system (most of the time).</p>
+            <p>One of the core values of our system will be to gather informations and actions related to specific contexts (for instance: all the different transportation options to go somewhere, all the actions and informations related to an email,...). That means that we'll need to create a lot of very different ephemeral groups of content that should help the user to 1) understand what this group is meaning (what concept it is illustrating), 2) understand what actions are available, and 3) choose wisely the best option between those actions. In this document we'll call these groups of content "meta-contexts", because they are illustrating contexts that exist only within our system (most of the time).</p>
             <p>Meta-contexts can be all very different: they can illustrate a very clear and simple concept (a person, a place,...) or some ideas that are more abstract (a journey, an action like "call", a phone number, or even a text string like the first characters of a phone number,...). Meta-contexts are even used for search results. In this case, we create a meta-context that gathers everything related to the search query (in other words: the search results).</p>
             <p>Because of this diversity, and because we want to handle each meta-context in the most efficient way, we need to be able to design a flexible wrapper that would fit any kind of content.<br>
             However, we still want to preserve as much as possible the consistency of our system. The idea is not to be flexible for the sole purpose of being flexible, and we want to diverge only when we have a good reason to do so.<br>
@@ -140,7 +139,7 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             <p>The rule is simple: every "more" request (more informations about a meta-context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.</p>
             <p>The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display.</p>
             <p>This view is the end point of our "internal actions", and is mostly suited for information consuming and exploring (reading an email, viewing an image, interacting with a map,...).<br>
-            Users can access this view either by taping the header of a card, or by long touching actions. In the later case, they will land on a zoom-in view dedicated to this action with more details about it (the app that will be launched for instance), and with other options when it makes sense (other phone numbers for a call for instance).</p>
+            Users can access this view either by taping the header of a card, or by long touching actions. In the latter case, they will land on a zoom-in view dedicated to this action with more details about it (the app that will be launched for instance), and with other options when it makes sense (other phone numbers for a call for instance).</p>
             <h3>A new homescreen: the contextual feed</h3>
             <figure class="floatL videoFigure">
               <video width="402" height="856" poster="../img/beyond-the-app-model/feed-thumb.jpg" loop>
@@ -148,32 +147,28 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
               </video>
               <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
             </figure>
-            <p>Bringing directly the most relevant information to the user is always better than asking.<br>
-            The context is the key of our system, and once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to this  is the homescreen of our system: contextual feed.</p>
+            <p>The context is the key of our system, and once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to this  is the homescreen of our system: contextual feed.</p>
             <p>The contextual feed is just a feed of cards. Cards related to my current context pop at the top of my feed because our system has decided that they are relevant for this specific situation (and this decision is based on many factors like the time, the weather, the place, people or places around me,...). This way, cards never disappear from the contextual feed, they will just gradually be buried inside the feed as they will become less relevant. This mechanism fits really well the idea of "context" because cards that are the most relevant (and probably the most useful) are always within reach, but I still can dig to access previous cards.</p>
             <p>The contextual feed is also helpful to discover interesting services. Even if the app is not installed on the phone, the system will suggest interesting services to the user by pushing cards in the feed when they make sense (even if in a first time and because of technical constraints, that means that some of these cards will ask to install the app).</p>
 <!--/Top
 Image animée de la search journey
 /-->
-            <h3>Search as main pull paradigm</h3>
+            <h3 class="clear">Search as main pull paradigm</h3>
             <figure class="floatL videoFigure">
               <video width="400" height="854" poster="../img/beyond-the-app-model/search-thumb.jpg" loop>
                 <source src="../img/beyond-the-app-model/search.mp4" type="video/mp4">
               </video>
               <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
             </figure>
-            <p>The contextual feed is a push mechanism (the system pushes information to the user). That's the most important part of a contextual system where most of the content is more valuable when pushed to the user.<br>
+            <p>The contextual feed is a push mechanism (the system pushes information to the user). That's the most important part of a contextual system.<br>
             However, despite all our efforts, we won't be able to answer perfectly all the different use cases that people will come across everyday. We need to provide a way for the user to pull information by himself.</p>
             <p>Our main pull mechanism (the user pulls information from the system) is based on a search pattern (actually, that's more a command based pattern). That's risky, because that's really different from the current model of static libraries of icons, but it makes sense if we want to remove the frictions of the concept of "product". Plus, we counterbalance this effect with smart search suggestions that are not based on low value products (we could imagine search suggestions like "Facebook", or "Google Maps", or even "All my apps" but it really doesn't make any sense in our proposal), but that are based on high value services ("Go to X", "Call Y", "Z nearby",...).<br>
             Search suggestions are made up of a lot of different things: last search queries, contextual queries (queries interesting for this specific situation like "Set an alarm" depending on the time, or "Pay at Café Saint-Martin",...), and common actions ("Call...", "Go to...", "Nearby...",...). The goal is to avoid to ask the user to actually type something as much as possible (voice based input is another complementary solution).</p>
-            <p>There are many ways to offer this search mechanism in our system. I spent a lot of time on this decision, and I've been through many different approaches, but at the end, I decided to put the search in another screen next to the contextual feed.<br>
-<!--/Top
-Image de la structure des screens en wireframe
-/-->
+            <p>There are many ways to offer this search mechanism in our system. I've been through many different approaches, but at the end, I decided to put the search in another screen next to the contextual feed.<br>
             From the contextual feed, I can just swipe from the right to the left to access the search screen. We could also imagine a third screen, on the other side of the feed, that will let users access all their apps (almost like our current OS homescreens) if we think that it makes sense.</p>
-            <p>As we described earlier, results of a search query appear wrapped in a card.<br>
+            <p>Results of a search query appear wrapped in a card.<br>
             The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
-            <h3>A typical user journey</h3>
+            <h3 class="clear">A typical user journey</h3>
             <p>Now that we defined the main elements of our design proposal, let's have a look at what that would mean in real life situations.</p>
             <div class="ujContainer">
               <figure class="floatL">
