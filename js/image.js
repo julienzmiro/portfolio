@@ -40,10 +40,14 @@
     var overlay = document.createElement("DIV");
     var image = el.cloneNode(true);
     var body = document.getElementsByTagName("BODY")[0];
+    var isBodyTooSmall = false;
+    var marginL;
+    var scrollVal;
 
     if (body.clientWidth < image.naturalWidth) {
-      body.style.width = image.naturalWidth + "px";
-      window.scrollBy((body.clientWidth - window.innerWidth) / 2, 0);
+      marginL = (image.naturalWidth - window.innerWidth) / 2;
+      image.style.marginLeft = marginL + "px";
+      isBodyTooSmall = true;
     }
 
     image.className = "zoomImg";
@@ -59,6 +63,11 @@
 
     addEvent(overlay, 'click', closeZoom);
     addEvent(image, 'click', closeZoom);
+
+    if (isBodyTooSmall) {
+      scrollVal = ((image.naturalWidth - window.innerWidth) / 2);
+      window.scrollBy(scrollVal, 0);
+    }
   }
 
   function closeZoom () {
@@ -66,7 +75,6 @@
     var o = document.getElementsByClassName("zoomOverlay")[0];
     var i = document.getElementsByClassName("zoomImg")[0];
 
-    body.style.width = "100%";
     body.removeChild(o);
     body.removeChild(i);
   }
