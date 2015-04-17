@@ -7,7 +7,6 @@
     // Flush the event cache
     addEvent(window, 'unload', EventCache.flush);
 
-    // Listen the resize event on the window
     for (i = 0; i < v.length; ++i) {
       addEvent(v[i], 'click', vClickHandler);
     }

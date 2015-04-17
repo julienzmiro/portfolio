@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/screen.css">
         <script src="../js/video.js"></script>
+        <script src="../js/image.js"></script>
     </head>
     <body>
 
@@ -100,9 +101,9 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             In this proposal, we'll go for the relevancy as a priority, as it's the most interesting value that we want to leverage when talking about contextual awareness.</p>
             <h3>Two types of actions</h3>
             <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access services, but we also want to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.</p>
-            <!-- <figure>
-                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions">
-            </figure> -->
+            <figure>
+                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions" class="imageFigure">
+            </figure>
             <p>We can define two kind of actions:
             <ul>
               <li>External actions: Most of the actions that we'll offer to the user will lead to external apps. In that way, the system that we design could be seen as an app launcher, but what really matters here, is that we'll add a smart layer on top of that, so we'll only provide the most relevant actions within the most relevant apps.</li>
@@ -118,14 +119,14 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             There is a balance to find, and we'll try to find it by providing a common structure to all our meta-contexts, and by making of each part of this structure a completely optional module. This way, we'll be able to establish patterns at a macro level (<strong>consistency</strong>), to adapt our system at micro levels (<strong>relevancy</strong>), and we'll always have a fallback to handle any kind of content (<strong>reliability</strong>).</p>
             <h3>...meet the cards</h3>
             <figure>
-                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards">
+                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards" class="imageFigure">
             </figure>
             <p>Cards are a very common design pattern. That's probably because cards act very well when we need to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys very well the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
             Our meta-contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about a card pattern.</p>
             <h3>The structure of a card</h3>
             <p>Let's have a look at the structure of our cards (every part is optional):</p>
             <figure>
-                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="Examples of actions">
+                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="The structure of a card" class="imageFigure">
             </figure>
             <ol>
               <li>Title: The name of the meta-context (person name, place name, search query,...).</li>
@@ -135,7 +136,7 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
             <p>By taping the header of a card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
             <h3>Zoom on the zoom-in view</h3>
             <figure>
-                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views">
+                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views" class="imageFigure">
             </figure>
             <p>The rule is simple: every "more" request (more informations about a meta-context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.</p>
             <p>The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display.</p>
