@@ -42,7 +42,6 @@
     var body = document.getElementsByTagName("BODY")[0];
 
     if (body.clientWidth < image.naturalWidth) {
-      console.log("Going to resize body");
       body.style.width = image.naturalWidth + "px";
       window.scrollBy((body.clientWidth - window.innerWidth) / 2, 0);
     }
