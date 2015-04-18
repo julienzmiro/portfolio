@@ -53,7 +53,7 @@
             Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service that is interesting for my current situation exists, and I would just consume this service on the fly. We would shift from a paradigm based on the compartmentalization of services into apps, to a paradigm based on the distribution of services into contextual streams.</p>
             <p>Of course, this model would raise a lot of questions (economic models, onboarding on new services,...), but that's always interesting to have a glance at this kind of long-term perspective.</p>
             <h3>The Orchestra conductor</h3>
-            <p>There is something amazing about smart objects: they bring back the most suited physical interfaces to daily use cases, while keeping the value of the connection with other systems that initially forced us to put their services under flat screens.<br>
+            <p>There is something amazing about smart objects: they bring back the most suited physical interfaces to daily use cases, while keeping the value of the connection with other systems that initially encouraged us to put their services under flat screens.<br>
             Because we'll put a computer everywhere (see <a href="http://www.conceptkitchen2025.com/" title="the kitchen of 2025">the kitchen of 2025</a> for instance), we'll need an "orchestra conductor" to handle all the synchronisation work for us.</p>
             <p>All these small pieces of smart technologies will probably already bring a lot of value as self-sufficient systems, but they could become incredibly helpful for people by acting all together as a single brain (just because we won't be able to handle this synchronisation work by ourselves).<br>
             We'll need to design a protocol, to build a system that would allow us to live peacefuly with so many technologies and to focus on what really matters: the end services.</p>
@@ -89,9 +89,6 @@
             <p>When we try to think about what it is to be contextual, we always think about specific situations (that's the definition of "being contextual").<br>
             But when designing for the context, we tend to think that we have to design with all these situations in mind: "what should we display in that specific case ?", "And how should we handle this specific situation ?",... that's obviously not possible.</p>
             <p>There are roughly, two ways to handle this situation:
-<!--/TOP
-Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content des formes de couleurs differentes... 1) on fait rentrer les formes dans les cases de la grid en gardant la couleur mais en perdant la richesse de l'info contenue dans la forme 2) on adapte la grid aux differentes formes)
-/-->
               <ul>
                 <li>By designing a rigid system and by making any context fit to this system. That means that we'll handle informations about a person in the same way than informations about a place or an action. The problem with this solution is that we are rarely able to provide useful answers because we don't adapt the system according to what really matters in a specific context (should we show a map instead of a text based address ? Should we show the whole journey of transportation instead of just the estimated time of arrival ?).</li>
                 <li>By designing a flexible system that fits to any context. That means to accept the idea that we won't be able to anticipate all the use cases, but provide the tools to answer anything. In that case, the ability of the system to be smart is the key: the more we'll be able to understand a context, the more we'll be able to provide a relevant and a specific answer; when we don't know enough, we'll provide generic fallbacks. We just need to spend more time to design a system that will support this flexibility.</li>
@@ -149,7 +146,7 @@ Illu qui symbolise les 2 façons de faire (le systeme est une grid et le content
               </video>
               <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
             </figure>
-            <p>The context is the key of our system, and once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to this  is the homescreen of our system: contextual feed.</p>
+            <p>The context is the key of our system, and once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to this  is the homescreen of our system: the contextual feed.</p>
             <p>The contextual feed is just a feed of cards. Cards related to my current context pop at the top of my feed because our system has decided that they are relevant for this specific situation (and this decision is based on many factors like the time, the weather, the place, people or places around me,...). This way, cards never disappear from the contextual feed, they will just gradually be buried inside the feed as they will become less relevant. This mechanism fits really well the idea of "context" because cards that are the most relevant (and probably the most useful) are always within reach, but I still can dig to access previous cards.</p>
             <p>The contextual feed is also helpful to discover interesting services. Even if the app is not installed on the phone, the system will suggest interesting services to the user by pushing cards in the feed when they make sense (even if in a first time and because of technical constraints, that means that some of these cards will ask to install the app).</p>
 <!--/Top
@@ -168,8 +165,7 @@ Image animée de la search journey
             Search suggestions are made up of a lot of different things: last search queries, contextual queries (queries interesting for this specific situation like "Set an alarm" depending on the time, or "Pay at Café Saint-Martin",...), and common actions ("Call...", "Go to...", "Nearby...",...). The goal is to avoid to ask the user to actually type something as much as possible (voice based input is another complementary solution).</p>
             <p>There are many ways to offer this search mechanism in our system. I've been through many different approaches, but at the end, I decided to put the search in another screen next to the contextual feed.<br>
             From the contextual feed, I can just swipe from the right to the left to access the search screen. We could also imagine a third screen, on the other side of the feed, that will let users access all their apps (almost like our current OS homescreens) if we think that it makes sense.</p>
-            <p>Results of a search query appear wrapped in a card.<br>
-            The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
+            <p>Results of a search query appear wrapped in a card. The meta-context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that on a search query card, we'll always display all the actions by default (and not display secondary actions only in the zoom-in view). That's because we have way more space, and because the whole screen and the whole attention are dedicated to this meta-context.</p>
             <h3 class="clear">A typical user journey</h3>
             <p>Now that we defined the main elements of our design proposal, let's have a look at what that would mean in real life situations.</p>
             <div class="ujContainer">
@@ -211,7 +207,7 @@ Image animée de la search journey
               <figure class="floatL">
                   <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card">
               </figure>
-              <p>On the evening, I'm looking for a gift in a store, but I can't find the product that I noticed on the website. On my feed, the system provides me a card with services from the app of the store, so I can find the product that I was looking for without having to install the app.</p>
+              <p>On the evening, I'm looking for a gift in a store, but I can't find the product that I liked on the website. On my feed, the system provides me a card with services from the app of the store, so I can find the product that I was looking for without having to install the app.</p>
               <br class="clear">
             </div>
 
