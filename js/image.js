@@ -58,6 +58,8 @@
     overlay.style.height = window.innerHeight + "px";
     overlay.style.width = window.innerWidth + "px";
 
+    body.style.cursor = "zoom-out";
+
     body.appendChild(overlay);
     body.appendChild(image);
 
@@ -74,6 +76,8 @@
     var body = document.getElementsByTagName("BODY")[0];
     var o = document.getElementsByClassName("zoomOverlay")[0];
     var i = document.getElementsByClassName("zoomImg")[0];
+
+    body.style.cursor = "";
 
     body.removeChild(o);
     body.removeChild(i);
