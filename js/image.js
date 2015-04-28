@@ -63,7 +63,7 @@
     var isBodyTooSmall = false;
     var marginL;
     var scrollVal;
-    var savedScroll = [document.body.scrollTop, document.body.scrollLeft];
+    var savedScroll = [window.scrollY, window.scrollX];
 
     hideBodyContent();
 
