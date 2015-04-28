@@ -67,12 +67,6 @@
 
     hideBodyContent();
 
-    if (body.clientWidth < image.naturalWidth) {
-      marginL = (image.naturalWidth - window.innerWidth) / 2;
-      image.style.marginLeft = marginL + "px";
-      isBodyTooSmall = true;
-    }
-
     image.className = "zoomImg";
     image.style.top = (window.scrollY + window.innerHeight / 2) + "px";
     image.style.left = (body.clientWidth / 2) + "px";
@@ -85,6 +79,12 @@
 
     body.appendChild(overlay);
     body.appendChild(image);
+
+    if (body.clientWidth < image.naturalWidth) {
+      marginL = (image.naturalWidth - window.innerWidth) / 2;
+      image.style.marginLeft = marginL + "px";
+      isBodyTooSmall = true;
+    }
 
     addEvent(overlay, 'click', function () {
       closeZoom(savedScroll);
