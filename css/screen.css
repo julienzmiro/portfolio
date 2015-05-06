@@ -731,10 +731,22 @@ strong {
 #introScreen {
   padding: 180px 0; }
 
-#resumeScreen {
+#resumeScreen,
+#bunchOfPixels {
   height: 210px;
   line-height: 210px;
   text-align: center; }
+
+#resumeScreen p,
+#bunchOfPixels p {
+  margin: 0 auto; }
+
+#bunchOfPixels {
+  height: 120px;
+  line-height: 120px;
+  background: #eaeaea;
+  width: 100%;
+  max-width: 100%; }
 
 #contactScreen {
   width: 100%;
