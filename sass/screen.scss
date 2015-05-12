@@ -96,9 +96,17 @@ strong {
 #bunchOfPixels {
   height: 120px;
   line-height: 120px;
-  background: #eaeaea;
+  background: #1b1f22;
+  color: white;
   width: 100%;
   max-width: 100%;
+}
+#bunchOfPixels a {
+  color: white;
+  border-bottom-color: white;
+}
+#bunchOfPixels a:hover {
+  border-bottom-color: transparent;
 }
 
 #contactScreen {
@@ -157,7 +165,7 @@ strong {
 }
 
 .csScreen {
-  height: 450px;
+  height: 510px;
   background: #333;
   width: 100%;
   max-width: 100%;
@@ -431,41 +439,20 @@ strong {
 #csCharts {
   background: #FC9A66;
 }
-#csCharts img {
-  -webkit-transform: scale(.8);
-  -moz-transform: scale(.8);
-  -o-transform: scale(.8);
-  transform: scale(.8);
-
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  -ms-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-#csCharts:hover img {
-  -webkit-transform: scale(.9);
-  -moz-transform: scale(.9);
-  -o-transform: scale(.9);
-  transform: scale(.9);
-}
 
 #craftingChartsVisu {
   margin-bottom: 30px;
 }
-#csCraftingCharts {
-  background: #5bd8c2;
-}
-#csCraftingCharts #craftingChartsVisuContainer {
-  border-bottom: 2px solid #3baa97;
+#csCharts #craftingChartsVisuContainer {
+  border-bottom: 2px solid #da7743;
   height: 100px;
   margin: 0 auto;
   padding: 0;
   position: relative;
   width: 300px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div {
-  background: #3baa97;
+#csCharts #craftingChartsVisuContainer div {
+  background: #da7743;
   height: 100px;
   width: 30px;
   margin: 0;
@@ -477,52 +464,52 @@ strong {
   -o-transition: height 300ms ease;
   transition: height 300ms ease;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(1) {
+#csCharts #craftingChartsVisuContainer div:nth-child(1) {
   height: 5px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(2) {
+#csCharts #craftingChartsVisuContainer div:nth-child(2) {
   left: 45px;
   height: 20px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(3) {
+#csCharts #craftingChartsVisuContainer div:nth-child(3) {
   left: 90px;
   height: 35px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(4) {
+#csCharts #craftingChartsVisuContainer div:nth-child(4) {
   left: 135px;
   height: 50px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(5) {
+#csCharts #craftingChartsVisuContainer div:nth-child(5) {
   left: 180px;
   height: 65px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(6) {
+#csCharts #craftingChartsVisuContainer div:nth-child(6) {
   left: 225px;
   height: 80px;
 }
-#csCraftingCharts #craftingChartsVisuContainer div:nth-child(7) {
+#csCharts #craftingChartsVisuContainer div:nth-child(7) {
   left: 270px;
   height: 95px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(1) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(1) {
   height: 45px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(2) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(2) {
   height: 15px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(3) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(3) {
   height: 45px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(4) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(4) {
   height: 60px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(5) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(5) {
   height: 45px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(6) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(6) {
   height: 90px;
 }
-#csCraftingCharts:hover #craftingChartsVisuContainer div:nth-child(7) {
+#csCharts:hover #craftingChartsVisuContainer div:nth-child(7) {
   height: 75px;
 }
 #csPbxUpload {
@@ -555,10 +542,10 @@ strong {
 }
 
 #csPbxUpsell {
-  background: #E3AA4C;
+  background: #5bd8c2;
 }
 #visuCircle {
-  background: #765621;
+  background: #45c0aa;
   border-radius: 999px;
   width: 46px;
   height: 46px;
@@ -807,5 +794,8 @@ nav svg {
   .csContent header {
     margin: 60px 0 120px 0;
     text-align: center;
+  }
+  #bunchOfPixels {
+    font-size: 1rem;
   }
 }
