@@ -1389,6 +1389,17 @@ nav svg {
   .ujContainer p {
     position: static;
     -webkit-transform: translateY(0); } }
+/*Bop*/
+#bop {
+  background: #1b1f22;
+  color: white; }
+
+#bop nav a {
+  background: #161A1D; }
+
+#bop nav a:hover {
+  background: #E65D56; }
+
 @media all and (max-width: 499px) {
   section {
     width: 90%; }
