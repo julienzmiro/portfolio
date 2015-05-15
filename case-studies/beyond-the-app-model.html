@@ -62,7 +62,7 @@
             We need a long-term vision, and we have a pretty clear one now: to put people closer to their services.<br>
             But we also need to think about a realistic way to achieve this vision, and if we try to imagine the first steps to go in this direction, we obviously look at mobile OS as they currently are the platforms that rule our relationship with digital services: they define that we should <strong>install</strong> an <strong>app</strong>, and then <strong>open</strong> it when we want to use it for instance... these rules come from the good old computer era legacy, but they shape how we behave today, in a very different world.<br>
             For this reason, mobile OS seem to be a natural starting point when we try to think about a new way to interact with our digital services. They are just in the best position right now to engage any change and to tackle all the problems that we'll meet in this quest.</p>
-            <p>But we have to keep in mind that there could be a lot of different ways... for instance, another really interesting approach is the new direction of Facebook Messenger as a platform, where the paradigm of discussions could be seen as an interesting interface to access services.</p>
+            <p>But we have to keep in mind that there could be a lot of different ways... another really interesting approach is the new direction of Facebook Messenger as a platform for instance, where the paradigm of discussions could be seen as an interesting interface to access services.</p>
             <h3>Design proposal</h3>
             <p>The main principles behind this design proposal are not related to any specific product, but as an example, I decided to imagine what a mobile OS could do to remove frictions in the way people access their services.</p>
             <p>We won't go as far as what we described previously (services as an API), and we'll keep the concept of "app" in our system. Completely removing a concept like this one requires a lot of work on many design challenges, and the point of this study is just to draw the main directions.</p>
@@ -74,7 +74,8 @@
             <p>Let's start by defining the most important guidelines that we'll try to follow when we'll design this new system.</p>
             <p>This system will try to get rid of obstacles lying between people and their services:
               <ul>
-                <li>By being a single entry point: "No matter what product, or even what device, I can always use the system as an entry point to reach relevant services in a consistent way." Please notice that we talk about accessing services and not products. The difference is important here because the point is to deep link to relevant services within the relevant products... otherwise current mobile OS do a perfect job as app launchers.</li>
+                <li>By being a single entry point: "No matter what product, or even what device, I can always use the system to reach relevant services in a consistent way."<br>
+                <em>We talk about accessing services and not products. The difference is important here because the point is to deep link to relevant services within the relevant products... otherwise current mobile OS do a perfect job as app launchers.</em></li>
                 <li>By helping services discovery: "No matter if I know the product, if there is an interesting service for my current situation, the system will provide it to me."</li>
                 <li>By grouping services: "No matter on how many different products or devices the relevant services are available, I can quickly access and compare those related to a specific 'meta-context' (a smart context created by the system)."</li>
               </ul>
@@ -89,7 +90,7 @@
             <p>In order to be relevant, we need to be contextual.<br>
             When we try to think about what it is to be contextual, we always think about specific situations (that's the definition of "being contextual").<br>
             But when designing for the context, we tend to think that we have to design with all these situations in mind: "what should we display in that specific case ?", "And how should we handle this specific situation ?",... that's obviously not possible.</p>
-            <p>There are roughly, two ways to handle this situation:
+            <p>There are roughly, two ways to handle this tricky situation:
               <ul>
                 <li>By designing a rigid system and by making any context fit to this system. That means that we'll handle informations about a person in the same way than informations about a place or an action. The problem with this solution is that we are rarely able to provide useful answers because we don't adapt the system according to what really matters in a specific context (should we show a map instead of a text based address ? Should we show the whole journey of transportation instead of just the estimated time of arrival ?).</li>
                 <li>By designing a flexible system that fits to any context. That means to accept the idea that we won't be able to anticipate all the use cases, but provide the tools to answer anything. In that case, the ability of the system to be smart is the key: the more we'll be able to understand a context, the more we'll be able to provide a relevant and a specific answer; when we don't know enough, we'll provide generic fallbacks. We just need to spend more time to design a system that will support this flexibility.</li>
