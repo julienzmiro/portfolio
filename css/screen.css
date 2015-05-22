@@ -1351,7 +1351,10 @@ nav svg {
 .ujContainer p {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%); }
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .videoOverlay {
   width: 100%;
@@ -1388,7 +1391,10 @@ nav svg {
 
   .ujContainer p {
     position: static;
-    -webkit-transform: translateY(0); } }
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
 /*Bop*/
 #bop {
   background: #1b1f22;

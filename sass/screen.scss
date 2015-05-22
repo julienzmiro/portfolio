@@ -704,6 +704,9 @@ nav svg {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .videoOverlay {
@@ -743,6 +746,9 @@ nav svg {
   .ujContainer p {
     position: static;
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
