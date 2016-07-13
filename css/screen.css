@@ -1347,6 +1347,12 @@ nav svg {
   width: 72px;
   height: 72px; }
 
+.zoomableOverlay {
+  background-color: #fff; }
+
+#bop .zoomableOverlay {
+  background-color: #1b1f22; }
+
 @media all and (max-width: 999px) {
   .ujContainer {
     height: auto;

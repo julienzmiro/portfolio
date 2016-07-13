@@ -123,7 +123,6 @@
     o.className = "zoomableOverlay";
     o.style.height = window.innerHeight + "px";
     o.style.width = window.innerWidth + "px";
-    o.style.background = "white";
     o.style.position = "fixed";
     o.style.top = 0;
     o.style.left = 0;
