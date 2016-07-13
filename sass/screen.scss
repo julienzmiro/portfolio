@@ -623,40 +623,6 @@ nav svg {
 }
 .csContent figure img {
   max-width: 100%;
-  // border: 1px solid #eee;
-}
-.csContent figure a img {
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
-  cursor: zoom-in;
-}
-.csContent .imageFigure.zoomable {
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
-  cursor: zoom-in;
-}
-.zoomOverlay {
-  background: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  cursor: -webkit-zoom-out;
-  cursor: -moz-zoom-out;
-  cursor: zoom-out;
-}
-.zoomImg {
-  width: auto;
-  height: auto;
-  cursor: -webkit-zoom-out;
-  cursor: -moz-zoom-out;
-  cursor: zoom-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
 }
 .csContent video {
   max-width: 100%;
