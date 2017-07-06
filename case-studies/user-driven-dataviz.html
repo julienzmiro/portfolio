@@ -29,197 +29,180 @@
                 <h2>qunb<span> - 2015</span></h2>
             </header>
 
-            <section class="foreword">
-              <h2>Foreword</h2>
-              <p>This article is based on my limited experience of datavisualization, and I would really love to <strong>receive some feedback</strong> on it... Please don't hesitate to <a href="#" title="Message me" class="messageMeButton">reach me</a> if you have anything to say about it!</p>
-            </section>
-            <p>At qunb, we spent one year to build a tool that tells meaningful stories from Google Analytics. These stories are actually a series of clear messages supported by relevant charts and visual representations.<br>
-            With the exception of the books from Edward Tufte, I didn't had a lot of opportunities to learn about datavisualization before joining qunb. Now that I'm a bit more familiar with this fields, I have to say that I'm not really comfortable with the way most of the datavisualizations (let's say dataviz for conveniance) are created today. I often hear or read rules statings things like "continues values should be displayed as a line chart and discrete values as a bar chart"...<br>
-            That's fine, all these rules are very reasonable... but they're going beyond their role of simple common sense constraints, and they're overwhelming what's really at stake in a dataviz: the communication of an idea.</p>
-            <p>We build dataviz according to the nature of the data instead of the message that we want to communicate.<br>
-            Consequently, a large part of the dataviz that we consume everyday are really poorly designed and end up to be completely indigestible. They don't address a clear use case. They just follow existing patterns, because it's so easy to simply update data from an old excel template, or because most of these dataviz are now automated, meaning that there is not a real person that is trying to communicate a message (and we're still pretty bad at making programs that know what story tell from a specific dataset).<br>
-            So if we used a line chart to display our sales of last year, why should we change this year ? Even if the message that we want the user to receive is completely different today...<br>
-            These dataviz are <strong>data driven.</strong>
-            I'll try to explain why I think that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
+            <p>With the exception of Edward Tufte's books, I never had much opportunities to learn about datavisualization before joining qunb (where we were building a tool that tunred Google Analytics into meaningful "datastories"). Now that I'm slightly more familiar with the domain, I realise that I'm not completely comfortable with the way most of the datavisualizations are created today.<br>
+            When I tried to learn more about datavizualisation good practices, I very often came across rules statings things like "continues values should be displayed as a line chart and discrete values as a bar chart"... And that's fine, all these rules are very reasonable. So reasonable that it's almost common sense. And by focusing on these basic constraints and rules, we miss the core of the datavizualisation domain: the communication of an idea.</p>
+            <p>We design datavizualisation depending on the type of data that we want to show instead of the message that we want to communicate.<br>
+            Consequently, a large part of the datavizualisations that we consume everyday are really poorly designed and end up being completely indigestible. They don't address a clear use case. They just (at best) follow existing patterns, because it's so easy to simply update data from an old excel template, or because most of these datavizualisations are now automated, meaning that nobody is trying to think about the message that should be communicated.<br>
+            So if we used a line chart to display our sales of last year, why should we change this year ? Even if the message that we want to communicate is completely different...<br>
+            These datavizualisations are <strong>data driven.</strong>
+            I'll try to explain why that's a bad approach, and how to switch to <strong>user driven representations.</strong></p>
 
-              <h3>But first, what is a dataviz ?</h3>
-              <p>Here are some data.</p>
-              <figure>
-                <img src="../img/user-driven-dataviz/table.jpg" alt="Here is a simple dataset" />
-                <!-- <figcaption>Here is a simple dataset</figcaption> -->
-              </figure>
-              <p>This dataset is expressed through numerical values in a table.<br>
-                A numerical value is a great way to communicate quantities (doh!).<br>
-                And a table is a good way to structure information.<br>
-                In a way, this representation is already a kind dataviz (in a very simple form).<br>
-                But there is way more than structures and quantities in this dataset... there are also things that we can't see here (or barely see), things that lie between numbers and lines : relationships and patterns.<br>
-                <strong>Dataviz is an abstraction of these patterns and relationships.</strong></p>
+            <h3>But first, what is a datavizualisation?</h3>
+            <p>Here is a simple dataset.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/table.jpg" alt="Here is a simple dataset" />
+            </figure>
+            <p>This dataset is expressed through numerical values in a table.<br>
+            A numerical value is a great way to communicate quantities (doh!).<br>
+            And a table is a good way to structure information.<br>
+            In some ways, this representation is already a kind datavizualisation (in a very simple form).<br>
+            But there is way more than structures and quantities in this dataset... there are also things that we can't see here (or barely see), things that lie between numbers and lines : relationships and patterns.<br>
+            <strong>A datavizualisation is an abstraction of these patterns and relationships.</strong></p>
 
-              <h3>We can already guess some relationships in this table... why going further ?</h3>
+            <h3>We can already guess some relationships in this table... why going further ?</h3>
+            <p>Our "visual hardware" is quite powerful. We can "sense" a lot of visual information.<br>
+            But "cognitive bandwith" is limited, and we can't really process all this visual information.<br>
+            Selecting which information deserves attention can be tricky, and very often, the user is abandonned at this step.<br>
+            In our table example, we can of course discover some patterns just by reading the numbers in the cells. But it's hard because it requires a lot of mental gymnastic: "this number is greater than this one and this one and... and the evolution of this one seems to be linked to this one, but that's not true for this dimension and...".<br>
+            In the same way that numbers are symbols that wrap the complex abstractions that are quantities, we need something to help us to "preprocess" relevant information in this other kind of complex abstraction that is relationship between quantities. We need to be able <strong>to gain some knowledge from the data</strong>.<br>
+            That's exactly the goal of a datavizualisation.</p>
 
-              <p>"Visual hardware" has high capacity. We can "sense" a lot of visual information.<br>
-                But "cognitive bandwith" is limited, and we can't really process all this visual information.<br>
-                <!-- <figure>
-                  <img src="../img/user-driven-dataviz/user-attention.jpg" alt="Attention is the bottleneck of data consumption" />
-                  <figcaption>User's attention is the bottleneck of data consumption</figcaption>
-                </figure> -->
-                Selecting which information deserves attention can be tricky, and very often, the user is abandonned at this step.<br>
-                In our table example, we can of course discover some patterns just by reading the numbers in the cells, but it's hard because it requires a lot of mental work to visualize these abstractions: "this number is greater than this one and this one and... and this one seems to be linked to this one, but that's not true for this dimension and...".<br>
-                In the same way that numbers are symbols that wrap the complex abstractions that are quantities, we need something to help us to "preprocess" relevant information in this other kind of complex abstraction that is relationship between quantities. We need to be able <strong>to gain some knowledge from the data</strong>.<br>
-                That's exactly the goal of a dataviz.</p>
+            <h3>How to extract knowledge from data</h3>
+            <p>Actually, we can identify 2 ways.</p>
+            <p><strong>Data exploration</strong> is a process where the user pulls the knowledge from the representation.<br>
+            Facilitating the extraction of a message is the first use case.<br>
+            <strong>Data explanation</strong> is a process where the representation pushes the knowledge to the user.<br>
+            Delivering a message is the first use case.</p>
+            <p>There is no better way between these 2 options, it's just a matter of identifying which of them you're trying to address as a first use case. Moreover, things are not just black or white, and most of the time we'll need a bit of both. These two approaches are more like extremities of a scale... but it's important to identify where a dataviz should stand on this scale, because it allows to be bold and thus clearer and more efficient.</p>
+            <p>Most of the datavizualisations that we use everydays are about data exploration, not because this has been identified as the use case, but simply because they are data driven, meaning that they have been designed according to the type of data that they need to show, and not to the message that they want to communicate to the user. It's easier to fall on the data exploration side when you don't know the use case: just throw a bunch of data in the most common template, and let the user handle it.<br>
+            Data explanation is almost always completely ignored.</p>
+            <p>Let's come back to our table example.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/table.jpg" alt="Let's come back to our dataset" />
+            </figure>
+            <p>That's actually an interesting (and quiet extreme) way to let the user explore a dataset. But as we just explained it, data exploration is over used and we'll probably need to look in the direction of data explanation if we really had to design a meaningful representation of this dataset.<br>
+            Let's pretend that we want to send a report about visits per countries to a client.<br>
+            What representation would convey the clearest message?</p>
+            <p>The common approach is to choose the representation depending on the type of the data. Here, we're dealing with locations, so we'll end up with a map.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/map.jpg" alt="A map" />
+            </figure>
+            <p>Think about visits per countries on Google Analytics, or any kind of location based data... no matter what's interesting in the dataset, you'll often end up with a map.<br>
+            But what kind of information does a map convey?<br>
+            As any kind of datavizusalition, it helps to see patterns. Location based patterns of course. And a map is very bad for everything else.</p>
+            <p>So if we wanted to show a pattern about location, like showing that visits are more important when we get closer to Scandinavia for instance, a map would be great.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/map-pattern.jpg" alt="A map is relevant to show location based patterns" />
+              <figcaption>A map is relevant to show location based patterns</figcaption>
+            </figure>
+            <p>But let's be honest, that's not something that happens very often, yet we always use a map for location based data, no matter what message to get from it. Here, the data type drives the representation.<br>
+            <strong>This is a data driven approach.</strong></p>
+            <p>If we come back to our location based dataset, we can notice a lot of interesting things to say. For instance, Germany seems to have performed very well compared to other countries in 2011.<br>
+            That's not easy to see there:</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/table.jpg" />
+            </figure>
+            <p>That's not really better here:</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/map.jpg" />
+            </figure>
+            <p>A map is not a good representation for ranking values.</p>
+            <p>So if we want to show that Germany performed very well in 2011 compared to other countries, why not try to find a good representation to compare values?<br>
+            Like a simple bar chart:</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/bar-chart.jpg" />
+            </figure>
+            <p> Here, the message drives the representation.<br>
+            <strong>This is a user driven approach.</strong></p>
 
-                <h3>What can we do to achieve this goal ?</h3>
-                  <p>Actually, we can identify 2 ways.</p>
-                  <!-- <figure>
-                    <img src="../img/user-driven-dataviz/use-cases.jpg" alt="2 different use cases" />
-                    <figcaption>2 different use cases for data consumption</figcaption>
-                  </figure> -->
-                  <p><strong>Data exploration</strong> is a process where the user pulls the knowledge from the representation.<br>
-                    Facilitating the extraction of a message is the first use case.<br>
-                    <strong>Data explanation</strong> is a process where the representation pushes the knowledge to the user.<br>
-                    Delivering a message is the first use case.</p>
-                  <p>There is no better way between these 2 options, it's just a matter of identifying which of them you're trying to address as a first use case. Moreover, things are not just black or white, and we can find parts about both data exploration and data explanation in most of the representations. These two approaches are more like extremities of a scale... but it's important to identify where a dataviz should stand on this scale, because it allows to be bold and thus more clear and efficient.</p>
-                  <p>Most of the dataviz that we use everydays are about data exploration, not because this has been identified as the use case to follow, but simply because they are data driven, meaning that they have been designed according to the type of data that they need to show, and not to the message that they want to communicate to the user. It's easier to fall on the data exploration side when you don't know the use case : just throw a bunch of data in the most common template, and let the user handle it.<br>
-                    Data explanation is almost always completely ignored.</p>
-                  <p>Let's come back to our table example.</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/table.jpg" alt="Let's come back to our dataset" />
-                  </figure>
-                  <p>That's actually an interesting (and quiet extreme) way to let the user explore a dataset. But as we just explained it, data exploration is over used and we'll probably need to look in the direction of data explanation if we really had to design a representation to exploit this dataset.<br>
-                    Let's pretend that we'll have to send a report about its visits per countries to our client.<br>
-                    What representation would allow us to push a clear message to the user ?</p>
-                  <p>The common approach is to choose the representation depending on the type of the data. Here, we're dealing with locations, so we'll end up with a map.</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/map.jpg" alt="A map" />
-                  </figure>
-                  <p>Think about visits per countries on Google Analytics, or any kind of geolocation based data... no matter what's interesting in the dataset, you'll often end up with a map.<br>
-                    But what kind of information does a map convey?<br>
-                    Well, as any kind of dataviz, it helps to see patterns. Location patterns of course. And a map is very bad for everything else.</p>
-                  <p>So if we wanted to show a pattern about locations, like showing that visits are more important when we get closer to Scandinavia for instance, a map would be great.</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/map-pattern.jpg" alt="A map is relevant to show location based patterns" />
-                    <figcaption>A map is relevant to show location based patterns</figcaption>
-                  </figure>
-                  <p>But let's be honest, that's not something that happens very often, yet we always use a map for location based data, no matter what message to get from it. Here, the data rules the representation.<br>
-                    <strong>This is a data driven approach.</strong></p>
-                  <p>If we come back to our "location based" dataset, we can notice a lot of interesting things to say. For instance, Germany seems to have performed very well compared to other countries in 2011.<br>
-                    That's not easy to see there:</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/table.jpg" />
-                  </figure>
-                  <p>That's not really better here:</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/map.jpg" />
-                  </figure>
-                  <p>A map is not a good representation to rank values.</p>
-                  <p>So if we want to show that Germany performed very well in 2011, why not try to find a good representation to compare values ?<br>
-                    Like a bar chart:</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/bar-chart.jpg" />
-                  </figure>
-                  <p> Here, the message that we're trying to address to the user rules the representation.<br>
-                    <strong>This is a user driven approach.</strong></p>
-
-                  <h3>Fine, but that doesn't help to know how to choose a good representation...</h3>
-                  <p>There are tons of ways to represent quantitative information... <a href="http://en.wikipedia.org/wiki/Data_visualization#mediaviewer/File:Minard.png">and</a> <a href="http://f.fastcompany.net/multisite_files/fastcompany/slideshow/2013/11/3022248-slide-s-5-information-is-beautiful.jpg">people</a> <a href="http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html?_r=0">are</a> <a href="http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html">really</a> <a href="http://hint.fm/wind/">creative</a>...<br>
-                    Yet, some common representations are always interesting. To help us to choose the right one or to create a new one, it's a good idea to try to define the type of message that we're trying to address.</p>
-                  <p>Think about all these small questions that you ask yourself (sometimes uncousciously) when you're in front of a dataset : is this number greater than this one ? And what about this one ? Is this one linked to this one ? What does this value represent ? etc... they all help to highlight patterns and to shape your mental model of the dataset. These questions are your users' needs and knowing about them, and thus how to help the user to answer them, helps the design of a dataviz to be more efficient.<br>
-                    If you think about it, all these questions are always about comparison. Comparison is a kind of "primitive user need" when we design dataviz.</p>
-                  <p>The goal is always to allow the user to <strong>compare</strong> values or series of values in order to:
-                    <ul>
-                      <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that" ?</li>
-                      <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense) ?</li>
-                      <li>Determine a <strong>causality</strong>: What impact has "this" over "that" ?</li>
-                      <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason ?</li>
-                      <li>Observe a <strong>deviation</strong>: Does "this" diverge from this reference ?</li>
-                      <li>Explain a <strong>composition</strong>: How is "this" made up of "these" ?</li>
-                      <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that" ?</li>
-                    </ul>
-                  </p>
-                  <p>Here again, things are not just black or white, and we'll often try to communicate several type of messages (and even several messages of the same type). We'll probably have to create more complex representations to do that (like composing several charts in one for instance). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
-                  <p>Some rules of thumb can help to pick the right chart.<br>
-                    For instance, some charts use areas to convey more than one variable through a shape (using height to illustrate one variable, and width for another one for instance).</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/marimekko.jpg" alt="Areas are hard to compare" />
-                    <figcaption>Areas are hard to compare</figcaption>
-                  </figure>
-                  <p>This kind of representations is incredibly hard to read, because it's almost impossible to compare areas.</p>
-                  <p>But areas can be useful to illustrate the composition of an element because it's easier to imagine an element when it's pictured as a whole shape.</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/pie-chart.jpg" alt="But areas are great to  picture a concept" />
-                    <figcaption>But areas are great to  picture a concept</figcaption>
-                  </figure>
-                  <p>It's harder to compare each part of the whole, but it's easier to understand the abstraction of the whole, and the link between these parts.</p>
-                  <p>That means that we can define 2 important properties that make a good representation :
-                    <ul>
-                      <li>It's easy to compare (compare values, compare series,...).</li>
-                      <li>It's easy to understand the abstraction (for instance: composition is an abstraction of the whole, evolution is an abstraction of change, height is an abstraction of the value,...).</li>
-                      <!-- <li>It's honest in the way it shows data.</li> -->
-                    </ul>
-                  </p>
-                  <h3>And how does a visual representation actually convey information ?</h3>
-                  <p>Stephen Few wrote a very interesting paper about <a href="http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf" title="rules for encoding values in graphs">rules for encoding values in graphs</a>. He talks about some kinds of basic visual entities that are used to encode information : points, lines, and bars.<br>
-                  <p>These 3 visual elements are the most common ones, but if we step down one level of abstraction, we can try to define some properties that would help to understand how to convey information in any kind of visual representations.<br>
-                  Four visual properties seem interesting here:
-                    <ul>
-                      <li>The shape</li>
-                      <li>The color</li>
-                      <li>The dimension</li>
-                      <li>The position</li>
-                    </ul>
-                  </p>
-                  <p>Let's study all these properties through an example.</p>
-                  <figure>
-                    <a href="../img/user-driven-dataviz/visual-properties-example.jpg" title="An interesting chart to study visual properties"><img src="../img/user-driven-dataviz/visual-properties-example.jpg" alt="An interesting chart to study visual properties" /></a>
-                    <figcaption>Chart by <a href="http://www.valentinadefilippo.co.uk/">Valentina D'Efilipo</a></figcaption>
-                  </figure>
-                  <p>This chart is really interesting because it leverages all these visual properties to convey meaning.</p>
-                  <p>The shape of a visual element is an amazing tool to create abstractions in many different ways.<br>
-                  Here, we can notice two interesting usages of shapes. First, this graph uses flowers to represent the number of deaths in wars. That's a pure iconic purpose, and that's the most important role of the shape: acting like a placeholder for a concept. That's exactly what happens when we draw countries on a map. The shape of each country helps the reader to create a match between the visual representation and the concept of "France" or "Spain".<br>
-                  We can find another interesting usage of shapes in the way how lines are used to show the duration of the war. A line is a natural way to highlight a link between entities, and that's why we often use lines to illustrate evolutions (a link between two states in time). Here, lines are used to create a link between a starting date and an ending date.</p>
-                  <p>Colors can be very hard to master. It's tempting to think that colors bring meaning by themselves, because we often associate a color to a feeling, or an object... but it's very easy to confuse a reader who is not able to understand this association. In those cases, colors can be harmful for the readability.<br>
-                  In this graph, colors are used to create categories of elements. That's very efficient, because it's easy to notice color patterns, even when the elements are not close from each other. <br>
-                  But the most basic usage of color is probably to highlight elements. Again, color matching (and thus contrast) is amazingly powerful.</p>
-                  <p>In this graph, the dimensions of the flowers is simply used to illustrate the number of deaths. That's the most basic usage of dimensions, exactly like we do when we encode a value in the height of bars in a bar chart.</p>
-                  <p>Finally, the position of the flowers and their lines tells us where we are in time. Again, that's a very common practice that we can see in most of the line charts.</p>
-                  <h3>We know how to map a message to a representation, but how to identify interesting messages in a first place ?</h3>
-                  <p>When designing dataviz, Identifying interesting messages in a dataset can be challenging.<br>
-                  One of the most famous example of this issue is known as <a href="http://en.wikipedia.org/wiki/Anscombe%27s_quartet" title="Anscomb's Quartet">Anscomb's Quartet</a>.<br>
-                  This extrem example shows very well that extracting relevant facts from a dataset can be hard. Actually, the designer is in the shoes of a user alone in front of a raw dataset. This is a clear data exploration use case...</p>
-                  <p>There is an interesting approach to adopt in order to frame a dataset and to reveal interesting patterns.<br>
-                  As described by Bret Victor in the article <a href="http://worrydream.com/LadderOfAbstraction/" title="Up and Down the Ladder of Abstraction">Up and Down the Ladder of Abstraction</a>: "to understand a system, we must explore it".<br>
-                  In this article, Bret Victor explains that we can explore complex systems (like complex datasets) by constantly moving in the level of abstraction that we adopt to represent this system, in order to see and to manipulate different layers of concepts.<br>
-                  There is a lot of ways to visually represent a dataset, and each of these representations stands on a specific level of abstraction: numbers are abstractions of quantities, mean and variance are abstractions of a series of numbers, a table is an abstraction of the structure of these numbers, a line chart is an abstraction of their evolution, a bar chart is an abstraction of their ranking,... when we're trying to know what messages to get from a dataset, it's usually a good idea to explore the data through different representations, and thus different level of abstraction, in order to reveal interesting patterns to address.<br>
-                  That's how you realise that a dataset like the one described in Anscomb's Quartet is actually more complex than how it looked at first sight.</p>
-                  <h3>So, if I know my use case, and if I know the type of message that I'm trying to address, the rest of the work is just about visual design right ?</h3>
-                  <p>Visual design is not the only way to convey information and you should use all the tools available on your medium to achieve this mission.</p>
-                  <p>Animations for instance can be an amazing tool.<br>
-                  Let's take an example with this very bad representation.</p>
-                  <figure>
-                    <img src="../img/user-driven-dataviz/marimekko.jpg" alt="This chart is really hard to understand" />
-                    <figcaption>This chart is really hard to understand</figcaption>
-                  </figure>
-                  <p>Beyond the difficulty to compare areas, the problem is that there is a lot of dimensions (a measure, some categories, some sub categories for each category,...), and the relationship between each of them is not clear.</p>
-                  <p>Let's see how animation could help us here with this very simple example:</p>
-                  <figure class="videoFigure">
-                    <!-- <img src="../img/user-driven-dataviz/marimekko-anim.gif" alt="Animations convey a lot of information when they're used properly" /> -->
-                    <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg">
-                      <source src="../img/user-driven-dataviz/marimekko-anim.webm" type="video/webm">
-                      <source src="../img/user-driven-dataviz/marimekko-anim.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>Animations convey a lot of information when they're used properly</figcaption>
-                    <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
-                  </figure>
-                  <p>By animating the way we show all the elements of this chart, we can help the user to understand relationships between them : we start by showing main categories from the left to the right, and then we draw sub categories inside each category from the bottom to the top.</p>
-                  <p>Copywriting is also very important.<br>
-                    The words that you choose, the symbols that you use for your units, the way you truncate labels or round up values, the title, the labels and the values that you choose to display,... all these decisions are fundamental in the way the user will perceive your message.</p>
-                  <p>Interactions are important too, particularly for data exploration. You can engage the user to discover interesting facts by allowing him to actually manipulate the dataset.</p>
-                  <p>And what about your "user's flow" ?<br>
-                    You don't always have to tell everything in one representation. Complicated problems can easily be split into small parts that become often easier to understand. You can spread representations either in space (show multiple representation in one page for instance), or in time (show a series of representations one after the other). You can also leverage the succession of these representation to create a journey that will also convey a meaning (diving step by step into the details of a value for instance).<br>
-                    Whatever you decide, it has to be intentional and meaningful.</p>
-                  <p>Tools are many, the most important thing is to be conscious of them, and to leverage them as much as possible to achieve the first use case that you defined: data exploration, or data explanation.<br>
-                    Because that should always be your first concern when designing something : understanding what you're trying to achieve. Just like the way we switched from data driven to user driven approach in web design 15 years ago (remember old email clients that were just mapping of databases ? What a journey to come to something like Google Inbox!), we need to move away from meaningless and unintentional dataviz.<br>
-                    The type of data that we want to show should only be a constraint, the use case that we want to address, and thus the user, should always be the driver of a dataviz.</p>
+            <h3>Fine, but that doesn't help to know how to choose a good representation...</h3>
+            <p>There are tons of ways to represent quantitative information... <a href="http://en.wikipedia.org/wiki/Data_visualization#mediaviewer/File:Minard.png">and</a> <a href="http://f.fastcompany.net/multisite_files/fastcompany/slideshow/2013/11/3022248-slide-s-5-information-is-beautiful.jpg">people</a> <a href="http://www.nytimes.com/interactive/2009/11/06/business/economy/unemployment-lines.html?_r=0">are</a> <a href="http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html">really</a> <a href="http://hint.fm/wind/">creative</a>...<br>
+            Yet, there is a few set of common representations that are always interesting. To help us to choose the right one or to create a new one, it's a good idea to try to define the type of message that we're trying to address.</p>
+            <p>Think about all these small questions that you ask yourself (sometimes uncousciously) when you're in front of a dataset : is this number greater than this one? Is this one linked to this one? What does this value represent? etc... they all help to highlight patterns and to shape your mental model of the dataset. These questions are your users' needs and knowing about them, and thus how to help the user to answer them, will help the design of a more relevant datavizualisation.<br>
+            If you think about it, all these questions are always about comparison. Comparison is a kind of "primitive user need" when we design datavizusalisations.</p>
+            <p>The goal is always to allow the user to <strong>compare</strong> values or series of values in order to:
+              <ul>
+                <li>Establish a <strong>ranking</strong>: How high is "this" compared to "that"?</li>
+                <li>Show an <strong>evolution</strong>: How does "this" move over time (usually, other dimensions that time don't make sense)?</li>
+                <li>Determine a <strong>causality</strong>: What impact has "this" over "that"?</li>
+                <li>Highlight a <strong>correlation</strong>: Is "this" linked to "that" without any obvious reason?</li>
+                <li>Observe a <strong>deviation</strong>: Does "this" diverge from this reference?</li>
+                <li>Explain a <strong>composition</strong>: How is "this" made up of "these"?</li>
+                <li>Illustrate a <strong>distribution</strong>: How are "these" spread on "that"?</li>
+              </ul>
+            </p>
+            <p>Here again, things are not just black or white, and we'll often try to communicate several types of messages (and even several messages of the same type). We'll probably have to create more complex representations to do that (like a composition of several charts for instance). That's fine, we just have to keep in mind that the more messages we're trying to address, the less each of them will be understandable.</p>
+            <p>Some rules of thumb can help to pick the right chart.<br>
+            For instance, some charts use areas to convey more than one variable through a shape (using height to illustrate one variable, and width for another one for instance).</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/marimekko.jpg" alt="Areas are hard to compare" />
+              <figcaption>Areas are hard to compare</figcaption>
+            </figure>
+            <p>This kind of representations is incredibly hard to read, because it's almost impossible to compare areas.</p>
+            <p>But areas can be useful to illustrate the composition of an element because it's easier to imagine an element when it's pictured as a whole shape.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/pie-chart.jpg" alt="But areas are great to  picture a concept" />
+              <figcaption>But areas are great to picture a concept</figcaption>
+            </figure>
+            <p>It's harder to compare each part of the whole, but it's easier to understand the abstraction of the whole, and the link between these parts.</p>
+            <p>That means that we can define 2 important properties that make a good representation :
+              <ul>
+                <li>It's easy to compare (compare values, compare series,...).</li>
+                <li>It's easy to understand the abstraction (for instance: composition is an abstraction of the whole, evolution is an abstraction of change, height is an abstraction of the value,...).</li>
+              </ul>
+            </p>
+            <h3>And how does a visual representation actually convey information?</h3>
+            <p>Stephen Few wrote a very interesting paper about <a href="http://www.perceptualedge.com/articles/b-eye/encoding_values_in_graph.pdf" title="rules for encoding values in graphs">rules for encoding values in graphs</a>. He talks about some kinds of basic visual entities that are used to encode information : points, lines, and bars.<br>
+            <p>These 3 visual elements are the most common ones, but if we step down one level of abstraction, we can try to define the properties that would help to understand how to convey information in any kind of visual representations.<br>
+            Four visual properties seem interesting here:
+              <ul>
+                <li>The shape</li>
+                <li>The color</li>
+                <li>The dimension</li>
+                <li>The position</li>
+              </ul>
+            </p>
+            <p>Let's study all these properties through an example.</p>
+            <figure>
+              <a href="../img/user-driven-dataviz/visual-properties-example.jpg" title="An interesting chart to study visual properties"><img src="../img/user-driven-dataviz/visual-properties-example.jpg" alt="An interesting chart to study visual properties" /></a>
+              <figcaption>Chart by <a href="http://www.valentinadefilippo.co.uk/">Valentina D'Efilipo</a></figcaption>
+            </figure>
+            <p>This chart is really interesting because it leverages all these visual properties to convey a meaning.</p>
+            <p>The shape of a visual element is an amazing tool to create abstractions in many different ways.<br>
+            Here, we can notice two interesting usages of shapes. First, this graph uses flowers to represent deaths in wars. That's a pure iconic purpose, and that's the most important role of the shape: acting like a placeholder for a concept. That's exactly what happens when we draw countries on a map. The shape of each country helps the reader to create a match between the visual representation and the concept of "France" or "Spain".<br>
+            We can find another interesting usage of shapes in how the lines are used to show the duration of the war. A line is a natural way to highlight a link between entities, and that's why we often use lines to illustrate evolutions (a link between two states in time). Here, lines are used to create a link between a starting date and an ending date.</p>
+            <p>Colors can be very hard to master. It's tempting to think that colors bring meaning by themselves, because we often associate a color to a feeling, or an object... but it's very easy to confuse a reader who is not able to understand this association. In those cases, colors can be harmful for the readability.<br>
+            In this graph, colors are used to create categories of elements. That's very efficient, because it's easy to notice color patterns, even when the elements are not close from each other. <br>
+            But the most basic usage of color is probably to highlight elements. Again, color matching (and thus contrast) is amazingly powerful.</p>
+            <p>In this graph, the dimension of the flowers is simply used to illustrate the number of deaths. That's the most basic usage of dimension, exactly like when we encode a value in the height of bars in a bar chart.</p>
+            <p>Finally, the position of the flowers and their lines tells us where we are in time. Again, that's a very common practice that we can see in most of the line charts.</p>
+            <h3>We know how to map a message to a representation, but how to identify interesting messages in a first place?</h3>
+            <p>When designing dataviz, Identifying interesting messages in a dataset can be challenging.<br>
+            One of the most famous example of this issue is known as <a href="http://en.wikipedia.org/wiki/Anscombe%27s_quartet" title="Anscomb's Quartet">Anscomb's Quartet</a>.<br>
+            This extrem example shows very well that extracting relevant facts from a dataset can be hard. Actually, the designer is in the shoes of a user / reader, alone in front of a raw dataset. This is a clear data exploration use case...</p>
+            <p>There is an interesting approach to adopt in order to frame a dataset and to reveal interesting patterns.<br>
+            As described by Bret Victor in the article <a href="http://worrydream.com/LadderOfAbstraction/" title="Up and Down the Ladder of Abstraction">Up and Down the Ladder of Abstraction</a>: "to understand a system, we must explore it".<br>
+            In this article, Bret Victor explains that we can explore complex systems (like complex datasets) by constantly moving in the level of abstraction that we adopt to represent this system, in order to see and to manipulate different layers of concepts.<br>
+            There is a lot of ways to visually represent a dataset, and each of these representations stands on a specific level of abstraction: numbers are abstractions of quantities, mean and variance are abstractions of a series of numbers, a table is an abstraction of the structure of these numbers, a line chart is an abstraction of their evolution, a bar chart is an abstraction of their ranking,... when we're trying to know what messages to get from a dataset, it's usually a good idea to explore the data through different representations, and thus different level of abstraction, in order to reveal interesting patterns.<br>
+            That's how you realise that a dataset like the one described in Anscomb's Quartet is actually more complex than how it looks initially.</p>
+            <h3>So, if I know my use case, and if I know the type of message that I'm trying to address, the rest of the work is just about visual design right?</h3>
+            <p>Visual design is not the only way to convey information and you should use all the tools available on your medium to achieve this mission.</p>
+            <p>Animations for instance can be an amazing tool.<br>
+            Let's take an example with this very bad representation.</p>
+            <figure>
+              <img src="../img/user-driven-dataviz/marimekko.jpg" alt="This chart is really hard to understand" />
+              <figcaption>This chart is really hard to understand</figcaption>
+            </figure>
+            <p>Beyond the difficulty to compare areas, the problem is that there is a lot of dimensions (a measure, some categories, some sub categories for each category,...), and the relationship between them is not clear.</p>
+            <p>Let's see how animation could help us here with this very simple example:</p>
+            <figure class="videoFigure">
+              <video width="860" height="450" poster="../img/user-driven-dataviz/marimekko.jpg">
+                <source src="../img/user-driven-dataviz/marimekko-anim.webm" type="video/webm">
+                <source src="../img/user-driven-dataviz/marimekko-anim.mp4" type="video/mp4">
+              </video>
+              <figcaption>Animations convey a lot of information when they're used properly</figcaption>
+              <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
+            </figure>
+            <p>By animating the way we show all the elements of this chart, we can help the user to understand relationships between them: we start by showing main categories from the left to the right, and then we draw sub categories inside each category from the bottom to the top.</p>
+            <p>Copywriting is also very important.<br>
+            The words that you choose, the symbols that you use for your units, the way you truncate labels or round up values, the title, the labels and the values that you choose to display,... all these decisions are fundamental in the way the user will perceive your message.</p>
+            <p>Interactions are important too, particularly for data exploration. You can engage users and push them to discover more by allowing direct manipulation on the dataset.</p>
+            <p>And what about your "user's flow" ?<br>
+            You don't always have to tell everything in one representation. Complicated problems can easily be broken down into smaller parts that become often easier to understand. You can spread representations either in space (show multiple representations in one page for instance), or in time (show a series of representations one after the other).<br>
+            Whatever you decide, it has to be intentional and meaningful.</p>
+            <p>Tools are many, the most important thing is to be conscious of them, and to leverage them as much as possible to achieve the first use case that you defined: data exploration, or data explanation.<br>
+            Because that should always be your first concern when designing something: getting clarity on what you're trying to achieve. Just like the way we switched from data driven to user driven approach in web design 15 years ago (remember old email clients that were just mirroring the structure of databases? What a journey to come to something like Google Inbox!), we need to move away from meaningless and unintentional datavizualisations.<br>
+            The type of data that we want to show should only be a constraint, the use case that we want to address, and thus the user, should always be the driver of a datavizualisation.</p>
 
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
 
