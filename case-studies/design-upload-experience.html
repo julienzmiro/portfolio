@@ -28,71 +28,59 @@
             </header>
 
             <p>Uploading photos is boring.<br>
-            At Photobox, every user has to face this process at least once during its journey.</p>
-            <p>One of the main questions that we try to address is : How can we take care of the boring tasks in order to let the user focus on the creative and fun parts ?<br>
+            At Photobox, every user has to go through this process at least once.</p>
+            <p>And one of the main questions that we try to address is: How can we take care of the boring tasks in order to let the user focus on the creative and fun parts?<br>
             This question is clearly at the core of the upload step.</p>
             <h3>The former solution</h3>
-            <p>The first thing to know is that there is a lot of ways to upload photos on Photobox. You can upload photos one by one, upload many photos in a dedicated page, upload them in one of the creation tools, or even by FTP,... and all these solutions took very different design directions.</p>
-            <p>There is clearly a consistency issue. Why do we need all these different methods ?<br>
-            If we are not able to answer this question, how can we expect the user to be able to choose confidently between those different solutions and to know which one suits the best its needs ?<br>
-            If we decide that many different methods are required (for good reasons, for instance because we think that the way we upload only one photo is really different from the way we upload a lot of photos), is there any reason why those methods use a different copy, a different user flow, or different interactions ?</p>
+            <p>The first thing to know is that there is a lot of ways to upload photos on Photobox. You can upload photos one by one, by bulk, upload them in one of the creation tools, or by FTP,... and all these solutions took very different design directions.</p>
+            <p>There is clearly a consistency issue. Why do we need all these different methods?<br>
+            If we are not able to answer this question, how can we expect users to choose confidently between those different solutions and to know which one will better suit their needs?<br>
+            If we decide that many different methods are required (for good reasons, for instance because we think that the way we upload only one photo is really different from the way we upload multiple photos), is there any reason why those methods use a different copy, a different user flow, or different interactions?</p>
             <p>Another important point is the lack of feedback during the process. Users do not know anything about the remaining time, or the state of individual photos,... it is not even clear where the photos will be uploaded.</p>
             <figure>
                 <img src="../img/design-upload-experience/old-ui-uploading.jpg" alt="Uploading photos lack of feedback">
-                <figcaption>Here some photos are being "preloaded" but I do not have any idea on how much time I will have to wait... should I leave to have a cup of tea ?</figcaption>
+                <figcaption>Here some photos are being "preloaded" but I do not have any idea on how much time I will have to wait... do I need to stay in front of my screen?</figcaption>
             </figure>
-            <p>Finally, the last main issue is that it is incredibly hard !<br>
-            It is hard to understand the difference between photobox albums (the place where photos are stored to be used in any creation) and the creation selection (the place where we keep photos that will be used in this specific creation). The concept of albums can be hard to understand (most of people want to create only one product and do not even think that their photos will be stored), but the idea of selection might be even worst (why should I need to define a selection of photos when I can upload or use any photo from my computer ?).</p>
+            <p>Finally, the last issue is that it is incredibly hard!<br>
+            It is hard to understand the difference between photobox albums (the place where photos are stored to be used in any creation) and the creation selection (the place where we keep photos that will be used in this specific creation). The concept of albums can be hard to understand (most of people want to create only one product and do not even think that their photos will be stored), but the idea of selection might be even worst: why should I need to define a selection of photos when I can upload or use any photo from my computer?</p>
+
             <h3>Design proposal</h3>
-            <p>First, let me quickly talk about design directions to answer these problems :</p>
+            <p>First, let me quickly talk about the main design directions:</p>
             <ul>
-                <li>Remove the selection : there is no reason to have this kind of "proxy album". It is hard to understand, it brings a lot of difficulty, and there is no value at the end. Users do not choose their photos once for all. They are constantly going back and forth.</li>
-                <li>Bring the user to its creation as soon as possible. This is the fun part. Most of the users love the creation step. We know that as soon as they start to create their book, users almost never leave the process. Again, there is no reason to bother the user with unnecessary steps before the creation.</li>
+                <li>Removing the selection : there is no reason to have this kind of "proxy album". That just brings a lot of confusion for nothing. Users do not choose their photos once for all. They are constantly going back and forth.</li>
+                <li>Bringing the user to its creation as soon as possible. This is the fun part. Most of the users love the creation step. We know that as soon as they start to create their book, users almost never leave the process until they're done. Again, there is no reason to bother the user with unnecessary steps before the creation.</li>
             </ul>
-            <p>We also tried to keep or even to improve good things from the existing solution :</p>
+            <p>We also tried to keep or even to improve good things from the existing solution:</p>
             <ul>
-                <li>Photos are uploaded in background. That means that you can continue to edit your creation while your photos are being uploaded (which is a very long process).</li>
-                <!-- <li>Instant book is a feature that allows people to create a photo book instantly. Basically, this feature takes your selection of photos and place it properly in your book thanks to a smart algorithm. This is another great point as it allows people to either quickly create a book (and just take care of details) or to avoid the blank page syndrom.</li> -->
-                <li>Finally, we even wanted to enhance our upload process by allowing a lot of different photos storage providers : Picasa, FlickR, Facebook, Instagram, Dropbox,...</li>
+                <li>Photos are uploaded in background. That means that you can keep editing your creation while your photos are being uploaded (which is a very long process).</li>
+                <li>We also wanted to improve the process by plugging more photo storage providers : Picasa, FlickR, Facebook, Instagram, Dropbox,...</li>
             </ul>
+
             <h3>A simple library</h3>
             <p>In this design proposal, the user starts directly in the creation tool. No more "upload and organise" screen, no more creation selection. No more unnecessary step.</p>
-            <p>On our creation tools, the photos selection was displayed in a kind of library at the bottom of the page. This area is useful, even if we do not have a creation selection anymore, we still need photos to create our products. So everything is now handled from this place.</p>
+            <p>In the creation tools, the photos selection was displayed in a kind of library at the bottom of the page. This area is useful, even if we do not have a creation selection anymore, we still need photos to create our products. So everything is now handled from this place.</p>
             <figure>
                 <img src="../img/design-upload-experience/photos-library.jpg" alt="Photos library">
                 <figcaption>The library area at the bottom of this screen is now the place where we handle everything related to photos.</figcaption>
             </figure>
 
-            <p>Here you can access all your photobox albums and simply drag and drop photos in your creation. We allow the user to access other providers. We also created some "meta providers" that are just virtual categories of related photos ("All photo used in my creation", "Last uploaded photos", "People photos", "Landscapes",...).</p>
+            <p>Here you can access all the albums (including albums from other providers) and simply drag and drop photos in your creation. We've also created some sorts of "meta albums" that are just virtual categories of related photos: "All the photo used in my creation", "The last uploaded photos", "Photos of people", "Landscapes",....</p>
             <figure>
                 <img src="../img/design-upload-experience/provider-filter.jpg" alt="Provider filter">
                 <figcaption>Here is a simple version of the dropdown that allows users to change the photo provider.</figcaption>
             </figure>
             <p>At any time, the user is able to upload more photos from its computer, either by drag and droping one or several photos directly in the library area, or by clicking on the "Get more photos" button that will simply open the operating system window. The user will not have to leave the creation step anymore in order to add photos.<br>
-            Photos are uploaded in the album that is currently selected in the library. However, if this album is not a photobox album (for instance if it is a Facebook album), we display an alert box that ask the user to choose a destination album for these photos. By default, a kind of "session album" is created but the user can access any of its other albums.</p>
+            Photos are uploaded in the album that is currently selected in the library. However, if this album is not a photobox album (for instance if it is a Facebook album), we display an alert box that ask the user to choose a destination album for these photos. By default, a kind of "session album" is created but the user can access any other album.</p>
             <figure>
                 <img src="../img/design-upload-experience/alert.jpg" alt="We only ask to choose a destination album when it's really necessary.">
                 <figcaption>This window suggests to create a default session album, but the user can still access any other album.</figcaption>
             </figure>
-            <p>When photos are uploaded, we display a small notification that informs the user on the remaining time. At this step, the user can still upload more photos (they will simply be added to the queue), use any photo in its creation, browse another album (the main notification is still there),...</p>
+            <p>When photos are being uploaded, we display a small notification that informs the user on the remaining time. At this step, the user can still upload more photos (they will simply be added to the queue), use any photo in its creation, or browse another album (the notification will remain).</p>
             <figure>
                 <img src="../img/design-upload-experience/uploading-state.jpg" alt="The uploading state of the library">
-                <figcaption>Some photos are being uploaded. I can see the remaining time. There are also some individual progress bars and some placeholders (the grey rectangles) as long as photos thumbnails have not been "pre-uploaded".</figcaption>
+                <figcaption>Some photos are being uploaded. I can see the remaining time. We also show individual progress bars and thumbnail placeholders.</figcaption>
             </figure>
-            <!-- <p>This answers most of the users needs about the upload and photo selection. However, there is one point that we do not handle in this solution : instant book.</p> -->
-            <!-- <h3>...and a landing page</h3>
-            <p>If we think about it, instant book is mainly a way to start a creation (avoid the blank page or start quickly). This way, it seems reasonable to treat it as a kind of starting point for books creations.</p>
-            <figure>
-                <img src="../img/design-upload-experience/landing-default.jpg" alt="The landing popup">
-                <figcaption>The landing popup dedicated to instant book.</figcaption>
-            </figure>
-            <p>Basically, when the user arrives on the creation tool, we simply display a popup that suggests to start by uploading photos in order to quickly create a book. The user can ignore this popup by clicking on "Go to edit" or by closing it.</p>
-            <p>This landing popup works almost in the same way than the library in the creation tool. Actions are the same, so we followed the same patterns (providers browsing, albums browsing, uploading more photos,...).</p>
-            <p>The only new thing is at the bottom of the screen, where we have a "creation selection" (the same one as the one that we gave up earlier). I think that this is important here, and maybe easier to understand as we clearly explain that this is a selection of photos that will be used to automatically create the book.</p>
-            <figure>
-                <img src="../img/design-upload-experience/landing-selection.jpg" alt="The instant book selection">
-                <figcaption>Here is the main state of this landing popup where the user can select photos to apply the instant book algorithm.</figcaption>
-            </figure> -->
+            
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
         </section>
 
