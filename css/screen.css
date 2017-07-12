@@ -720,6 +720,10 @@ a, a:focus, a img, a:focus img {
 strong {
   font-weight: 400; }
 
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto; }
+
 .csContent figure.floatL {
   float: left;
   margin-right: 6%;
