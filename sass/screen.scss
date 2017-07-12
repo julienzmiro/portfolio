@@ -75,6 +75,7 @@ strong {
   margin-right: 6%;
   margin-top: 0;
   margin-left: -15%;
+  z-index: 1;
 }
 .clear {
   clear: both;
@@ -236,6 +237,84 @@ strong {
 }
 .csIllu {
   margin-bottom: 30px;
+}
+
+#csIntercomMessenger {
+  // background: #108AEE;
+  background: #E65D56;
+  // background: #EFDE69;
+}
+#intercomMessengerIllu {
+  position: relative;
+  width: 56px;
+  height: 64px;
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+#intercomMessengerIllu img {
+  width: 56px;
+  height: 64px;
+}
+#intercomMessengerIllu div {
+  width: 8px;
+  height: 8px;
+  background: #E65D56;
+  border-radius: 999px;
+  position: absolute;
+  top: 25px;
+}
+#intercomMessengerIllu div:nth-child(1) {
+  left: 10px;
+}
+#intercomMessengerIllu div:nth-child(2) {
+  left: 24px;
+}
+#intercomMessengerIllu div:nth-child(3) {
+  left: 38px;
+}
+#csIntercomMessenger:hover #intercomMessengerIllu div:nth-child(1) {
+  -webkit-animation: bounce 1s linear infinite;
+  -moz-animation: bounce 1s linear infinite;
+  -o-animation: bounce 1s linear infinite;
+  animation: bounce 1s linear infinite;
+}
+#csIntercomMessenger:hover #intercomMessengerIllu div:nth-child(2) {
+  -webkit-animation: bounce 1s linear infinite;
+  -moz-animation: bounce 1s linear infinite;
+  -o-animation: bounce 1s linear infinite;
+  animation: bounce 1s linear infinite;
+  animation-delay: .16s;
+}
+#csIntercomMessenger:hover #intercomMessengerIllu div:nth-child(3) {
+  -webkit-animation: bounce 1s linear infinite;
+  -moz-animation: bounce 1s linear infinite;
+  -o-animation: bounce 1s linear infinite;
+  animation: bounce 1s linear infinite;
+  animation-delay: .32s;
+}
+@-webkit-keyframes bounce {
+  0% { top: 25px; }
+  10% { top: 22px; }
+  20% { top: 22px; }
+  40% { top: 25px; }
+}
+@-moz-keyframes bounce {
+  0% { top: 25px; }
+  10% { top: 22px; }
+  20% { top: 22px; }
+  40% { top: 25px; }
+}
+@-o-keyframes bounce {
+  0% { top: 25px; }
+  10% { top: 22px; }
+  20% { top: 22px; }
+  40% { top: 25px; }
+}
+@keyframes bounce {
+  0% { top: 25px; }
+  10% { top: 22px; }
+  20% { top: 22px; }
+  40% { top: 25px; }
 }
 
 #csBeyondApp {

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/screen.css">
         <script src="../js/video.js"></script>
         <script src="../js/image.js"></script>
+        <script src="../js/app.js"></script>
     </head>
     <body>
 
@@ -25,183 +26,99 @@
 
         <section class="csContent">
             <header>
-                <h1>Intercom Messenger</h1>
+                <h1>A more personal business Messenger</h1>
                 <h2>Intercom <span>2016</span></h2>
             </header>
 
-            <p>The model that we use everyday to interact with our "digital asset" is outdated.<br>
-            We've replaced softwares by apps, libraries of softwares (OS) by libraries of apps (mobile OS), physical stores by app stores, clicks by taps,... but the paradigms are always the same.<br>
-            And solutions that worked 15 years ago when we were using Words 3 times per day and Outlook once every 2 hours are not suited for our current usage.</p>
-            <p>
-            How many different products do we need to use to achieve even the simplest things like planning a meeting (calendar, emails, maps, contacts, linkedin,...)?<br>
-            How many time do we miss opportunities to use interesting services just because we don't know about them (a map of transportation in a new city, online payment methods at the restaurant, app of a physical store to find more products,...)?<br>
-            How many screens do we need to browse to compare all the options that we have in a specific situation (compare transportation options, compare all the theaters and their respective time slots to watch a movie,...)?</p>
-            <p>
-            The problem is already very real, but it could get even worse as we'll get more and more devices and apps.</p>
+            <p>In September 2015, after just few weeks at Intercom, I learned I’d be leading the design of the biggest project that the company ever tackled: the redesign of our messenger. I worked in collaboration with 2 amazing designers on this project: <a href="http://wordstoshapes.com/">Brendan Fagan</a> who was focusing mobile, and <a href="https://dribbble.com/antalik">Jakub Antalik</a> who was working on the visual identity.<br>
+            In many ways, this project was unique for Intercom. We were the biggest team of the company at this time (~18 people), we were working cross platforms (web, mobile web, iOS, Android), we were building a “hosted product” (a product that would live inside our customers’ apps), and we spent a large amount on time on it (~a year, which is extremely unusual for Intercom).<br>
+            Inspired by the company mission (“Making Internet business more personal”), our goal was to build the most personal business messenger. Something looking more like WhatsApp or Facebook Messenger than like a classical live chat widget. A tool that would allow businesses to show their authenticity and their personality to their customers.</p>
 
-            <h3>There is a model to reinvent</h3>
-            <p>First, let's be clear about two words that we'll be using a lot in this document:<br>
-            By "products", I'm referring to apps, websites, webapps, or any kind of "wrapper of services" (Gmail, Google Inbox, or Outlook are products).<br>
-            By "services", I'm referring to end values offered by a product ("storing emails", "composing and sending emails", "searching in emails" are some examples of services from the above mentioned products).<br>
-            For instance, Gmail and Google Inbox are two different products, offering different ways to interact with (almost) the same services.</p>
-            <p>Products don't have a lot of reasons to exist beyond the services that they offer to their users. And if we try to imagine another way to interact with our services, products could even be seen as obstacles: people need to know about a product; people need to acquire the product; people need to learn how to use the product; people need to remember the product, to find it and to open it whenever they want to use it; people often need to juggle between different products to achieve a single goal;...</p>
-            <h3>Services as an API</h3>
-            <p>If we push this idea to its limits, we could imagine a world with almost no products as we know them today, and where a kind of unified system would allow people to seamlessly access interesting services, no matter what products offer them, or even on what devices they are available.<br>
-            Instead of having to learn about a product, to find it in an app store, to install it, to learn how to use it, and to finally use it, the system would let me know that a service interesting for my current situation exists, and I would just consume this service on the fly. We would shift from a paradigm based on the compartmentalization of services into apps, to a paradigm based on the distribution of services into contextual streams.</p>
-            <p>Of course, this model would raise a lot of questions (economic models, onboarding on new services,...), but it's always interesting to consider this kind of long term perspective.</p>
-            <h3>Let's come back to reality</h3>
-            <p>Disrupting the model that we use everyday is a huge challenge, and the gap is probably too big to tackle it at once. We need a long term vision, and we have a pretty clear one now: putting people closer to their services.<br>
-            But we also need to think about a realistic way to achieve this vision, and if we try to imagine the first step to go in that direction, we naturally look at mobile OS as they currently are the platforms that rule our relationship with digital services: they define that we should <em>install</em> an <em>app</em>, and then <em>open</em> it when we want to use it for instance... these rules come from the good old computer era legacy, but they shape how we behave today, in a very different world.<br>
-            Mobile OS seem to be a natural starting point when we try to think about a new way to interact with our digital services. They are just in the best position right now to engage any change and to tackle all the problems that we'll meet in this journey.</p>
-            <p>But we have to keep in mind that there could be a lot of different ways... another really interesting approach is explored by modern messaging apps like WeChat or Facebook Messenger for instance, where the conversation is used as an interface to access services.</p>
-            <h3>Design proposal</h3>
-            <p>The main principles behind this design proposal are not related to any specific product, but as an example, I've decided to imagine what a mobile OS could do in order to remove the friction in how people access services.</p>
-            <p>We won't go as far as what we described previously (services as an API), and we'll keep the concept of "app" in our system. Completely removing a concept like this one requires a lot of work on many design challenges, and the point of this study is just to draw the main directions.</p>
-            <p>We also have to keep in mind that we're not trying to redesign every part of the OS (settings, notifications,...). We'll focus our work on the way people access services (discover, acquire, launch, and use services).</p>
-            <p>We'll start by defining the main elements and principles of our design proposal (let's call it "the system" for conveniance): the actions, the cards, the feed, the pull and push mechanisms,...<br>
-            At the end, we'll describe a typical user journey to have a better idea of how our system could help people in concrete situations.</p>
-            <h3>The core values</h3>
-            <p>Let's start by defining the most important guidelines that we'll try to follow when we'll design this new system.</p>
-            <p>This system will try to get rid of obstacles lying between people and their services:
-              <ul>
-                <li>By being a single entry point: "No matter the product, or even the device, I can always use the system to reach services in a consistent way."</li>
-                <li>By helping services discovery: "No matter if I know the product, if there is an interesting service for my current situation, the system will provide it to me."</li>
-                <li>By grouping services: "No matter on how many different products or devices the relevant services are available, I can quickly access and compare those related to a specific context"</li>
-              </ul>
-              In order to do that, we'll have to focus our system on 3 core values:
-              <ul>
-                <li>Relevancy: Suggest solutions that are interesting for a specific context.</li>
-                <li>Reliability: Build a system that will be able to answer any situation.</li>
-                <li>Consistency: Offer similar ways to interact with the system as much as possible.</li>
-              </ul>
-            </p>
-            <h3>Two types of actions</h3>
-            <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access services, but we also want to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.</p>
+            <h3>A quick overview</h3>
+            <p>Let's first have a quick look at the overall redesign cross platforms.</p>
             <figure>
-                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions" class="imageFigure">
+              <img src="../img/intercom-messenger/messenger-redesign-overview.png" alt="The new version of Intercom's messenger" class="imageFigure" />
+              <figcaption>Here is the new version of Intercom's messenger</figcaption>
             </figure>
-            <p>We can define two kinds of actions:
-            <ul>
-              <li>External actions: Most of the actions that we'll offer to the user will lead to external apps. In that way, the system that we design could be seen as an app launcher, but what really matters here, is that we'll add a smart layer on top of that, so we'll only provide the most relevant actions within the most relevant apps.</li>
-              <li>Internal actions: Again, our goal is to remove anything that is not required to access services. That means that we should not hesitate to offer end services directly within the system (without having to open an app) as much as we can (mostly when the end service is about consuming information and not really taking any action).</li>
-            </ul>
-            </p>
-            <p>In a long term perspective, we could easily imagine having more and more internal actions by completely changing the relationship between the services and the OS (services as an API).</p>
-            <h3>A flexible wrapper...</h3>
-            <p>One of the main missions of our system will be to gather information and actions related to specific contexts (for instance: all the different transportation options to go somewhere, all the actions and informations related to an email,...). That means that we'll need to create a lot of very different ephemeral groups of content that should help the user to 1) understand what this group is meaning (what concept it is illustrating), 2) understand what actions are available, and 3) choose wisely the best option between those actions.<br>
-            In this document we'll call these groups of related actions and informations "contexts".</p>
-            <p>Contexts can all be very different: they can illustrate a very clear and simple concept (a person, a place,...) or some ideas that are more abstract (all the things related to the current location, a journey, an action like "call", a phone number, or even a text string like the first characters of a phone number,...). Contexts are even used for search results. In this case, we create a context that gathers everything related to the search query (in other words: the search results).</p>
-            <p>Because of this diversity, and because we want to handle each context in the most efficient way, we need to design a wrapper flexible enough to fit any kind of content (image, text, maps, videos,...).<br>
-            However, we still want to preserve as much as possible the consistency of our system. The idea is not to be flexible for the sole purpose of being flexible, and we want to diverge only when we have a good reason to do so.<br>
-            There is a balance to find, and our contexts will thus all share a common structure, but this structure will be made up of optional modules. This way, we'll be able to establish patterns at a macro level (<strong>consistency</strong>), to adapt our system at micro levels (<strong>relevancy</strong>), and we'll always have a fallback to handle any kind of content (<strong>reliability</strong>).</p>
-            <h3>...meet the cards</h3>
+            <p>The Intercom messenger is a very simple tool that allows users to communicate with a business (and vice versa): users will mostly reach a business when they need support, and companies will mostly use the messenger to engage their users. Most of the conversations are asynchronous, meaning that the participants are not necessarily there at the same time. People send a message, and come back later to check the reply.</p>
+
+            <h3>Back to first principle</h3>
+            <p>At Intercom, <a href="https://blog.intercom.com/peeling-back-to-first-principles/">peeling back to first principle</a> is almost a tradition… so before diving into the design details, let’s take a step back to try to understand why this project was so important for Intercom.</p>
             <figure>
-                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards" class="imageFigure">
+              <img src="../img/intercom-messenger/mv2.png" alt="The previous version of Intercom's messenger" class="imageFigure" />
+              <figcaption>This is the previous version of Intercom's messenger</figcaption>
             </figure>
-            <p>Cards are a very common design pattern. That's probably because cards are great to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys perfectly the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
-            Our contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about the card pattern.</p>
-            <h3>The structure of a card</h3>
-            <p>Let's have a look at the structure of our cards (every part is optional):</p>
+            <p>The previous version of Intercom’s messenger was working pretty well. The company could have easily spared the investment of building a new version from scratch, and could have spent an entire year iterating on this one instead, fixing bugs, adding features, creating a lot of immediate value for our customers.<br>
+            But we thought that the existing live chat model was broken and misaligned with Intercom’s mission (remember “making internet business personal”!). We believed in a more casual and personal way for businesses to communicate with their customers, taking inspiration from consumer messaging platforms (Facebook Messenger, WhatsApp, Telegram etc). That alone was such a big change, that it required to come back to the first principle of our messenger and to question all the existing decisions. In other words, to start a new product from scratch.</p>
+
+            <h3>Enabling businesses to be personal</h3>
+            <p>So how did that translate in practice? As I wrote, the main idea was to borrow from consumer apps: to reuse standard patterns and features that people use everyday.</p>
             <figure>
-                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="The structure of a card" class="imageFigure">
+              <img src="../img/intercom-messenger/gifs.png" alt="GIFs are cool" class="imageFigure" />
+              <figcaption>GIFs are cool</figcaption>
             </figure>
-            <ol>
-              <li>Title: The name of the context (person name, place name, search query,...).</li>
-              <li>Header: Additional information about a context (a map, a photo, address of a place,...).</li>
-              <li>Actions: List of actions related to this context. On the feed (we'll explain the feed later), we only display the most relevant actions, and we'll provide secondary actions in the zoom-in view.</li>
-            </ol>
-            <p>By taping the header of a card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
-            <h3>Zoom on the zoom-in view</h3>
+            <p>The introduction of GIFs is an interesting example. To be honest, I was a bit skeptical initially. I knew what we were trying to do, but it was a bit hard for me to imagine people sending GIFs in a business context. However, GIFs were so aligned with our company mission, and with the project principle (borrowing from consumer apps), that it was totally worth trying it. The idea was mostly to get this new mean of expression in the hand of people, and to see what they would do with it. If it failed, we would just kill the feature.</p>
+            <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Who says customer support can&#39;t be fun? Haha <a href="https://twitter.com/intercom">@intercom</a> you guys rock. <a href="https://t.co/nw9ldKU2Le">pic.twitter.com/nw9ldKU2Le</a></p>&mdash; Denny K. Schuldt (@DenkSchuldt) <a href="https://twitter.com/DenkSchuldt/status/842388783886667776">March 16, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p>But it didn’t fail at all! People use GIFs, and more importantly, they use it in their own personal way, making the communication way more casual and authentic.</p>
+            <p>Another interesting example of this "personal touch": what we call internally the “teammate profile”.<br>
+            In most of the existing live chat services at this time (including the previous version of Intercom’s messenger), the people behind a business remained mostly hidden and anonymous. If you were lucky, you could get an avatar of the customer support person, but that was it. We wanted to enable teammates to express themselves and to give more details about them because we know this is the best way to build a trustful relationship with customers.<p>
             <figure>
-                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views" class="imageFigure">
+              <img src="../img/intercom-messenger/profile.png" alt="Messenger profile" class="imageFigure" />
             </figure>
-            <p>The rule is simple: every "more" request (more informations about a context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.</p>
-            <p>The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display (because every part of a card is optional).</p>
-            <p>This view is also the end point of our "internal actions", and is mostly suited for consuming information (reading an email, viewing an image, interacting with a map,...).<br>
-            Users can access this view either by taping the header of a card, by taping internal actions, or by long touching any action. In the latter case, they will land on a zoom-in view dedicated to this action with more details about it (the app that will be launched for instance), and with other options when it makes sense (other phone numbers for a call for instance).</p>
-            <h3>A new homescreen: the contextual feed</h3>
-            <figure class="floatL videoFigure">
-              <video width="402" height="856" poster="../img/beyond-the-app-model/feed-thumb.jpg" loop>
-                <source src="../img/beyond-the-app-model/feed.webm" type="video/webm">
-                <source src="../img/beyond-the-app-model/feed.mp4" type="video/mp4">
+            <p>So we spent <a href="https://blog.intercom.com/why-messiness-is-a-good-thing-for-product-teams/">quite a lot of time</a> building these profiles. This part of the project has probably been one of the most difficult in terms of design. We’ve built dozens of prototypes in Framer, or directly in React to fine tune an interaction that seemed pretty straightforward at first. We also had to make some very tricky product decisions like when we had to decide if we should allow teammates to hide their location and their timezone, which was against our principle of transparency, but which was for some businesses something extremely sensitive.</p>
+            <figure>
+              <img src="../img/intercom-messenger/profile-example.png" alt="Example of profile" class="imageFigure" />
+              <figcaption>This is an actual profile from a real teammate!</figcaption>
+            </figure>
+            <p>But at the end, that was completely worth the effort. Users can now see that they’re talking to real people, and not to faceless agents. One of the most satisfying experience of the project was listening to users calling teammates by their name, remembering their job titles or other details about them during our user testing sessions.</p>
+
+            <h3>Attention to details</h3>
+            <p>Beyond our “being personal” principle, we also tried to ship a product that was polished in every detail.</p>
+            <figure class="videoFigure">
+              <video width="368" height="484" poster="../img/intercom-messenger/borderless.png" loop>
+                <source src="../img/intercom-messenger/borderless.webm" type="video/webm">
+                <source src="../img/intercom-messenger/borderless.mp4" type="video/mp4">
               </video>
               <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
+              <figcaption>Borderless allows users to quickly reply inline</figcaption>
             </figure>
-            <p>The context is the key of our system, and once we are able to understand the user, the challenge is to leverage this knowledge in the tools that we offer to him. Our best answer to this  is the homescreen of our system: the contextual feed.</p>
-            <p>The contextual feed is just a feed of cards. Cards related to my current context pop at the top of my feed because our system has decided that they are relevant for this specific situation (and this decision is based on many factors like the time, the weather, the place, people or places around me,...). This way, cards never disappear from the contextual feed, they will just gradually be buried inside the feed as they will become less relevant. This mechanism fits really well the idea of "context" because cards that are the most relevant (and probably the most useful) are always within reach, but I can still dig to access previous cards.</p>
-            <p>The contextual feed is also helpful to discover services. The system will suggest interesting services to the user by pushing cards into the feed, even if the related app is not on the phone.</p>
-            <h3 class="clear">Search as main pull paradigm</h3>
-            <figure class="floatL videoFigure">
-              <video width="400" height="854" poster="../img/beyond-the-app-model/search-thumb-2.jpg" loop>
-                <source src="../img/beyond-the-app-model/search-2.webm" type="video/webm">
-                <source src="../img/beyond-the-app-model/search-2.mp4" type="video/mp4">
+            <p>For instance, we realised that when users were having a conversation with a business, they were most of the time having very short and sporadic interactions. So instead of loading the entire messenger all the time, we’ve built Borderless, a secondary mode that allows users to reply inline and in a very lightweight way to notifications of new replies.</p>
+            <p>Another example is a micro interaction that we’ve added in the middle of the project.<br> Initially, our messenger had a close button at its top right corner. That’s a pretty standard pattern. One day when we were attending a user testing, we realised that users were constantly switching between their conversation and the website that we were using for the test. They had to close the messenger with the top right close button and to reopen it with a button located at the bottom right of the website (we call this button the launcher). That didn't seem optimal. So I suggested that we could try to reuse the launcher to close the messenger. A bit like a toggle button. We've quickly added a second state to the launcher, and we've been able to test it with the next user.</p>
+            <figure class="videoFigure">
+              <video width="398" height="702" poster="../img/intercom-messenger/close-interaction.png" loop>
+                <source src="../img/intercom-messenger/close-interaction.webm" type="video/webm">
+                <source src="../img/intercom-messenger/close-interaction.mp4" type="video/mp4">
               </video>
               <div class="videoOverlay"><img src="../img/play-ico.svg" /></div>
+              <figcaption>Using the launcher as a toggle button</figcaption>
             </figure>
-            <p>The contextual feed is a push mechanism (the system pushes information to the user). That's the most important part of a contextual system.<br>
-            However, despite all our efforts, we won't be able to answer perfectly all the different use cases that people will come across everyday. We need to provide a way for the users to pull information by themselves.</p>
-            <p>Our main pull mechanism (the user pulls information from the system) is based on a search pattern (more like a command based pattern in reality). That's risky, because that's really different from the current model of static libraries of icons (aka homescreens), but it makes sense if we want to remove the friction implied by the concept of "product". Plus, we counterbalance this effect with smart search suggestions that are not based on low value products (we could imagine search suggestions like "Facebook", or "Google Maps", or even "All my apps" but it really doesn't make any sense in our proposal), but that are based on high value services ("Go to X", "Call Y", "Z nearby",...).<br>
-            Search suggestions are made up of a lot of different things: last search queries, contextual queries (queries interesting for this specific situation like "Set an alarm" depending on the time, or "Pay at Café Saint-Martin",...), and common actions ("Call...", "Go to...", "Nearby...",...). The goal is to avoid having to ask the user to type anything.</p>
-            <p>Results of a search query appear wrapped in a card. The context of this card is just the search query (that means that each search query generates only one card). A search result card behaves exactly like any other card (all parts are optional for instance), except that we'll display its zoom-in view directly because the whole screen and the whole attention are dedicated to it.</p>
-            <h3 class="clear">A typical user journey</h3>
-            <p>Now that we defined the main elements of our design proposal, let's have a look at how that would work in real life situations.</p>
-            <div class="ujContainer">
-              <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/05-uj-morning.png" alt="My contextual feed on the morning">
-              </figure>
-              <p>Every morning, when I check my phone for the first time, I can access interesting information to start the day : the weather, my calendar of the day, the latest news,...</p>
-              <br class="clear">
-            </div>
-            <div class="ujContainer">
-              <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/06-uj-transportation.png" alt="Transportation card">
-              </figure>
-              <p>Later on the morning, when I'm about to leave, a new card pops on my feed to suggest the best way to go to work.</p>
-              <br class="clear">
-            </div>
-            <div class="ujContainer">
-              <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/06b-uj-zoom-in.png" alt="Zoom in">
-              </figure>
-              <p>I can zoom-in the card to access more transportation options.</p>
-              <br class="clear">
-            </div>
-            <div class="ujContainer">
-              <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/08-uj-search.png" alt="Search">
-              </figure>
-              <p>I want to lunch in a restaurant that has been recommanded by a friend. I can easily gather all the relevant informations with the search mechanism.</p>
-              <br class="clear">
-            </div>
-            <div class="ujContainer">
-              <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card">
-              </figure>
-              <p>On the evening, I'm looking for a gift in a store, but I can't find the product that I liked on the website. On my feed, the system provides me with a card of services from the app of the store, so I can find the product that I was looking for without having to install the app.</p>
-              <br class="clear">
-            </div>
+            <p>The first user to test this new pattern was initially looking for a close button at the top right corner of the window for few seconds (which could be concerning). But once she found the new button, it actually totally made sense to her, and she was not upset at all because that felt right and logical. More importantly, she learned the pattern almost instantly and was using the new close button completely easily after that. This behaviour has been then validated by many other testing sessions.<br>
+            This example goes against few of our design principles at Intercom (being standard over innovative, intuitive over learnable), but sometimes, it’s good to break principles (as long as it’s done consciously). In that case the benefit of being able to toggle the messenger was so interesting and felt just so right, that we were happy to diverge.</p>
 
-            <p>Of course, this design proposal still raises a lot questions, and this kind of approach would require way more work in order to answer all of them properly. The idea here is just to start to question a model inherited from another era that is so deeply settled into our daily lives that it prevents us from considering other directions (and there are a lot of other directions).</p>
-            <p>There is a famous quote from Marshall McLuhan stating that "all media are extensions of some human faculty". Wilson Miner has perfectly seized the essence of this quote in his talk <a href="https://vimeo.com/34017777#t=8m0s" title="When we build">"When we build"</a>.<br>
-            With so many new services and devices available, our faculties have obviously been extended, but they still depend on our good old homo sapiens brain, with its limited attention capacity and processing power.<br>
-            Just think about the last time you walked in a crowded place like a metro station… can you imagine all the work that your brain was doing subconsciously to anticipate other people moves and to predict the best path? Now think about the last time you were using your phone and walking in a crowded place at the same time… we really don’t want to waste all this precious subconscious power.<br>
-            Of course, we still want to send messages, to know when is our next train, or what is the best way to go to our meeting… <em>but we don’t really want to interact with products, we just want to consume services</em>.</p>
-            <p>We need something that will take care of most of our digital interactions in background, something that Marshall McLuhan could have described as <strong>an extension of our subconscious</strong> : an entire eco-system, with its own agents and rules that will help us to live in harmony with our new modern superpowers.</p>
+            <h3>An incredible collaboration</h3>
+            <figure>
+              <img src="../img/intercom-messenger/messenger-team.jpg" alt="The team that built the messenger!" class="imageFigure" />
+              <figcaption>This is the amazing team that built the new messenger!</figcaption>
+            </figure>
+            <p>Probably the best aspect of this project was the huge collaboration that was involved. As the main designer, I was working closely with the product manager to prioritise our work, with engineers to prototype and build (I even pushed few commits in production myself!), with user researchers to write scenarios and to assist them during our user testing sessions, with product analysts to get the right numbers to guide decisions, and more importantly with other designers. Because we were not only building a product, we were building a platform, a tool that would then be used by other teams at Intercom to support their products (customer support, users engagement, or lead conversion for instance). So I had to work closely with all the different designers of the company to be sure that we were building something that they could use in the future.<br>
+            This aspect was so exciting, that it led me to another project: the messenger patterns.</p>
+
+            <h3>Preparing the future of business messaging</h3>
+            <figure>
+              <img src="../img/intercom-messenger/messenger-patterns-types.png" alt="The different message types defined for our messenger" class="imageFigure" />
+            </figure>
+            <p>Releasing the messenger was just the first step. The most important part was to make of this new tool something easily usable by the other product teams at Intercom. I tried to create a documentation on “how to design for the messenger”. A bit like the user instructions for designers who will have to invent the future services and interactions of business messaging at Intercom. The goal was to answer questions like “how will my design be rendered across channels?” (on email, or on Facebook for instance), “how do I collect data in the conversation?” (asking visitors to leave their email for instance), or “how do I show my very specific content?” (showing an article from the help center for instance).</p>
+            <figure>
+              <img src="../img/intercom-messenger/messenger-patterns-form.png" alt="Buttons, forms, and events showcased in this example of interaction" class="imageFigure" />
+              <figcaption>Buttons, Forms, and Events patterns showcased in an example of flow</figcaption>
+            </figure>
+            <p>This “spin off” of the messenger project has been fascinating and extremely challenging. I took inspiration from the famous book <a href="https://en.wikipedia.org/wiki/A_Pattern_Language">“A pattern language”</a> by Christopher Alexander to create a list of common problems that designers were having when working with the messenger, and to provide some examples of answers and guidance. We came across some very tough questions, but at the end, I think that we’ve built an incredible understanding of the conversation model and of the different tools that we could use, their pros and cons, and when they are relevant.</p>
+
+            <p>This project was by far the most exciting experience of my professional life. I loved everything: the domain, the result (you can try it by yourself, <a href="#" class="messageMeButton">send me a Bonjour :D</a>), and more importantly the team!</p>
 
             <p>Don't hesitate to have a look at <a href="../index.html" title="View more case studies">other case studies</a>.</p>
 
-            <hr>
-            <small>
-              This great article from Paul Adams is probably the starting point of all this work:<br>
-              <a href="https://blog.intercom.io/why-cards-are-the-future-of-the-web/" title="Why cards are the future of the web">Why cards are the future of the web</a><br><br>
-              I also found some other very interesting links since I wrote this article:<br>
-              <a href="http://whoo.ps/2015/02/23/futures-of-text" title="Futures of text">Futures of text</a><br>
-              <a href="http://www.omgubuntu.co.uk/2015/06/ios-9-siri-suggestions-ubuntu-scopes" title="Why Siri in iOS 9 Validates the Design of Ubuntu Phone">Why Siri in iOS 9 Validates the Design of Ubuntu Phone</a><br>
-              <a href="https://blog.intercom.io/the-end-of-apps-as-we-know-them/" title="The end of apps as we know them">The end of apps as we know them</a><br>
-              <a href="https://medium.com/soda-hall/why-the-the-end-of-apps-theory-is-wrong-6e92e2d2af3d" title="Why the end of apps theory is wrong">Why the end of apps theory is wrong</a><br>
-              <a href="https://500ish.com/there-is-no-app-694813fa2167" title="There is no app">There is no app</a><br>
-              <a href="http://ben-evans.com/benedictevans/2014/8/1/app-unbundling-search-and-discovery" title="App unbundling, search and discovery">App unbundling, search and discovery</a><br>
-            </small>
         </section>
 
         <script>

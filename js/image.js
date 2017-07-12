@@ -1,3 +1,5 @@
+// TODO: make animation speed relative to the distance?
+
 (function () {
 
   function init () {
@@ -11,9 +13,7 @@
     var images = document.getElementsByClassName("imageFigure");
 
     for (i = 0; i < images.length; ++i) {
-      if (isZoomable(images[i])) {
-        makeZoomable(images[i]);
-      }
+      makeZoomable(images[i]);
     }
   }
 
@@ -23,8 +23,11 @@
     i.style.cursor = "zoom-in";
     i.zzz = {};
     i.zzz.style = {};
+    i.zzz.parentNode = {};
+    i.zzz.parentNode.style = {};
     i.zzz.style.position = getComputedStyle(i).getPropertyValue("position");
     i.zzz.style.zIndex = getComputedStyle(i).getPropertyValue("z-index");
+    i.zzz.parentNode.style.zIndex = getComputedStyle(i.parentNode).getPropertyValue("z-index");
     addEvent(i, 'click', zoomableHandler);
   }
 
@@ -65,43 +68,39 @@
   }
 
   function scaleImageUp (i) {
-    var iNatWidth = i.naturalWidth;
-    var iNatHeight = i.naturalHeight;
-    var iDisWidth = i.clientWidth;
-    var iDisHeight = i.clientHeight;
+    var iDisplayWidth = i.clientWidth;
+    var iDisplayHeight = i.clientHeight;
     var iNewWidth = null;
     var iNewHeight = null;
-    var ratio = null;
+    var iRatio = iDisplayWidth / iDisplayHeight;
+    var wWidth = window.innerWidth - 20;
+    var wHeight = window.innerHeight - 20;
+    var wRatio = wWidth / wHeight;
     var xTranslate = null;
     var yTranslate = null;
-    // Calculate the scaling ratio
-    if (window.innerWidth < iNatWidth) {
-      iNewWidth = window.innerWidth - 20;
-    } else if (window.innerHeight < iNatHeight) {
-      iNewHeight = window.innerHeight - 20;
-    } else {
-      iNewWidth = i.naturalWidth;
-      iNewHeight = i.naturalHeight;
-    }
-    if (iNewWidth > iNewHeight) {
-      ratio = iNewWidth / iDisWidth;
-    } else {
-      ratio = iNewHeight / iDisHeight;
-    }
-    // Calculate the translate values
-    var offsetX = i.getBoundingClientRect().left;
-    var offsetY = i.getBoundingClientRect().top;
-    var winCenterX = window.innerWidth / 2;
-    var winCenterY = window.innerHeight / 2;
-    var iCenterX = iDisWidth / 2;
-    var iCenterY = iDisHeight / 2;
+    var scaleRatio = null;
+    var iCenterY = Math.floor(i.getBoundingClientRect().top + (iDisplayHeight / 2));
+    var iCenterX = Math.floor(i.getBoundingClientRect().left + (iDisplayWidth / 2));
+    var wCenterY = window.innerHeight / 2;
+    var wCenterX = window.innerWidth / 2;
 
-    xTranslate = (winCenterX - offsetX - iCenterX) / ratio;
-    yTranslate = (winCenterY - offsetY - iCenterY) / ratio;
+    if (wRatio > iRatio) {
+      iNewWidth = Math.min(iDisplayWidth * wHeight / iDisplayHeight, i.naturalWidth);
+      iNewHeight = iNewWidth / iRatio;
+      scaleRatio = +(iNewWidth / iDisplayWidth).toFixed(1);
+    } else {
+      iNewHeight = Math.min(iDisplayHeight * wWidth / iDisplayWidth, i.naturalHeight);
+      iNewWidth = iNewHeight * iRatio;
+      scaleRatio = +(iNewHeight / iDisplayHeight).toFixed(1);
+    }
 
-    i.style.transform = "scale(" + ratio + ") translateX(" + xTranslate + "px) translateY(" + yTranslate + "px)";
+    yTranslate = (wCenterY - iCenterY) / scaleRatio;
+    xTranslate = (wCenterX - iCenterX) / scaleRatio;
+
+    i.style.transform = "scale(" + scaleRatio + ") translateX(" + xTranslate + "px) translateY(" + yTranslate + "px)";
     i.style.cursor = "zoom-out";
-    i.style.zIndex = 999;
+    i.style.zIndex = 2;
+    i.parentNode.style.zIndex = 999; // Stacking context
     i.style.position = "relative";
     i.className = i.className.replace(" zoomable", " zoomed");
     showOverlay();
@@ -127,12 +126,13 @@
     o.style.top = 0;
     o.style.left = 0;
     o.style.cursor = "zoom-out";
-    o.style.zIndex = 998;
-    o.style.transition = "opacity 200ms linear";
+    o.style.zIndex = 1;
+    o.style.opacity = 0;
+    o.style.transition = "opacity 80ms linear";
 
     i.parentNode.insertBefore(o, i);
 
-    o.style.opacity = 1;
+    setTimeout(function(){ o.style.opacity = 1; }, 1);
   }
 
   function hideOverlay () {
@@ -145,6 +145,7 @@
       o.remove();
       i.style.zIndex = i.zzz.style.zIndex;
       i.style.position = i.zzz.style.position;
+      i.parentNode.style.zIndex = i.zzz.parentNode.style.zIndex;
       clearTimeout(t);
     }, 200);
   }
