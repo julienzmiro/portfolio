@@ -883,6 +883,31 @@ strong {
 .csIllu {
   margin-bottom: 30px; }
 
+#csUnflattening {
+  background: #57C6B5; }
+
+#unflatteningIllu {
+  position: relative;
+  width: 220px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.unflatteningIlluClosedEye,
+.unflatteningIlluOpenEye {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.unflatteningIlluOpenEye {
+  opacity: 0; }
+
+#csUnflattening:hover .unflatteningIlluOpenEye {
+  opacity: 1; }
+
+#csUnflattening:hover .unflatteningIlluClosedEye {
+  opacity: 0; }
+
 #csIntercomMessenger {
   background: #E65D56; }
 
