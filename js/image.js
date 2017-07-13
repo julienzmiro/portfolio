@@ -1,5 +1,3 @@
-// TODO: make animation speed relative to the distance?
-
 (function () {
 
   function init () {
