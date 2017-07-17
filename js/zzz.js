@@ -1,14 +1,26 @@
-(function () {
+var zzz = zzz || {};
 
-  function init () {
-    addEvent(window, 'unload', EventCache.flush);
-    addEvent(window, 'resize', checkImages);
-    checkImages();
-  }
+(function ( o ) {
+
+  var zzzF = this;
+  var overlayColor;
+
+  o.init = function (overlayColor) {
+    // Check wether or not the document is ready until it is ready
+    var readyStateCheckInterval = setInterval(function() {
+      if (document.readyState === "complete") {
+        addEvent(window, 'unload', EventCache.flush);
+        addEvent(window, 'resize', checkImages);
+        zzzF.overlayColor = overlayColor || "#ffffff";
+        checkImages();
+        clearInterval(readyStateCheckInterval);
+      }
+    }, 10);
+  };
 
   function checkImages () {
     var i;
-    var images = document.getElementsByClassName("imageFigure");
+    var images = document.getElementsByClassName("zzz");
 
     for (i = 0; i < images.length; ++i) {
       makeZoomable(images[i]);
@@ -16,7 +28,7 @@
   }
 
   function makeZoomable (i) {
-    i.className = i.className + " zoomable";
+    i.className = i.className + " zzzZoomable";
     i.style.transition = "transform 200ms ease-out";
     i.style.cursor = "zoom-in";
     i.zzz = {};
@@ -55,8 +67,8 @@
   }
 
   function zoomedHandler () {
-    var o = document.getElementsByClassName("zoomableOverlay")[0];
-    var i = document.getElementsByClassName("zoomed")[0];
+    var o = document.getElementsByClassName("zzzZoomableOverlay")[0];
+    var i = document.getElementsByClassName("zzzZoomed")[0];
 
     window.removeEventListener('scroll', zoomedHandler);
     i.removeEventListener('click', zoomedHandler);
@@ -100,7 +112,7 @@
     i.style.zIndex = 2;
     i.parentNode.style.zIndex = 999; // Stacking context
     i.style.position = "relative";
-    i.className = i.className.replace(" zoomable", " zoomed");
+    i.className = i.className.replace(" zzzZoomable", " zzzZoomed");
     showOverlay();
   }
 
@@ -108,16 +120,17 @@
     hideOverlay();
     i.style.transform = "scale(1)";
     i.style.cursor = "zoom-in";
-    i.className = i.className.replace(" zoomed", " zoomable");
+    i.className = i.className.replace(" zzzZoomed", " zzzZoomable");
   }
 
   function showOverlay () {
-    var i = document.getElementsByClassName("zoomed")[0];
+    var i = document.getElementsByClassName("zzzZoomed")[0];
     var o = document.createElement("DIV");
 
     addEvent(o, 'click', zoomedHandler);
 
-    o.className = "zoomableOverlay";
+    o.className = "zzzZoomableOverlay";
+    o.style.backgroundColor = zzzF.overlayColor;
     o.style.height = window.innerHeight + "px";
     o.style.width = window.innerWidth + "px";
     o.style.position = "fixed";
@@ -126,16 +139,19 @@
     o.style.cursor = "zoom-out";
     o.style.zIndex = 1;
     o.style.opacity = 0;
-    o.style.transition = "opacity 80ms linear";
+    o.style.transition = "opacity 100ms linear";
 
     i.parentNode.insertBefore(o, i);
 
-    setTimeout(function(){ o.style.opacity = 1; }, 1);
+    var t = setTimeout(function() {
+      o.style.opacity = 1;
+      clearTimeout(t);
+    }, 1);
   }
 
   function hideOverlay () {
-    var o = document.getElementsByClassName("zoomableOverlay")[0];
-    var i = document.getElementsByClassName("zoomed")[0];
+    var o = document.getElementsByClassName("zzzZoomableOverlay")[0];
+    var i = document.getElementsByClassName("zzzZoomed")[0];
 
     o.style.opacity = 0;
 
@@ -203,11 +219,4 @@
     };
   }();
 
-  // Check wether or not the document is ready until it is ready
-  var readyStateCheckInterval = setInterval(function() {
-    if (document.readyState === "complete") {
-      init();
-      clearInterval(readyStateCheckInterval);
-    }
-  }, 10);
-})();
+})(zzz);

@@ -8,7 +8,10 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/screen.css">
         <script src="../js/video.js"></script>
-        <script src="../js/image.js"></script>
+        <script src="../js/zzz.js"></script>
+        <script type="text/javascript">
+           zzz.init();
+        </script>
         <script src="../js/app.js"></script>
     </head>
     <body>
@@ -37,7 +40,7 @@
             <h3>A quick overview</h3>
             <p>Let's first have a quick look at the overall redesign cross platforms.</p>
             <figure>
-              <img src="../img/intercom-messenger/messenger-redesign-overview.png" alt="The new version of Intercom's messenger" class="imageFigure" />
+              <img src="../img/intercom-messenger/messenger-redesign-overview.png" alt="The new version of Intercom's messenger" class="zzz" />
               <figcaption>Here is the new version of Intercom's messenger</figcaption>
             </figure>
             <p>The Intercom messenger is a very simple tool that allows users to communicate with a business (and vice versa): users will mostly reach a business when they need support, and companies will mostly use the messenger to engage their users. Most of the conversations are asynchronous, meaning that the participants are not necessarily there at the same time. People send a message, and come back later to check the reply.</p>
@@ -45,7 +48,7 @@
             <h3>Back to first principle</h3>
             <p>At Intercom, <a href="https://blog.intercom.com/peeling-back-to-first-principles/">peeling back to first principle</a> is almost a tradition… so before diving into the design details, let’s take a step back to try to understand why this project was so important for Intercom.</p>
             <figure>
-              <img src="../img/intercom-messenger/mv2.png" alt="The previous version of Intercom's messenger" class="imageFigure" />
+              <img src="../img/intercom-messenger/mv2.png" alt="The previous version of Intercom's messenger" class="zzz" />
               <figcaption>This is the previous version of Intercom's messenger</figcaption>
             </figure>
             <p>The previous version of Intercom’s messenger was working pretty well. The company could have easily spared the investment of building a new version from scratch, and could have spent an entire year iterating on this one instead, fixing bugs, adding features, creating a lot of immediate value for our customers.<br>
@@ -54,7 +57,7 @@
             <h3>Enabling businesses to be personal</h3>
             <p>So how did that translate in practice? As I wrote, the main idea was to borrow from consumer apps: to reuse standard patterns and features that people use everyday.</p>
             <figure>
-              <img src="../img/intercom-messenger/gifs.png" alt="GIFs are cool" class="imageFigure" />
+              <img src="../img/intercom-messenger/gifs.png" alt="GIFs are cool" class="zzz" />
               <figcaption>GIFs are cool</figcaption>
             </figure>
             <p>The introduction of GIFs is an interesting example. To be honest, I was a bit skeptical initially. I knew what we were trying to do, but it was a bit hard for me to imagine people sending GIFs in a business context. However, GIFs were so aligned with our company mission, and with the project principle (borrowing from consumer apps), that it was totally worth trying it. The idea was mostly to get this new mean of expression in the hand of people, and to see what they would do with it. If it failed, we would just kill the feature.</p>
@@ -64,11 +67,11 @@
             <p>Another interesting example of this "personal touch": what we call internally the “teammate profile”.<br>
             In most of the existing live chat services at this time (including the previous version of Intercom’s messenger), the people behind a business remained mostly hidden and anonymous. If you were lucky, you could get an avatar of the customer support person, but that was it. We wanted to enable teammates to express themselves and to give more details about them because we know this is the best way to build a trustful relationship with customers.<p>
             <figure>
-              <img src="../img/intercom-messenger/profile.png" alt="Messenger profile" class="imageFigure" />
+              <img src="../img/intercom-messenger/profile.png" alt="Messenger profile" class="zzz" />
             </figure>
             <p>So we spent <a href="https://blog.intercom.com/why-messiness-is-a-good-thing-for-product-teams/">quite a lot of time</a> building these profiles. This part of the project has probably been one of the most difficult in terms of design. We’ve built dozens of prototypes in Framer, or directly in React to fine tune an interaction that seemed pretty straightforward at first. We also had to make some very tricky product decisions like when we had to decide if we should allow teammates to hide their location and their timezone, which was against our principle of transparency, but which was for some businesses something extremely sensitive.</p>
             <figure>
-              <img src="../img/intercom-messenger/profile-example.png" alt="Example of profile" class="imageFigure" />
+              <img src="../img/intercom-messenger/profile-example.png" alt="Example of profile" class="zzz" />
               <figcaption>This is an actual profile from a real teammate!</figcaption>
             </figure>
             <p>But at the end, that was completely worth the effort. Users can now see that they’re talking to real people, and not to faceless agents. One of the most satisfying experience of the project was listening to users calling teammates by their name, remembering their job titles or other details about them during our user testing sessions.</p>
@@ -98,7 +101,7 @@
 
             <h3>An incredible collaboration</h3>
             <figure>
-              <img src="../img/intercom-messenger/messenger-team.jpg" alt="The team that built the messenger!" class="imageFigure" />
+              <img src="../img/intercom-messenger/messenger-team.jpg" alt="The team that built the messenger!" class="zzz" />
               <figcaption>This is the amazing team that built the new messenger!</figcaption>
             </figure>
             <p>Probably the best aspect of this project was the huge collaboration that was involved. As the main designer, I was working closely with the product manager to prioritise our work, with engineers to prototype and build (I even pushed few commits in production myself!), with user researchers to write scenarios and to assist them during our user testing sessions, with product analysts to get the right numbers to guide decisions, and more importantly with other designers. Because we were not only building a product, we were building a platform, a tool that would then be used by other teams at Intercom to support their products (customer support, users engagement, or lead conversion for instance). So I had to work closely with all the different designers of the company to be sure that we were building something that they could use in the future.<br>
@@ -106,11 +109,11 @@
 
             <h3>Preparing the future of business messaging</h3>
             <figure>
-              <img src="../img/intercom-messenger/messenger-patterns-types.png" alt="The different message types defined for our messenger" class="imageFigure" />
+              <img src="../img/intercom-messenger/messenger-patterns-types.png" alt="The different message types defined for our messenger" class="zzz" />
             </figure>
             <p>Releasing the messenger was just the first step. The most important part was to make of this new tool something easily usable by the other product teams at Intercom. I tried to create a documentation on “how to design for the messenger”. A bit like the user instructions for designers who will have to invent the future services and interactions of business messaging at Intercom. The goal was to answer questions like “how will my design be rendered across channels?” (on email, or on Facebook for instance), “how do I collect data in the conversation?” (asking visitors to leave their email for instance), or “how do I show my very specific content?” (showing an article from the help center for instance).</p>
             <figure>
-              <img src="../img/intercom-messenger/messenger-patterns-form.png" alt="Buttons, forms, and events showcased in this example of interaction" class="imageFigure" />
+              <img src="../img/intercom-messenger/messenger-patterns-form.png" alt="Buttons, forms, and events showcased in this example of interaction" class="zzz" />
               <figcaption>Buttons, Forms, and Events patterns showcased in an example of flow</figcaption>
             </figure>
             <p>This “spin off” of the messenger project has been fascinating and extremely challenging. I took inspiration from the famous book <a href="https://en.wikipedia.org/wiki/A_Pattern_Language">“A pattern language”</a> by Christopher Alexander to create a list of common problems that designers were having when working with the messenger, and to provide some examples of answers and guidance. We came across some very tough questions, but at the end, I think that we’ve built an incredible understanding of the conversation model and of the different tools that we could use, their pros and cons, and when they are relevant.</p>

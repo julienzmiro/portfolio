@@ -8,7 +8,10 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/screen.css">
         <script src="../js/video.js"></script>
-        <script src="../js/image.js"></script>
+        <script src="../js/zzz.js"></script>
+        <script type="text/javascript">
+           zzz.init();
+        </script>
     </head>
     <body>
 
@@ -78,7 +81,7 @@
             <h3>Two types of actions</h3>
             <p>End actions that lead to end services, are at the core of the system that we're trying to design. We want to remove anything that is not required to access services, but we also want to provide enough information to allow people to understand and to choose the best actions efficiently and wisely.</p>
             <figure>
-                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions" class="imageFigure">
+                <img src="../img/beyond-the-app-model/01-actions.png" alt="Examples of actions" class="zzz">
             </figure>
             <p>We can define two kinds of actions:
             <ul>
@@ -96,14 +99,14 @@
             There is a balance to find, and our contexts will thus all share a common structure, but this structure will be made up of optional modules. This way, we'll be able to establish patterns at a macro level (<strong>consistency</strong>), to adapt our system at micro levels (<strong>relevancy</strong>), and we'll always have a fallback to handle any kind of content (<strong>reliability</strong>).</p>
             <h3>...meet the cards</h3>
             <figure>
-                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards" class="imageFigure">
+                <img src="../img/beyond-the-app-model/02-cards.png" alt="Examples of cards" class="zzz">
             </figure>
             <p>Cards are a very common design pattern. That's probably because cards are great to create and to highlight "entities". A card has boundaries (just like any box), has its own structure, and conveys perfectly the idea that we can handle it as a whole (just like physical cards that we can grab, move, stack, shuffle,...)... this is a great way to visually illustrate the idea of "entity".<br>
             Our contexts are very complex entities. We're trying to make it clear that all these elements form an unified concept, so it makes sense to think about the card pattern.</p>
             <h3>The structure of a card</h3>
             <p>Let's have a look at the structure of our cards (every part is optional):</p>
             <figure>
-                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="The structure of a card" class="imageFigure">
+                <img src="../img/beyond-the-app-model/03-card-structure.png" alt="The structure of a card" class="zzz">
             </figure>
             <ol>
               <li>Title: The name of the context (person name, place name, search query,...).</li>
@@ -113,7 +116,7 @@
             <p>By taping the header of a card, I can access its "zoom-in" view: a detailed view of the card that offers other ways to manipulate the content (interactive map, photo gallery, more actions,...).</p>
             <h3>Zoom on the zoom-in view</h3>
             <figure>
-                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views" class="imageFigure">
+                <img src="../img/beyond-the-app-model/04-zoom-in.png" alt="Examples of zoom-in views" class="zzz">
             </figure>
             <p>The rule is simple: every "more" request (more informations about a context, more options for a specific action, more ways to manipulate the content,...), leads to a zoom-in view.</p>
             <p>The zoom-in view behaves exactly like the normal view of a card: when we know interesting things to tell about a context, we don't hesitate to be very specific, but when we don't really know what to tell, we always have a fallback to display (because every part of a card is optional).</p>
@@ -147,35 +150,35 @@
             <p>Now that we defined the main elements of our design proposal, let's have a look at how that would work in real life situations.</p>
             <div class="ujContainer">
               <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/05-uj-morning.png" alt="My contextual feed on the morning" class="imageFigure">
+                  <img src="../img/beyond-the-app-model/05-uj-morning.png" alt="My contextual feed on the morning" class="zzz">
               </figure>
               <p>Every morning, when I check my phone for the first time, I can access interesting information to start the day : the weather, my calendar of the day, the latest news,...</p>
               <br class="clear">
             </div>
             <div class="ujContainer">
               <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/06-uj-transportation.png" alt="Transportation card" class="imageFigure">
+                  <img src="../img/beyond-the-app-model/06-uj-transportation.png" alt="Transportation card" class="zzz">
               </figure>
               <p>Later on the morning, when I'm about to leave, a new card pops on my feed to suggest the best way to go to work.</p>
               <br class="clear">
             </div>
             <div class="ujContainer">
               <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/06b-uj-zoom-in.png" alt="Zoom in" class="imageFigure">
+                  <img src="../img/beyond-the-app-model/06b-uj-zoom-in.png" alt="Zoom in" class="zzz">
               </figure>
               <p>I can zoom-in the card to access more transportation options.</p>
               <br class="clear">
             </div>
             <div class="ujContainer">
               <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/08-uj-search.png" alt="Search" class="imageFigure">
+                  <img src="../img/beyond-the-app-model/08-uj-search.png" alt="Search" class="zzz">
               </figure>
               <p>I want to lunch in a restaurant that has been recommanded by a friend. I can easily gather all the relevant informations with the search mechanism.</p>
               <br class="clear">
             </div>
             <div class="ujContainer">
               <figure class="floatL">
-                  <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card" class="imageFigure">
+                  <img src="../img/beyond-the-app-model/09-uj-zara.png" alt="Zara card" class="zzz">
               </figure>
               <p>On the evening, I'm looking for a gift in a store, but I can't find the product that I liked on the website. On my feed, the system provides me with a card of services from the app of the store, so I can find the product that I was looking for without having to install the app.</p>
               <br class="clear">
